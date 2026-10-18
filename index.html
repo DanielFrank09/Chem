@@ -149,6 +149,57 @@
       font-size: 16px;
     }
 
+    /* Soft, muted pastel study highlights that blend with the warm cream & dark themes */
+    p strong, li strong, .hl-amber {
+      background: rgba(217, 155, 38, 0.16);
+      color: var(--mac-text);
+      padding: 1.5px 6px;
+      border-radius: 6px;
+      font-weight: 650;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    html.dark p strong, html.dark li strong, html.dark .hl-amber {
+      background: rgba(245, 185, 66, 0.17);
+      color: #fde68a;
+    }
+
+    .hl-blue {
+      background: rgba(0, 102, 204, 0.11);
+      color: #004c99;
+      padding: 1.5px 6px;
+      border-radius: 6px;
+      font-weight: 650;
+    }
+    html.dark .hl-blue {
+      background: rgba(56, 189, 248, 0.16);
+      color: #bae6fd;
+    }
+
+    .hl-green {
+      background: rgba(16, 145, 95, 0.13);
+      color: #0c5e3e;
+      padding: 1.5px 6px;
+      border-radius: 6px;
+      font-weight: 650;
+    }
+    html.dark .hl-green {
+      background: rgba(52, 211, 153, 0.16);
+      color: #a7f3d0;
+    }
+
+    .hl-rose {
+      background: rgba(210, 65, 90, 0.12);
+      color: #8c2235;
+      padding: 1.5px 6px;
+      border-radius: 6px;
+      font-weight: 650;
+    }
+    html.dark .hl-rose {
+      background: rgba(251, 113, 133, 0.17);
+      color: #fecdd3;
+    }
+
     ::-webkit-scrollbar { width: 8px; height: 8px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: rgba(120, 105, 85, 0.25); border-radius: 999px; }
@@ -972,7 +1023,7 @@
           { sub: '2s', boxes: ['↑↓'] },
           { sub: '2p', boxes: ['↑↓', '↑', '↑'] }
         ],
-        note: 'Hund’s Rule ("Empty Bus Seat Rule"): In the 2p sublevel (4e⁻), place one electron in each of the 3 boxes first before pairing the 4th electron! Has 2 unpaired e⁻ (Paramagnetic).'
+        note: '<strong>Hund’s Rule ("Empty Bus Seat Rule")</strong>: In the 2p sublevel (4e⁻), place <strong>one electron in each of the 3 boxes first</strong> before pairing the 4th electron! Has <strong>2 unpaired e⁻ (Paramagnetic)</strong>.'
       },
       {
         id: 'sulfur', label: 'S (16e⁻)', name: 'Sulfur (S — 16 Electrons)',
@@ -982,7 +1033,7 @@
           { sub: '[Ne] Core + 3s', boxes: ['↑↓'] },
           { sub: '3p', boxes: ['↑↓', '↑', '↑'] }
         ],
-        note: 'Shorthand Rule: Go up one row to Period 2 Noble Gas [Ne] (10 core e⁻), then write the remaining 6 valence electrons on Row 3 (3s² 3p⁴).'
+        note: '<strong>Shorthand Rule</strong>: Go up one row to Period 2 Noble Gas <strong>[Ne] (10 core e⁻)</strong>, then write the remaining <strong>6 valence electrons</strong> on Row 3 (<strong>3s² 3p⁴</strong>).'
       },
       {
         id: 'germanium', label: 'Ge (32e⁻)', name: 'Germanium (Ge — 32 Electrons)',
@@ -993,7 +1044,7 @@
           { sub: '3d (n−1)', boxes: ['↑↓','↑↓','↑↓','↑↓','↑↓'] },
           { sub: '4p', boxes: ['↑', '↑', ''] }
         ],
-        note: 'Remember: In Row 4, the d-block is (n − 1) = 3d! So after [Ar], you fill 4s², then 3d¹⁰, then 4p².'
+        note: 'Remember: In Row 4, the d-block is <strong>(n − 1) = 3d</strong>! So after <strong>[Ar]</strong>, you fill <strong>4s²</strong>, then <strong>3d¹⁰</strong>, then <strong>4p²</strong>.'
       },
       {
         id: 'chromium', label: 'Cr (24e⁻ Exception!)', name: 'Chromium (Cr — 24e⁻ Stability Exception)',
@@ -1003,7 +1054,7 @@
           { sub: '4s¹', boxes: ['↑'] },
           { sub: '3d⁵ (Half-Full!)', boxes: ['↑','↑','↑','↑','↑'] }
         ],
-        note: 'EXAM EXCEPTION: Chromium promotes one electron from 4s into 3d so that both 4s and 3d are HALF-FULL (6 unpaired electrons), which lowers repulsion and increases stability!'
+        note: '<span class="hl-rose">EXAM EXCEPTION:</span> Chromium promotes one electron from 4s into 3d so that both 4s and 3d are <strong>HALF-FULL (4s¹ 3d⁵)</strong>, which lowers repulsion and increases stability!'
       },
       {
         id: 'copper', label: 'Cu (29e⁻ Exception!)', name: 'Copper (Cu — 29e⁻ Stability Exception)',
@@ -1013,7 +1064,7 @@
           { sub: '4s¹', boxes: ['↑'] },
           { sub: '3d¹⁰ (Full!)', boxes: ['↑↓','↑↓','↑↓','↑↓','↑↓'] }
         ],
-        note: 'EXAM EXCEPTION: Copper moves one electron from 4s to 3d to achieve a completely FULL 3d¹⁰ sublevel!'
+        note: '<span class="hl-rose">EXAM EXCEPTION:</span> Copper moves one electron from 4s to 3d to achieve a completely <strong>FULL 3d¹⁰ sublevel (4s¹ 3d¹⁰)</strong>!'
       },
       {
         id: 'zn2', label: 'Zn²⁺ & O²⁻ Ions', name: 'Ion Formation: Zinc Cation (Zn²⁺) & Oxide Anion (O²⁻)',
@@ -1023,7 +1074,7 @@
           { sub: '4s (Lost 2e⁻!)', boxes: [''] },
           { sub: '3d¹⁰ (Kept Full)', boxes: ['↑↓','↑↓','↑↓','↑↓','↑↓'] }
         ],
-        note: 'CATION RULE: Transition metals ALWAYS lose electrons from the highest principal quantum number "n" (4s) BEFORE 3d! Leaving 3d¹⁰ full makes Zn²⁺ very stable.'
+        note: '<span class="hl-blue">CATION RULE:</span> Transition metals ALWAYS lose electrons from the <strong>highest principal quantum number "n" (4s) BEFORE 3d</strong>! Leaving <strong>3d¹⁰ full</strong> makes Zn²⁺ very stable.'
       }
     ];
 
@@ -1126,19 +1177,19 @@
 
     // --- CHAPTER 4: VSEPR 13 SHAPES (MAPPED TO ACTUAL SLIDE IMAGES!) ---
     const vseprData = [
-      { code:'AX₂', name:'Linear', epg:2, epgLabel:'Linear (sp)', angle:'180°', ex:'BeH₂, BeF₂, CO₂, CS₂, HCN', note:'2 bonding pairs, 0 lone pairs. Opposite sides (180°). Works for single (F–Be–F) and double bonds (O=C=O).', img1:'images/deck_1_image3.jpg', img2:'images/deck_1_image18.jpg' },
-      { code:'AX₃', name:'Trigonal Planar', epg:3, epgLabel:'Trigonal Planar (sp²)', angle:'120°', ex:'BF₃, SO₃, NO₃⁻, CO₃²⁻', note:'3 bonding pairs flat in a single plane at 120°.', img1:'images/deck_1_image8.jpg', img2:'images/deck_1_image13.jpg' },
-      { code:'AX₂E', name:'Bent (V-shaped)', epg:3, epgLabel:'Trigonal Planar (sp²)', angle:'< 120°', ex:'SO₂, O₃', note:'2 bonding + 1 lone pair. The lone pair repels strongly and compresses the bond angle below 120°.', img1:'images/deck_1_image9.jpg', img2:'images/deck_1_image27.png' },
-      { code:'AX₄', name:'Tetrahedral', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'109.5°', ex:'CH₄, SiCl₄, SO₄²⁻, ClO₄⁻', note:'4 bonding pairs in a symmetrical 3D tetrahedron (109.5°).', img1:'images/deck_1_image15.jpg', img2:'images/deck_1_image20.jpg' },
-      { code:'AX₃E', name:'Trigonal Pyramidal', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'107°', ex:':NH₃, :PF₃, :ClO₃⁻, H₃O⁺', note:'3 bonding + 1 lone pair at the apex. Lone pair repulsion pushes the 3 bonds down to 107°.', img1:'images/deck_1_image19.jpg', img2:'images/deck_1_image6.png' },
-      { code:'AX₂E₂', name:'Bent (V-shaped)', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'104.5°', ex:'H₂O, :OF₂:, :SCl₂:', note:'2 bonding + 2 lone pairs. Strong LP–LP and LP–BP repulsion shrinks the bond angle to 104.5°.', img1:'images/deck_1_image21.jpg', img2:'images/deck_1_image17.png' },
-      { code:'AX₅', name:'Trigonal Bipyramidal', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'120° / 90°', ex:'PCl₅, PF₅, AsF₅, SOF₄', note:'5 bonding pairs: 3 equatorial in the trigonal plane (120°) + 2 axial top/bottom (90°).', img1:'images/deck_1_image24.jpg', img2:'images/deck_1_image23.jpg' },
-      { code:'AX₄E', name:'Seesaw', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'103° / 179°', ex:':SF₄, :XeO₂F₂, :IF₄⁺', note:'1 lone pair sits in the equatorial plane (most room), reducing SF₄ bond angles from 120° → 103° and 180° → 179°.', img1:'images/deck_1_image32.jpg', img2:'images/deck_1_image23.jpg' },
-      { code:'AX₃E₂', name:'T-Shaped', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'< 90° (86°)', ex:'::ClF₃, ::BrF₃', note:'2 lone pairs sit in the equatorial plane; axial Br–F bonds are pushed back slightly to 86°.', img1:'images/deck_1_image34.jpg', img2:'images/deck_2_image7.png' },
-      { code:'AX₂E₃', name:'Linear (5-Group)', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'180°', ex:':::XeF₂, :::I₃⁻, :::IF₂⁻', note:'All 3 lone pairs sit in the equatorial triangle (120° apart), leaving the 2 axial atoms in a straight 180° line!', img1:'images/deck_1_image28.jpg', img2:'images/deck_2_image11.png' },
-      { code:'AX₆', name:'Octahedral', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'90°', ex:'SF₆, IOF₅', note:'6 bonding pairs arranged symmetrically at 90° angles around the central atom.', img1:'images/deck_1_image35.jpg', img2:'images/deck_1_image29.jpg' },
-      { code:'AX₅E', name:'Square Pyramidal', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'< 90°', ex:':BrF₅, :TeF₅⁻, :XeOF₄', note:'5 bonding + 1 lone pair at the bottom axial position.', img1:'images/deck_1_image38.jpg', img2:'images/deck_1_image29.jpg' },
-      { code:'AX₄E₂', name:'Square Planar', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'90°', ex:'::XeF₄, ::ICl₄⁻', note:'2 lone pairs sit directly opposite each other (180° top & bottom), leaving 4 bonds in a flat square plane.', img1:'images/deck_1_image33.jpg', img2:'images/deck_1_image29.jpg' }
+      { code:'AX₂', name:'Linear', epg:2, epgLabel:'Linear (sp)', angle:'180°', ex:'BeH₂, BeF₂, CO₂, CS₂, HCN', note:'<strong>2 bonding pairs, 0 lone pairs</strong>. Opposite sides (<strong>180°</strong>). Works for single (F–Be–F) and double bonds (O=C=O).', img1:'images/deck_1_image3.jpg', img2:'images/deck_1_image18.jpg' },
+      { code:'AX₃', name:'Trigonal Planar', epg:3, epgLabel:'Trigonal Planar (sp²)', angle:'120°', ex:'BF₃, SO₃, NO₃⁻, CO₃²⁻', note:'<strong>3 bonding pairs</strong> flat in a single plane at <strong>120°</strong>.', img1:'images/deck_1_image8.jpg', img2:'images/deck_1_image13.jpg' },
+      { code:'AX₂E', name:'Bent (V-shaped)', epg:3, epgLabel:'Trigonal Planar (sp²)', angle:'< 120°', ex:'SO₂, O₃', note:'<strong>2 bonding + 1 lone pair</strong>. The lone pair repels strongly and compresses the bond angle to <strong>&lt; 120°</strong>.', img1:'images/deck_1_image9.jpg', img2:'images/deck_1_image27.png' },
+      { code:'AX₄', name:'Tetrahedral', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'109.5°', ex:'CH₄, SiCl₄, SO₄²⁻, ClO₄⁻', note:'<strong>4 bonding pairs</strong> in a symmetrical 3D tetrahedron (<strong>109.5°</strong>).', img1:'images/deck_1_image15.jpg', img2:'images/deck_1_image20.jpg' },
+      { code:'AX₃E', name:'Trigonal Pyramidal', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'107°', ex:':NH₃, :PF₃, :ClO₃⁻, H₃O⁺', note:'<strong>3 bonding + 1 lone pair</strong> at the apex. Lone pair repulsion pushes the 3 bonds down to <strong>107°</strong>.', img1:'images/deck_1_image19.jpg', img2:'images/deck_1_image6.png' },
+      { code:'AX₂E₂', name:'Bent (V-shaped)', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'104.5°', ex:'H₂O, :OF₂:, :SCl₂:', note:'<strong>2 bonding + 2 lone pairs</strong>. Strong LP–LP and LP–BP repulsion shrinks the bond angle to <strong>104.5°</strong>.', img1:'images/deck_1_image21.jpg', img2:'images/deck_1_image17.png' },
+      { code:'AX₅', name:'Trigonal Bipyramidal', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'120° / 90°', ex:'PCl₅, PF₅, AsF₅, SOF₄', note:'<strong>5 bonding pairs</strong>: 3 equatorial in the trigonal plane (<strong>120°</strong>) + 2 axial top/bottom (<strong>90°</strong>).', img1:'images/deck_1_image24.jpg', img2:'images/deck_1_image23.jpg' },
+      { code:'AX₄E', name:'Seesaw', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'103° / 179°', ex:':SF₄, :XeO₂F₂, :IF₄⁺', note:'<strong>1 lone pair sits in the equatorial plane</strong> (most room), reducing SF₄ bond angles from 120° → <strong>103°</strong> and 180° → <strong>179°</strong>.', img1:'images/deck_1_image32.jpg', img2:'images/deck_1_image23.jpg' },
+      { code:'AX₃E₂', name:'T-Shaped', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'< 90° (86°)', ex:'::ClF₃, ::BrF₃', note:'<strong>2 lone pairs sit in the equatorial plane</strong>; axial Br–F bonds are pushed back slightly to <strong>86°</strong>.', img1:'images/deck_1_image34.jpg', img2:'images/deck_2_image7.png' },
+      { code:'AX₂E₃', name:'Linear (5-Group)', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'180°', ex:':::XeF₂, :::I₃⁻, :::IF₂⁻', note:'<strong>All 3 lone pairs sit in the equatorial triangle</strong> (120° apart), leaving the 2 axial atoms in a straight <strong>180° line</strong>!', img1:'images/deck_1_image28.jpg', img2:'images/deck_2_image11.png' },
+      { code:'AX₆', name:'Octahedral', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'90°', ex:'SF₆, IOF₅', note:'<strong>6 bonding pairs</strong> arranged symmetrically at <strong>90° angles</strong> around the central atom.', img1:'images/deck_1_image35.jpg', img2:'images/deck_1_image29.jpg' },
+      { code:'AX₅E', name:'Square Pyramidal', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'< 90°', ex:':BrF₅, :TeF₅⁻, :XeOF₄', note:'<strong>5 bonding + 1 lone pair</strong> at the bottom axial position (<strong>&lt; 90°</strong>).', img1:'images/deck_1_image38.jpg', img2:'images/deck_1_image29.jpg' },
+      { code:'AX₄E₂', name:'Square Planar', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'90°', ex:'::XeF₄, ::ICl₄⁻', note:'<strong>2 lone pairs sit directly opposite each other (180°)</strong>, leaving 4 bonds in a flat <strong>90° square plane</strong>.', img1:'images/deck_1_image33.jpg', img2:'images/deck_1_image29.jpg' }
     ];
 
     let curEPG = 'all';
@@ -1174,7 +1225,7 @@
       document.getElementById('v-angle').textContent = s.angle;
       document.getElementById('v-epg').textContent = s.epgLabel;
       document.getElementById('v-ex').textContent = s.ex;
-      document.getElementById('v-note').textContent = s.note;
+      document.getElementById('v-note').innerHTML = s.note;
 
       document.getElementById('v-svg').innerHTML = `
         <div class="flex flex-col items-center">
