@@ -1199,6 +1199,8 @@
         </div>
     
 
+        </div> <!-- End #view-notes -->
+
         <!-- ==========================================
              MODE B: FLASHCARDS
              ========================================== -->
@@ -1241,6 +1243,7 @@
   </div>
 
   <script>
+
 
 
     // --- THEME TOGGLE ---
@@ -1584,6 +1587,12 @@
     // ==========================================
     // BIOLOGY DATASETS & CONTROLLERS (SBI4U)
     // ==========================================
+
+    // Global state variables for Biology & Subject switching
+    let currentSubject = 'chem';
+    let currentBioTopic = 'biomol';
+    const bioTopics = ['biomol', 'enzymes', 'cells', 'mosaic', 'cftr', 'passive', 'active'];
+    const bioPicked = {};
 
     const bioFlashcards = [
     {
@@ -2433,7 +2442,9 @@
       box.innerHTML = items.map((it) => `
         <button onclick="${pickFnName}('${it.id}')" id="pill-${containerId}-${it.id}" class="pill-choice ${it.id===defaultId ? 'active' : ''} px-4 py-2 text-sm font-semibold cursor-pointer">${it.label}</button>
       `).join('');
-      window[pickFnName](defaultId);
+      if (window[pickFnName]) {
+        window[pickFnName](defaultId);
+      }
     }
 
     function renderStageContent(stageId, containerId, items, activeId) {
@@ -2494,6 +2505,28 @@
       btn.textContent = isHidden ? '🙈 Hide Answer Key' : '👁️ Reveal Answer Key (A to Q)';
     }
 
+    // Bind to window for HTML event handlers
+    window.pickBiomol = pickBiomol;
+    window.pickEnzyme = pickEnzyme;
+    window.pickCell = pickCell;
+    window.pickMosaic = pickMosaic;
+    window.pickCftr = pickCftr;
+    window.pickPassive = pickPassive;
+    window.pickActive = pickActive;
+    window.toggleCellAnswers = toggleCellAnswers;
+
+    // --- ENHANCED MODE SWITCHER ---
+    const origSetStudyMode = setStudyMode;
+    setStudyMode = function(mode) {
+      origSetStudyMode(mode);
+      if (mode === 'flashcards') {
+        renderFlashcard();
+      } else if (mode === 'quiz') {
+        renderQuiz();
+      }
+    };
+    window.setStudyMode = setStudyMode;
+
     // --- SUBJECT SWITCHER CONTROLLER ---
     function switchSubject(subj) {
       currentSubject = subj;
@@ -2513,22 +2546,31 @@
         courseBadge.textContent = isChem ? 'YRDSB Grade 12 · Structure & Properties' : 'YRDSB Grade 12 · Unit 1 Biochemistry & Transport';
       }
 
-      document.getElementById('sidebar-unit-title').textContent = isChem ? 'Chemistry Chapters' : 'Biology Chapters';
-      document.getElementById('nav-chem-group').classList.toggle('hidden', !isChem);
-      document.getElementById('nav-bio-group').classList.toggle('hidden', isChem);
+      const sbTitle = document.getElementById('sidebar-unit-title');
+      if (sbTitle) {
+        sbTitle.textContent = isChem ? 'Chemistry Chapters' : 'Biology Chapters';
+      }
+      const navChem = document.getElementById('nav-chem-group');
+      if (navChem) navChem.classList.toggle('hidden', !isChem);
+      const navBio = document.getElementById('nav-bio-group');
+      if (navBio) navBio.classList.toggle('hidden', isChem);
 
       const trapChem = document.getElementById('trap-chem');
       const trapBio = document.getElementById('trap-bio');
       if (trapChem) trapChem.classList.toggle('hidden', !isChem);
       if (trapBio) trapBio.classList.toggle('hidden', isChem);
 
-      document.getElementById('notes-chem').classList.toggle('hidden', !isChem);
-      document.getElementById('notes-bio').classList.toggle('hidden', isChem);
+      const notesChem = document.getElementById('notes-chem');
+      if (notesChem) notesChem.classList.toggle('hidden', !isChem);
+      const notesBio = document.getElementById('notes-bio');
+      if (notesBio) notesBio.classList.toggle('hidden', isChem);
 
       const activeDeck = isChem ? flashcards : bioFlashcards;
       const activeQuiz = isChem ? quizData : bioQuizData;
-      document.getElementById('fc-count-pill').textContent = activeDeck.length;
-      document.getElementById('quiz-count-pill').textContent = activeQuiz.length;
+      const fcPill = document.getElementById('fc-count-pill');
+      if (fcPill) fcPill.textContent = activeDeck.length;
+      const qPill = document.getElementById('quiz-count-pill');
+      if (qPill) qPill.textContent = activeQuiz.length;
 
       fcIndex = 0;
       fcFlipped = false;
@@ -2542,6 +2584,7 @@
         initBioPillDecks();
       }
     }
+    window.switchSubject = switchSubject;
 
     // Show Topic override
     showTopic = function(t) {
@@ -2563,40 +2606,66 @@
         });
       }
     };
+    window.showTopic = showTopic;
 
     // Flashcard renderers
     renderFlashcard = function() {
       const deck = currentSubject === 'chem' ? flashcards : bioFlashcards;
+      if (!deck || deck.length === 0) return;
       if (fcIndex >= deck.length) fcIndex = 0;
+      if (fcIndex < 0) fcIndex = deck.length - 1;
       const card = deck[fcIndex];
       const subjTag = currentSubject === 'chem' ? 'CHEM' : 'BIO';
-      document.getElementById('fc-badge').textContent = fcFlipped 
-        ? `${subjTag} ANSWER ${fcIndex + 1} / ${deck.length}` 
-        : `${subjTag} QUESTION ${fcIndex + 1} / ${deck.length}`;
-      document.getElementById('fc-text').textContent = fcFlipped ? card.a : card.q;
-      document.getElementById('fc-counter').textContent = `${fcIndex + 1} / ${deck.length}`;
+      const badgeEl = document.getElementById('fc-badge');
+      const textEl = document.getElementById('fc-text');
+      const counterEl = document.getElementById('fc-counter');
+      if (badgeEl) {
+        badgeEl.textContent = fcFlipped 
+          ? `${subjTag} ANSWER ${fcIndex + 1} / ${deck.length}` 
+          : `${subjTag} QUESTION ${fcIndex + 1} / ${deck.length}`;
+      }
+      if (textEl) {
+        textEl.textContent = fcFlipped ? card.a : card.q;
+      }
+      if (counterEl) {
+        counterEl.textContent = `${fcIndex + 1} / ${deck.length}`;
+      }
     };
+    window.renderFlashcard = renderFlashcard;
+
+    flipCard = function() {
+      fcFlipped = !fcFlipped;
+      renderFlashcard();
+    };
+    window.flipCard = flipCard;
 
     nextCard = function() {
       const deck = currentSubject === 'chem' ? flashcards : bioFlashcards;
+      if (!deck || deck.length === 0) return;
       fcIndex = (fcIndex + 1) % deck.length;
       fcFlipped = false;
       renderFlashcard();
     };
+    window.nextCard = nextCard;
 
     prevCard = function() {
       const deck = currentSubject === 'chem' ? flashcards : bioFlashcards;
+      if (!deck || deck.length === 0) return;
       fcIndex = (fcIndex - 1 + deck.length) % deck.length;
       fcFlipped = false;
       renderFlashcard();
     };
+    window.prevCard = prevCard;
 
     // Quiz renderers
     renderQuiz = function() {
       const qList = currentSubject === 'chem' ? quizData : bioQuizData;
       const userAnswers = currentSubject === 'chem' ? picked : bioPicked;
 
-      document.getElementById('quiz-list').innerHTML = qList.map(item => {
+      const quizListEl = document.getElementById('quiz-list');
+      if (!quizListEl || !qList) return;
+
+      quizListEl.innerHTML = qList.map(item => {
         const u = userAnswers[item.id];
         const done = u !== undefined;
         return `
@@ -2620,23 +2689,34 @@
         `;
       }).join('');
 
-      const right = Object.keys(userAnswers).filter(k => userAnswers[k] === qList.find(x => x.id === Number(k)).ans).length;
-      document.getElementById('score-pill').textContent = `Quiz Score: ${right} / ${qList.length}`;
+      const right = Object.keys(userAnswers).filter(k => {
+        const item = qList.find(x => x.id === Number(k));
+        return item && userAnswers[k] === item.ans;
+      }).length;
+
+      const scoreEl = document.getElementById('score-pill');
+      if (scoreEl) {
+        scoreEl.textContent = `Quiz Score: ${right} / ${qList.length}`;
+      }
     };
+    window.renderQuiz = renderQuiz;
 
     answerQ = function(id, idx) {
       const userAnswers = currentSubject === 'chem' ? picked : bioPicked;
       userAnswers[id] = idx;
       renderQuiz();
     };
+    window.answerQ = answerQ;
 
     resetQuiz = function() {
       const userAnswers = currentSubject === 'chem' ? picked : bioPicked;
       Object.keys(userAnswers).forEach(k => delete userAnswers[k]);
       renderQuiz();
     };
+    window.resetQuiz = resetQuiz;
 
-    // Chemistry initializers
+    // Initialization
+    currentSubject = 'chem';
     initEconfig();
     initLewis();
     renderVseprButtons();
