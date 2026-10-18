@@ -44,13 +44,25 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-      background-color: var(--mac-window);
+      background: radial-gradient(circle at 20% 10%, #f5f0e6 0%, #e6decb 60%, #dcd2be 100%);
+      background-color: var(--mac-bg);
       color: var(--mac-text);
       margin: 0;
       padding: 0;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    html.dark body {
+      background: radial-gradient(circle at 20% 10%, #1d1d22 0%, #0f0f12 75%);
+    }
+
+    .mac-window {
+      background: var(--mac-window);
+      border: 1px solid var(--mac-border-strong);
+      border-radius: 24px;
+      box-shadow: 0 32px 90px -15px rgba(45, 34, 18, 0.24), 0 4px 24px rgba(45, 34, 18, 0.08);
     }
 
     .mac-card {
@@ -126,55 +138,58 @@
       font-size: 16px;
     }
 
-    ::-webkit-scrollbar { width: 9px; height: 9px; }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: rgba(120, 105, 85, 0.25); border-radius: 999px; }
     ::-webkit-scrollbar-thumb:hover { background: rgba(120, 105, 85, 0.42); }
   </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen p-3 sm:p-5 lg:p-7 flex items-center justify-center">
 
-  <!-- Full-Width macOS Sticky Title Bar -->
-  <header class="sticky top-0 z-40 px-6 lg:px-10 py-4 border-b border-[var(--mac-border)] flex flex-wrap items-center justify-between gap-4 select-none" style="background: var(--mac-titlebar);">
-    <!-- Left: macOS Traffic Lights & Title -->
-    <div class="flex items-center gap-4">
-      <div class="flex items-center gap-2">
-        <span class="w-3.5 h-3.5 rounded-full bg-[#ff5f57] border border-black/15 inline-block"></span>
-        <span class="w-3.5 h-3.5 rounded-full bg-[#febc2e] border border-black/15 inline-block"></span>
-        <span class="w-3.5 h-3.5 rounded-full bg-[#28c840] border border-black/15 inline-block"></span>
+  <!-- Wide Floating macOS App Window (Rounded Edges + Breathing Room Around It) -->
+  <div class="mac-window w-full max-w-[1600px] overflow-hidden flex flex-col h-[93vh] min-h-[700px]">
+
+    <!-- macOS Window Title Bar -->
+    <header class="px-6 lg:px-8 py-4 border-b border-[var(--mac-border)] flex flex-wrap items-center justify-between gap-4 select-none shrink-0" style="background: var(--mac-titlebar);">
+      <!-- Left: macOS Traffic Lights & Title -->
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2">
+          <span class="w-3.5 h-3.5 rounded-full bg-[#ff5f57] border border-black/15 inline-block"></span>
+          <span class="w-3.5 h-3.5 rounded-full bg-[#febc2e] border border-black/15 inline-block"></span>
+          <span class="w-3.5 h-3.5 rounded-full bg-[#28c840] border border-black/15 inline-block"></span>
+        </div>
+        <div class="h-5 w-[1px] bg-[var(--mac-border-strong)] hidden sm:block"></div>
+        <div class="flex items-center gap-3">
+          <span class="text-base sm:text-lg font-bold tracking-tight">SCH4U Chemistry Study Guide</span>
+          <span class="text-xs px-3 py-1 rounded-full font-semibold hidden md:inline-block" style="background: var(--mac-accent-soft); color: var(--mac-accent);">
+            YRDSB Grade 12 · Ch. 3 &amp; Ch. 4
+          </span>
+        </div>
       </div>
-      <div class="h-5 w-[1px] bg-[var(--mac-border-strong)] hidden sm:block"></div>
+
+      <!-- Center: Mode Switcher -->
+      <div class="flex items-center p-1.5 rounded-2xl border border-[var(--mac-border)]" style="background: var(--mac-subtle);">
+        <button onclick="setStudyMode('notes')" id="mode-notes" class="seg-btn active px-5 py-1.5 text-sm cursor-pointer">📖 Study Notes</button>
+        <button onclick="setStudyMode('flashcards')" id="mode-flashcards" class="seg-btn px-5 py-1.5 text-sm cursor-pointer">🗂️ Flashcards (16)</button>
+        <button onclick="setStudyMode('quiz')" id="mode-quiz" class="seg-btn px-5 py-1.5 text-sm cursor-pointer">✅ Practice Quiz (10)</button>
+      </div>
+
+      <!-- Right: Score & Theme Toggle -->
       <div class="flex items-center gap-3">
-        <span class="text-base sm:text-lg font-bold tracking-tight">SCH4U Chemistry Study Guide</span>
-        <span class="text-xs px-3 py-1 rounded-full font-semibold hidden md:inline-block" style="background: var(--mac-accent-soft); color: var(--mac-accent);">
-          YRDSB Grade 12 · Ch. 3 &amp; Ch. 4
+        <span id="score-pill" class="text-sm font-semibold px-4 py-1.5 rounded-full border border-[var(--mac-border)] hidden sm:inline-block" style="background: var(--mac-card); color: var(--mac-muted);">
+          Quiz Score: 0 / 10
         </span>
+        <button onclick="toggleTheme()" class="px-4 py-1.5 rounded-xl border border-[var(--mac-border)] text-sm font-semibold cursor-pointer hover:opacity-85 transition-opacity shadow-sm" style="background: var(--mac-card);">
+          <span id="theme-label">🌙 Dark Mode</span>
+        </button>
       </div>
-    </div>
+    </header>
 
-    <!-- Center: Mode Switcher -->
-    <div class="flex items-center p-1.5 rounded-2xl border border-[var(--mac-border)]" style="background: var(--mac-subtle);">
-      <button onclick="setStudyMode('notes')" id="mode-notes" class="seg-btn active px-5 py-2 text-sm cursor-pointer">📖 Study Notes</button>
-      <button onclick="setStudyMode('flashcards')" id="mode-flashcards" class="seg-btn px-5 py-2 text-sm cursor-pointer">🗂️ Flashcards (16)</button>
-      <button onclick="setStudyMode('quiz')" id="mode-quiz" class="seg-btn px-5 py-2 text-sm cursor-pointer">✅ Practice Quiz (10)</button>
-    </div>
+    <!-- Inside Window Workspace: Sidebar + Scrollable Study Area -->
+    <div class="flex-1 flex flex-col lg:flex-row overflow-hidden">
 
-    <!-- Right: Score & Theme Toggle -->
-    <div class="flex items-center gap-3">
-      <span id="score-pill" class="text-sm font-semibold px-4 py-1.5 rounded-full border border-[var(--mac-border)] hidden sm:inline-block" style="background: var(--mac-card); color: var(--mac-muted);">
-        Quiz Score: 0 / 10
-      </span>
-      <button onclick="toggleTheme()" class="px-4 py-2 rounded-xl border border-[var(--mac-border)] text-sm font-semibold cursor-pointer hover:opacity-85 transition-opacity shadow-sm" style="background: var(--mac-card);">
-        <span id="theme-label">🌙 Dark Mode</span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Full-Viewport Workspace: Wide Sidebar + Expansive Content Canvas -->
-  <div class="flex-1 flex flex-col lg:flex-row w-full">
-
-    <!-- Left Sidebar (Spacious 290px width on Desktop) -->
-    <aside id="sidebar-nav" class="w-full lg:w-72 xl:w-80 border-b lg:border-b-0 lg:border-r border-[var(--mac-border)] p-5 lg:p-6 flex flex-col justify-between shrink-0" style="background: var(--mac-sidebar);">
+      <!-- Left Sidebar -->
+      <aside id="sidebar-nav" class="w-full lg:w-72 border-b lg:border-b-0 lg:border-r border-[var(--mac-border)] p-5 flex flex-col justify-between shrink-0 overflow-y-auto" style="background: var(--mac-sidebar);">
       <div class="space-y-2">
         <div class="px-3.5 py-1.5 text-xs font-bold uppercase tracking-widest" style="color: var(--mac-muted);">Unit Chapters</div>
 
@@ -218,8 +233,8 @@
       </div>
     </aside>
 
-    <!-- Main Expansive Content Area (Up to 1500px wide with generous breathing room) -->
-    <main class="flex-1 p-6 sm:p-10 lg:p-12 xl:p-14 overflow-x-hidden">
+    <!-- Main Expansive Content Area (Scrollable inside macOS window) -->
+    <main class="flex-1 p-6 sm:p-10 lg:p-12 overflow-y-auto overflow-x-hidden">
 
       <!-- ==========================================
            MODE A: STUDY NOTES (WIDE & SPACIOUS)
@@ -725,7 +740,8 @@
         <div id="quiz-list" class="grid grid-cols-1 xl:grid-cols-2 gap-6"></div>
       </div>
 
-    </main>
+      </main>
+    </div>
   </div>
 
   <script>
