@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCH4U Study Companion — YRDSB Grade 12 Chemistry</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    :root {
+      /* Warm Cream macOS Light Theme (Default) */
+      --mac-bg: #ebe4d7;
+      --mac-window: #faf7f0;
+      --mac-titlebar: #f2ece0;
+      --mac-sidebar: #f0e9dc;
+      --mac-card: #fffefb;
+      --mac-subtle: #f3ede1;
+      --mac-pill: #e6decb;
+      --mac-border: rgba(82, 67, 47, 0.12);
+      --mac-border-strong: rgba(82, 67, 47, 0.2);
+      --mac-text: #1e1a15;
+      --mac-muted: #5a5145;
+      --mac-accent: #0066cc;
+      --mac-accent-soft: rgba(0, 102, 204, 0.11);
+      --mac-card-shadow: 0 4px 20px -4px rgba(60, 45, 25, 0.07), 0 1px 3px rgba(60, 45, 25, 0.04);
+    }
+
+    html.dark {
+      /* Warm Espresso macOS Dark Theme */
+      --mac-bg: #111113;
+      --mac-window: #18181c;
+      --mac-titlebar: #141418;
+      --mac-sidebar: #151519;
+      --mac-card: #222228;
+      --mac-subtle: #1a1a1f;
+      --mac-pill: #2c2c34;
+      --mac-border: rgba(255, 248, 235, 0.1);
+      --mac-border-strong: rgba(255, 248, 235, 0.18);
+      --mac-text: #f5f2eb;
+      --mac-muted: #b0aaa0;
+      --mac-accent: #0a84ff;
+      --mac-accent-soft: rgba(10, 132, 255, 0.18);
+      --mac-card-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+      background-color: var(--mac-window);
+      color: var(--mac-text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .mac-card {
+      background: var(--mac-card);
+      border: 1px solid var(--mac-border);
+      border-radius: 20px;
+      box-shadow: var(--mac-card-shadow);
+    }
+
+    .mac-subtle {
+      background: var(--mac-subtle);
+      border: 1px solid var(--mac-border);
+      border-radius: 16px;
+    }
+
+    .nav-item {
+      color: var(--mac-muted);
+      border-radius: 12px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    .nav-item:hover {
+      background: var(--mac-pill);
+      color: var(--mac-text);
+    }
+    .nav-item.active {
+      background: var(--mac-accent);
+      color: #ffffff;
+      font-weight: 600;
+      box-shadow: 0 3px 12px rgba(0, 102, 204, 0.25);
+    }
+
+    .seg-btn {
+      color: var(--mac-muted);
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+    .seg-btn:hover { color: var(--mac-text); }
+    .seg-btn.active {
+      background: var(--mac-card);
+      color: var(--mac-text);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .pill-choice {
+      background: var(--mac-subtle);
+      color: var(--mac-text);
+      border: 1px solid var(--mac-border);
+      border-radius: 12px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    .pill-choice:hover { background: var(--mac-pill); }
+    .pill-choice.active {
+      background: var(--mac-accent);
+      color: #ffffff;
+      border-color: var(--mac-accent);
+      box-shadow: 0 2px 10px rgba(0, 102, 204, 0.25);
+    }
+
+    .orb-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border: 1.5px solid var(--mac-border-strong);
+      border-radius: 9px;
+      background: var(--mac-card);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    ::-webkit-scrollbar { width: 9px; height: 9px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(120, 105, 85, 0.25); border-radius: 999px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(120, 105, 85, 0.42); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Full-Width macOS Sticky Title Bar -->
+  <header class="sticky top-0 z-40 px-6 lg:px-10 py-4 border-b border-[var(--mac-border)] flex flex-wrap items-center justify-between gap-4 select-none" style="background: var(--mac-titlebar);">
+    <!-- Left: macOS Traffic Lights & Title -->
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <span class="w-3.5 h-3.5 rounded-full bg-[#ff5f57] border border-black/15 inline-block"></span>
+        <span class="w-3.5 h-3.5 rounded-full bg-[#febc2e] border border-black/15 inline-block"></span>
+        <span class="w-3.5 h-3.5 rounded-full bg-[#28c840] border border-black/15 inline-block"></span>
+      </div>
+      <div class="h-5 w-[1px] bg-[var(--mac-border-strong)] hidden sm:block"></div>
+      <div class="flex items-center gap-3">
+        <span class="text-base sm:text-lg font-bold tracking-tight">SCH4U Chemistry Study Guide</span>
+        <span class="text-xs px-3 py-1 rounded-full font-semibold hidden md:inline-block" style="background: var(--mac-accent-soft); color: var(--mac-accent);">
+          YRDSB Grade 12 · Ch. 3 &amp; Ch. 4
+        </span>
+      </div>
+    </div>
+
+    <!-- Center: Mode Switcher -->
+    <div class="flex items-center p-1.5 rounded-2xl border border-[var(--mac-border)]" style="background: var(--mac-subtle);">
+      <button onclick="setStudyMode('notes')" id="mode-notes" class="seg-btn active px-5 py-2 text-sm cursor-pointer">📖 Study Notes</button>
+      <button onclick="setStudyMode('flashcards')" id="mode-flashcards" class="seg-btn px-5 py-2 text-sm cursor-pointer">🗂️ Flashcards (16)</button>
+      <button onclick="setStudyMode('quiz')" id="mode-quiz" class="seg-btn px-5 py-2 text-sm cursor-pointer">✅ Practice Quiz (10)</button>
+    </div>
+
+    <!-- Right: Score & Theme Toggle -->
+    <div class="flex items-center gap-3">
+      <span id="score-pill" class="text-sm font-semibold px-4 py-1.5 rounded-full border border-[var(--mac-border)] hidden sm:inline-block" style="background: var(--mac-card); color: var(--mac-muted);">
+        Quiz Score: 0 / 10
+      </span>
+      <button onclick="toggleTheme()" class="px-4 py-2 rounded-xl border border-[var(--mac-border)] text-sm font-semibold cursor-pointer hover:opacity-85 transition-opacity shadow-sm" style="background: var(--mac-card);">
+        <span id="theme-label">🌙 Dark Mode</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-Viewport Workspace: Wide Sidebar + Expansive Content Canvas -->
+  <div class="flex-1 flex flex-col lg:flex-row w-full">
+
+    <!-- Left Sidebar (Spacious 290px width on Desktop) -->
+    <aside id="sidebar-nav" class="w-full lg:w-72 xl:w-80 border-b lg:border-b-0 lg:border-r border-[var(--mac-border)] p-5 lg:p-6 flex flex-col justify-between shrink-0" style="background: var(--mac-sidebar);">
+      <div class="space-y-2">
+        <div class="px-3.5 py-1.5 text-xs font-bold uppercase tracking-widest" style="color: var(--mac-muted);">Unit Chapters</div>
+
+        <button onclick="showTopic('econfig')" id="nav-econfig" class="nav-item active w-full text-left px-4 py-3.5 text-base flex items-center justify-between cursor-pointer">
+          <span>1. Electron Config</span>
+          <span class="opacity-75 font-mono text-xs">Ch. 3</span>
+        </button>
+
+        <button onclick="showTopic('lewis')" id="nav-lewis" class="nav-item w-full text-left px-4 py-3.5 text-base flex items-center justify-between cursor-pointer">
+          <span>2. Lewis &amp; Resonance</span>
+          <span class="opacity-75 font-mono text-xs">4.1</span>
+        </button>
+
+        <button onclick="showTopic('hybrid')" id="nav-hybrid" class="nav-item w-full text-left px-4 py-3.5 text-base flex items-center justify-between cursor-pointer">
+          <span>3. Hybridization (σ/π)</span>
+          <span class="opacity-75 font-mono text-xs">4.2</span>
+        </button>
+
+        <button onclick="showTopic('vsepr')" id="nav-vsepr" class="nav-item w-full text-left px-4 py-3.5 text-base flex items-center justify-between cursor-pointer">
+          <span>4. VSEPR (13 Shapes)</span>
+          <span class="opacity-75 font-mono text-xs">4.3</span>
+        </button>
+
+        <button onclick="showTopic('imf')" id="nav-imf" class="nav-item w-full text-left px-4 py-3.5 text-base flex items-center justify-between cursor-pointer">
+          <span>5. Intermolecular Forces</span>
+          <span class="opacity-75 font-mono text-xs">IMFs</span>
+        </button>
+
+        <button onclick="showTopic('solids')" id="nav-solids" class="nav-item w-full text-left px-4 py-3.5 text-base flex items-center justify-between cursor-pointer">
+          <span>6. Crystalline Solids</span>
+          <span class="opacity-75 font-mono text-xs">Solids</span>
+        </button>
+      </div>
+
+      <!-- Bottom Quick Exam Tip -->
+      <div class="mac-card p-5 text-sm space-y-2 mt-6 hidden lg:block">
+        <div class="font-bold text-base" style="color: var(--mac-accent);">💡 #1 Exam Trap</div>
+        <p class="leading-relaxed" style="color: var(--mac-muted);">
+          <strong>Symmetrical</strong> molecules (<code class="font-mono">CO₂, CF₄, CCl₄, XeF₄</code>) are <strong>always Nonpolar</strong> (London Dispersion forces only), even if their individual bonds have a big ΔEN!
+        </p>
+      </div>
+    </aside>
+
+    <!-- Main Expansive Content Area (Up to 1500px wide with generous breathing room) -->
+    <main class="flex-1 p-6 sm:p-10 lg:p-12 xl:p-14 overflow-x-hidden">
+
+      <!-- ==========================================
+           MODE A: STUDY NOTES (WIDE & SPACIOUS)
+           ========================================== -->
+      <div id="view-notes" class="max-w-[1440px] mx-auto space-y-10">
+
+        <!-- ==========================================
+             CHAPTER 1: ELECTRON CONFIGURATION (CH. 3)
+             ========================================== -->
+        <section id="topic-econfig" class="space-y-8">
+          <div class="border-b border-[var(--mac-border)] pb-6">
+            <span class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">Chapter 3 · Electrons in Atoms</span>
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">1. Electron Configuration, Ions &amp; Magnetism</h1>
+            <p class="text-lg mt-2" style="color: var(--mac-muted);">How electrons fill orbitals, how to read the periodic table blocks, the Cr/Cu exceptions, and magnetism.</p>
+          </div>
+
+          <!-- Part A: The 3 Golden Filling Rules -->
+          <div class="space-y-4">
+            <h2 class="text-xl font-bold">A. The 3 Orbital Filling Rules</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="mac-card p-7 space-y-3">
+                <div class="text-xs font-bold uppercase tracking-wider" style="color: var(--mac-accent);">Rule 1 · Pauli Exclusion Principle</div>
+                <div class="font-bold text-xl">Max 2 e⁻ per Orbital</div>
+                <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                  Each orbital box can hold at most <strong>TWO electrons</strong>, and they must have <strong>opposite spins</strong> (<code class="font-mono font-bold">↑↓</code>).
+                </p>
+              </div>
+
+              <div class="mac-card p-7 space-y-3">
+                <div class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Rule 2 · Aufbau Principle</div>
+                <div class="font-bold text-xl">“Lazy Tenant Rule”</div>
+                <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                  Electrons fill the <strong>lowest energy orbitals first</strong> (<code class="font-mono">1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p</code>). Remember: <strong>4s is lower energy than 3d, so 4s fills first!</strong>
+                </p>
+              </div>
+
+              <div class="mac-card p-7 space-y-3">
+                <div class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Rule 3 · Hund’s Rule</div>
+                <div class="font-bold text-xl">“Empty Bus Seat Rule”</div>
+                <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                  Within a sublevel (like <em>2p</em> or <em>3d</em>), place <strong>one electron in each orbital box first</strong> (<code class="font-mono font-bold">↑ ↑ ↑</code>) before pairing any of them up!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Part B: Interactive Slide Examples -->
+          <div class="mac-card p-8 space-y-6">
+            <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-4 border-b border-[var(--mac-border)] pb-5">
+              <div>
+                <h2 class="text-xl font-bold">B. Interactive Orbital Diagram &amp; Notation Explorer</h2>
+                <p class="text-base mt-1" style="color: var(--mac-muted);">Click any element or ion from your slides to inspect its Longhand, Shorthand, and Orbital Box diagram:</p>
+              </div>
+              <div class="flex flex-wrap gap-2.5" id="econfig-pills"></div>
+            </div>
+
+            <div class="mac-subtle p-7 space-y-5" id="econfig-stage">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Part C & D Side-by-Side Wide Layout -->
+          <div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
+            <!-- Periodic Table Blocks -->
+            <div class="xl:col-span-6 mac-card p-8 space-y-5">
+              <h2 class="text-xl font-bold">C. Periodic Table Blocks (<code class="font-mono">s, p, d, f</code>)</h2>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                Read the Periodic Table left-to-right like a book. Each block tells you the sublevel and how many electrons it holds:
+              </p>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 rounded-2xl bg-amber-500/15 border border-amber-500/30">
+                  <div class="font-mono font-bold text-lg text-amber-700 dark:text-amber-300">s-block (2 cols)</div>
+                  <div class="text-sm mt-1" style="color: var(--mac-muted);">Period # = <strong>n</strong><br/>Holds up to <strong>2 e⁻</strong> (1 orbital box)</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-pink-500/15 border border-pink-500/30">
+                  <div class="font-mono font-bold text-lg text-pink-700 dark:text-pink-300">p-block (6 cols)</div>
+                  <div class="text-sm mt-1" style="color: var(--mac-muted);">Period # = <strong>n</strong><br/>Holds up to <strong>6 e⁻</strong> (3 orbital boxes)</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-emerald-500/15 border border-emerald-500/30">
+                  <div class="font-mono font-bold text-lg text-emerald-700 dark:text-emerald-300">d-block (10 cols)</div>
+                  <div class="text-sm mt-1" style="color: var(--mac-muted);">Subtract 1: <strong>(n − 1)d</strong>!<br/>Row 4 = <strong>3d</strong> (Holds 10 e⁻ / 5 boxes)</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-sky-500/15 border border-sky-500/30">
+                  <div class="font-mono font-bold text-lg text-sky-700 dark:text-sky-300">f-block (14 cols)</div>
+                  <div class="text-sm mt-1" style="color: var(--mac-muted);">Subtract 2: <strong>(n − 2)f</strong>!<br/>Row 6 = <strong>4f</strong> (Holds 14 e⁻ / 7 boxes)</div>
+                </div>
+              </div>
+
+              <div class="mac-subtle p-5 text-base space-y-1.5">
+                <div class="font-bold">How to Write Shorthand Configuration:</div>
+                <p style="color: var(--mac-muted);">
+                  1. <strong>Core e⁻:</strong> Go up one row to the Noble Gas in <code class="font-mono">[ ]</code>.<br/>
+                  2. <strong>Valence / Outer e⁻:</strong> Fill across the element's row (e.g., Germanium = <code class="font-mono font-bold">[Ar] 4s² 3d¹⁰ 4p²</code>).
+                </p>
+              </div>
+            </div>
+
+            <!-- Exceptions, Ions & Magnetism -->
+            <div class="xl:col-span-6 space-y-6">
+              <div class="mac-card p-7 space-y-3">
+                <span class="text-xs font-bold uppercase px-3 py-1 rounded-lg bg-rose-500/15 text-rose-700 dark:text-rose-300">Must Memorize for Exam!</span>
+                <h3 class="text-xl font-bold">D1. Stability Exceptions: Chromium (Cr) &amp; Copper (Cu)</h3>
+                <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                  <strong>Stability Rank:</strong> Full energy level &gt; Full sublevel &gt; <strong>Half-full sublevel</strong>.<br/>
+                  • <strong>Chromium (Cr, 24e⁻):</strong> Expected <code class="font-mono line-through opacity-70">[Ar] 4s² 3d⁴</code> → Actual: <code class="font-mono font-bold text-emerald-600 dark:text-emerald-400">[Ar] 4s¹ 3d⁵</code> (Gains stability with a <strong>half-full d-sublevel</strong>).<br/>
+                  • <strong>Copper (Cu, 29e⁻):</strong> Expected <code class="font-mono line-through opacity-70">[Ar] 4s² 3d⁹</code> → Actual: <code class="font-mono font-bold text-emerald-600 dark:text-emerald-400">[Ar] 4s¹ 3d¹⁰</code> (Gains stability with a <strong>full d-sublevel</strong>).
+                </p>
+              </div>
+
+              <div class="mac-card p-7 space-y-3">
+                <span class="text-xs font-bold uppercase px-3 py-1 rounded-lg bg-purple-500/15 text-purple-700 dark:text-purple-300">Ions &amp; Magnetism</span>
+                <h3 class="text-xl font-bold">D2. Ion Configurations &amp; Magnetism</h3>
+                <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                  • <strong>Anions (−):</strong> Gain electrons to become <em>isoelectronic</em> with a Noble Gas (<code class="font-mono">O²⁻ = 10e⁻ = [He] 2s² 2p⁶ ≡ [Ne]</code>).<br/>
+                  • <strong>Cations (+):</strong> Lose electrons from the <strong>highest “n” shell FIRST</strong>! For <code class="font-mono">Zn ([Ar] 4s² 3d¹⁰)</code>, remove <code class="font-mono">4s²</code> first → <code class="font-mono font-bold">Zn²⁺ = [Ar] 3d¹⁰</code>.<br/>
+                  • <strong>Paramagnetism:</strong> Magnetism of individual atoms caused by <strong>unpaired electrons</strong> (domains do NOT form).<br/>
+                  • <strong>Ferromagnetism:</strong> Strong magnetism where a collection of atoms align in the same direction to form <strong>domains</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             CHAPTER 2: LEWIS & RESONANCE (4.1)
+             ========================================== -->
+        <section id="topic-lewis" class="space-y-8 hidden">
+          <div class="border-b border-[var(--mac-border)] pb-6">
+            <span class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">Chapter 4.1 · Pages 224–230</span>
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">2. Lewis Diagrams &amp; Resonance</h1>
+            <p class="text-lg mt-2" style="color: var(--mac-muted);">Simple rules for valence electrons, octet exceptions, and resonance structures.</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="mac-card p-7 space-y-3">
+              <div class="text-xs font-bold uppercase tracking-wide" style="color: var(--mac-accent);">1. Octet &amp; Charge Rule</div>
+              <div class="font-bold text-xl">8 Valence Electrons</div>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                Atoms share or transfer electrons to reach <strong>8 valence e⁻</strong> (2 in <em>s</em> + 6 in <em>p</em>).<br/><br/>
+                • <strong>Anion (−):</strong> ADD e⁻ to total<br/>
+                • <strong>Cation (+):</strong> SUBTRACT e⁻ from total<br/>
+                • Enclose ions in <code class="font-mono font-bold">[ ]±</code> brackets.
+              </p>
+            </div>
+
+            <div class="mac-card p-7 space-y-3">
+              <div class="text-xs font-bold uppercase tracking-wide text-amber-600 dark:text-amber-400">2. Octet Exceptions</div>
+              <div class="font-bold text-xl">Underfilled &amp; Expanded</div>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                • <strong>Underfilled (&lt;8e⁻):</strong><br/>
+                &nbsp;&nbsp;<strong>H</strong> = 2e⁻, <strong>Be</strong> = 4e⁻ (<code class="font-mono">BeCl₂</code>), <strong>B</strong> = 6e⁻ (<code class="font-mono">BF₃</code>).<br/>
+                • <strong>Expanded (&gt;8e⁻):</strong><br/>
+                &nbsp;&nbsp;Period 3+ (<code class="font-mono">PCl₅</code> = 10e⁻, <code class="font-mono">SF₆</code> = 12e⁻).<br/>
+                • <strong>Radicals:</strong> Odd e⁻ (<code class="font-mono">NO</code> = 11e⁻, unstable!).
+              </p>
+            </div>
+
+            <div class="mac-card p-7 space-y-3">
+              <div class="text-xs font-bold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">3. Resonance (↔)</div>
+              <div class="font-bold text-xl">Delocalized Bonding</div>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                When 1 Lewis diagram cannot show the true bonding (<code class="font-mono">O₃, SO₃, NO₃⁻</code>).<br/><br/>
+                • The real molecule is a <strong>hybrid average</strong> of all resonance forms with equal partial double bonds.
+              </p>
+            </div>
+          </div>
+
+          <div class="mac-card p-8 space-y-6">
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--mac-border)] pb-5">
+              <div>
+                <h2 class="text-xl font-bold">Slide Examples Walkthrough</h2>
+                <p class="text-base mt-1" style="color: var(--mac-muted);">Click a molecule from your slides to see its step-by-step electron count:</p>
+              </div>
+              <div class="flex flex-wrap gap-2" id="lewis-pills"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+              <div class="lg:col-span-6 mac-subtle p-6 space-y-3">
+                <div id="lewis-title" class="font-bold text-lg"></div>
+                <div id="lewis-math" class="text-base font-mono space-y-2 leading-relaxed" style="color: var(--mac-muted);"></div>
+                <div id="lewis-tip" class="text-base font-semibold pt-3 border-t border-[var(--mac-border)]" style="color: var(--mac-accent);"></div>
+              </div>
+              <div id="lewis-svg" class="lg:col-span-6 mac-subtle p-6 flex items-center justify-center min-h-[240px]"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             CHAPTER 3: HYBRIDIZATION (4.2)
+             ========================================== -->
+        <section id="topic-hybrid" class="space-y-8 hidden">
+          <div class="border-b border-[var(--mac-border)] pb-6">
+            <span class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">Chapter 4.2 · Valence Bond Theory (Linus Pauling)</span>
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">3. Hybridization &amp; Sigma (σ) / Pi (π) Bonds</h1>
+            <p class="text-lg mt-2" style="color: var(--mac-muted);">How atomic orbitals blend to make equal bonds and single/double/triple bonds.</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="mac-card p-7 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-emerald-600 dark:text-emerald-400">Sigma (σ) Bond</span>
+                <span class="text-xs px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-semibold">Can Rotate Freely</span>
+              </div>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                • Formed by <strong>end-to-end (head-on) overlap</strong> of orbitals.<br/>
+                • Every single bond is <strong>1 σ bond</strong> (e.g., Ethane, <code class="font-mono">C₂H₆</code>).<br/>
+                • Atoms can freely rotate around a single σ bond.
+              </p>
+            </div>
+
+            <div class="mac-card p-7 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-amber-600 dark:text-amber-400">Pi (π) Bond</span>
+                <span class="text-xs px-3 py-1 rounded-full bg-amber-500/15 text-amber-700 dark:text-amber-300 font-semibold">Locks Rotation!</span>
+              </div>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                • Formed by <strong>side-by-side overlap</strong> of <strong>unhybridized p orbitals</strong> above &amp; below the plane.<br/>
+                • <strong>Double bond (C=C)</strong> = <strong>1σ + 1π</strong> (Ethene, <code class="font-mono">C₂H₄</code>).<br/>
+                • <strong>Triple bond (C≡C)</strong> = <strong>1σ + 2π</strong> (Ethyne, <code class="font-mono">C₂H₂</code>).
+              </p>
+            </div>
+          </div>
+
+          <div class="mac-card p-8">
+            <h2 class="text-xl font-bold mb-1">Hybridization Cheat Table</h2>
+            <p class="text-base mb-5" style="color: var(--mac-muted);">Count the <strong>Total Electron Groups (Bonding + Lone Pairs)</strong> on the central atom:</p>
+            <div class="overflow-x-auto">
+              <table class="w-full text-base text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-[var(--mac-border-strong)]" style="color: var(--mac-muted);">
+                    <th class="py-3.5">Total Groups</th>
+                    <th class="py-3.5">Hybridization</th>
+                    <th class="py-3.5">Orbitals Blended</th>
+                    <th class="py-3.5">EPG Shape &amp; Angle</th>
+                    <th class="py-3.5">Slide Examples</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-[var(--mac-border)]">
+                  <tr>
+                    <td class="py-4 font-bold">2 Groups</td>
+                    <td class="py-4 font-mono font-bold text-lg" style="color: var(--mac-accent);">sp</td>
+                    <td class="py-4">1s + 1p (<strong>2p left</strong> for π bonds)</td>
+                    <td class="py-4">Linear (180°)</td>
+                    <td class="py-4 font-mono">C₂H₂ (Ethyne), CO₂, BeCl₂</td>
+                  </tr>
+                  <tr>
+                    <td class="py-4 font-bold">3 Groups</td>
+                    <td class="py-4 font-mono font-bold text-lg text-emerald-600 dark:text-emerald-400">sp²</td>
+                    <td class="py-4">1s + 2p (<strong>1p left</strong> for π bond)</td>
+                    <td class="py-4">Trigonal Planar (120°)</td>
+                    <td class="py-4 font-mono">C₂H₄ (Ethene), BF₃, Graphite</td>
+                  </tr>
+                  <tr>
+                    <td class="py-4 font-bold">4 Groups</td>
+                    <td class="py-4 font-mono font-bold text-lg text-amber-600 dark:text-amber-400">sp³</td>
+                    <td class="py-4">1s + 3p (0 unhybridized p)</td>
+                    <td class="py-4">Tetrahedral (109.5°)</td>
+                    <td class="py-4 font-mono">CH₄, C₂H₆ (Ethane), Diamond</td>
+                  </tr>
+                  <tr>
+                    <td class="py-4 font-bold">5 Groups</td>
+                    <td class="py-4 font-mono font-bold text-lg text-rose-600 dark:text-rose-400">sp³d</td>
+                    <td class="py-4">1s + 3p + 1d</td>
+                    <td class="py-4">Trig. Bipyramidal (120°/90°)</td>
+                    <td class="py-4 font-mono">PF₅, SF₄, ClF₃, XeF₂</td>
+                  </tr>
+                  <tr>
+                    <td class="py-4 font-bold">6 Groups</td>
+                    <td class="py-4 font-mono font-bold text-lg text-purple-600 dark:text-purple-400">sp³d²</td>
+                    <td class="py-4">1s + 3p + 2d</td>
+                    <td class="py-4">Octahedral (90°)</td>
+                    <td class="py-4 font-mono">SF₆, BrF₅, XeF₄</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             CHAPTER 4: VSEPR 13 SHAPES (4.3)
+             ========================================== -->
+        <section id="topic-vsepr" class="space-y-8 hidden">
+          <div class="border-b border-[var(--mac-border)] pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <span class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">Chapter 4.3 · Pages 242–249</span>
+              <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">4. VSEPR Theory: All 13 Shapes</h1>
+              <p class="text-lg mt-2" style="color: var(--mac-muted);">Click any <code class="font-mono">AXₘEₙ</code> notation below to see its 3D shape and bond angle.</p>
+            </div>
+            <span class="text-sm px-4 py-2 rounded-xl bg-rose-500/12 text-rose-600 dark:text-rose-400 font-semibold">
+              Lone Pairs repel stronger → shrink angles!
+            </span>
+          </div>
+
+          <div class="mac-card p-8 space-y-6">
+            <div class="flex flex-wrap items-center gap-2.5 pb-5 border-b border-[var(--mac-border)]">
+              <span class="text-sm font-semibold mr-2" style="color: var(--mac-muted);">Filter by Electron Groups:</span>
+              <button onclick="filterEPG('all')" id="epg-all" class="pill-choice active px-4 py-2 text-sm font-semibold cursor-pointer">All 13 Shapes</button>
+              <button onclick="filterEPG(2)" id="epg-2" class="pill-choice px-4 py-2 text-sm font-semibold cursor-pointer">2 · Linear</button>
+              <button onclick="filterEPG(3)" id="epg-3" class="pill-choice px-4 py-2 text-sm font-semibold cursor-pointer">3 · Trig. Planar</button>
+              <button onclick="filterEPG(4)" id="epg-4" class="pill-choice px-4 py-2 text-sm font-semibold cursor-pointer">4 · Tetrahedral</button>
+              <button onclick="filterEPG(5)" id="epg-5" class="pill-choice px-4 py-2 text-sm font-semibold cursor-pointer">5 · Trig. Bipyramidal</button>
+              <button onclick="filterEPG(6)" id="epg-6" class="pill-choice px-4 py-2 text-sm font-semibold cursor-pointer">6 · Octahedral</button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div id="vsepr-buttons" class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 max-h-[420px] overflow-y-auto pr-1"></div>
+
+              <div class="lg:col-span-7 mac-subtle p-7 flex flex-col justify-between space-y-5">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span id="v-code" class="text-base font-mono font-bold px-3 py-1 rounded-xl bg-[#0066cc] text-white">AX₄</span>
+                    <h3 id="v-name" class="text-2xl font-bold">Tetrahedral</h3>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-xs uppercase font-semibold block" style="color: var(--mac-muted);">Bond Angle</span>
+                    <span id="v-angle" class="text-xl font-mono font-bold text-emerald-600 dark:text-emerald-400">109.5°</span>
+                  </div>
+                </div>
+
+                <div id="v-svg" class="flex items-center justify-center py-4 min-h-[250px] rounded-2xl" style="background: var(--mac-card);"></div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base">
+                  <div class="p-4 rounded-xl" style="background: var(--mac-card);">
+                    <span class="block text-xs font-semibold uppercase" style="color: var(--mac-muted);">EPG &amp; Hybridization</span>
+                    <span id="v-epg" class="font-bold mt-1 block">Tetrahedral (sp³)</span>
+                  </div>
+                  <div class="p-4 rounded-xl" style="background: var(--mac-card);">
+                    <span class="block text-xs font-semibold uppercase" style="color: var(--mac-muted);">Slide Examples</span>
+                    <span id="v-ex" class="font-bold font-mono mt-1 block">CH₄, SiCl₄, SO₄²⁻, ClO₄⁻</span>
+                  </div>
+                </div>
+
+                <p id="v-note" class="text-base leading-relaxed" style="color: var(--mac-muted);"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             CHAPTER 5: INTERMOLECULAR FORCES (IMFs)
+             ========================================== -->
+        <section id="topic-imf" class="space-y-8 hidden">
+          <div class="border-b border-[var(--mac-border)] pb-6">
+            <span class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">Intermolecular Forces (IMFs)</span>
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">5. IMFs, Boiling Points &amp; Water</h1>
+            <p class="text-lg mt-2" style="color: var(--mac-muted);">Stronger attractions between molecules = Higher Melting Point, Boiling Point &amp; Surface Tension.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+            <div class="mac-card p-6 space-y-3">
+              <span class="text-xs font-bold px-3 py-1 rounded-lg bg-sky-500/15 text-sky-700 dark:text-sky-300">1. Weakest (In ALL)</span>
+              <h3 class="text-xl font-bold pt-1">London Dispersion</h3>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                Caused by momentary electron imbalances (temporary dipoles). Stronger when <strong># of electrons (size) increases</strong> (<code class="font-mono">He &lt; Cl₂ &lt; Br₂ &lt; S₈</code>) or shape is flatter.
+              </p>
+            </div>
+
+            <div class="mac-card p-6 space-y-3">
+              <span class="text-xs font-bold px-3 py-1 rounded-lg bg-amber-500/15 text-amber-700 dark:text-amber-300">2. Moderate (Polar)</span>
+              <h3 class="text-xl font-bold pt-1">Dipole–Dipole</h3>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                Attraction between δ⁺ and δ⁻ ends of <strong>asymmetrical polar molecules</strong> (ΔEN 0.4–1.7, e.g., <code class="font-mono">HCl, H₂S</code>). Higher polarity = higher boiling point.
+              </p>
+            </div>
+
+            <div class="mac-card p-6 space-y-3">
+              <span class="text-xs font-bold px-3 py-1 rounded-lg bg-rose-500/15 text-rose-700 dark:text-rose-300">3. Strongest van der Waals</span>
+              <h3 class="text-xl font-bold pt-1">Hydrogen Bonding</h3>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                Happens ONLY when <strong>H is directly covalently bonded to N, O, or F</strong> (with lone pairs). Explains why <code class="font-mono">HF</code> (+19.5°C) boils way higher than <code class="font-mono">HCl</code> (−85°C)!
+              </p>
+            </div>
+
+            <div class="mac-card p-6 space-y-3">
+              <span class="text-xs font-bold px-3 py-1 rounded-lg bg-purple-500/15 text-purple-700 dark:text-purple-300">4. Ions &amp; Lattice</span>
+              <h3 class="text-xl font-bold pt-1">Ion–Dipole &amp; Ionic</h3>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                <strong>Ion–Dipole:</strong> Polar <code class="font-mono">H₂O</code> surrounds <code class="font-mono">Na⁺</code> and <code class="font-mono">Cl⁻</code> to dissolve salt. <strong>Ionic bonds</strong> (ΔEN &gt; 1.7) are electrostatic lattice bonds—way stronger than IMFs!
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="mac-card p-7 space-y-3">
+              <h3 class="text-xl font-bold" style="color: var(--mac-accent);">Why Water (H₂O) is Unique</h3>
+              <ul class="text-base space-y-2.5 list-disc pl-5 leading-relaxed" style="color: var(--mac-muted);">
+                <li><strong>High BP (100°C vs. H₂S −60°C):</strong> Water forms more H-bonds per molecule than <code class="font-mono">NH₃</code> and has a higher ΔEN.</li>
+                <li><strong>Ice is Less Dense than Liquid Water:</strong> Freezing locks bent <code class="font-mono">H₂O</code> molecules into open <strong>hexagonal cages</strong> that are empty inside.</li>
+                <li><strong>High Surface Tension:</strong> Strong H-bonds pull surface molecules into tight droplets (and cause belly flops!).</li>
+              </ul>
+            </div>
+
+            <div class="mac-card p-7 space-y-3">
+              <h3 class="text-xl font-bold text-emerald-600 dark:text-emerald-400">Meniscus Shape: Water vs. Mercury</h3>
+              <ul class="text-base space-y-2.5 list-disc pl-5 leading-relaxed" style="color: var(--mac-muted);">
+                <li><strong>Cohesion:</strong> Attraction between <em>like</em> molecules.</li>
+                <li><strong>Adhesion:</strong> Attraction between <em>unlike</em> molecules.</li>
+                <li><strong>Water in Glass (Concave ⌣):</strong> Adhesion to polar glass &gt; Cohesion → climbs narrow tubes (capillary action).</li>
+                <li><strong>Mercury in Glass (Convex ⌢):</strong> Cohesion between Hg atoms &gt; Adhesion to glass.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             CHAPTER 6: CRYSTALLINE SOLIDS
+             ========================================== -->
+        <section id="topic-solids" class="space-y-8 hidden">
+          <div class="border-b border-[var(--mac-border)] pb-6">
+            <span class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">Structure &amp; Properties of Solids</span>
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">6. The 4 Types of Crystalline Solids</h1>
+            <p class="text-lg mt-2" style="color: var(--mac-muted);">Easy comparison of particles, forces, melting points, and electrical conductivity.</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="mac-card p-7 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-purple-600 dark:text-purple-400">1. Ionic Crystals (NaCl)</span>
+                <span class="text-xs font-mono font-bold px-3 py-1.5 rounded-xl mac-subtle">Conducts: (l) &amp; (aq)</span>
+              </div>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                • <strong>Structure:</strong> Alternating +ve and −ve ions in a 3D crystal lattice held by electrostatic attraction.<br/>
+                • <strong>Properties:</strong> Hard, brittle, high MP, water-soluble. Does <strong>NOT conduct as a solid</strong> (ions locked), but <strong>conducts when molten (l) or dissolved (aq)</strong>!<br/>
+                • <strong>Stronger when:</strong> Ions are <strong>smaller</strong> and have <strong>higher charges</strong>.
+              </p>
+            </div>
+
+            <div class="mac-card p-7 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-amber-600 dark:text-amber-400">2. Metallic Crystals (Au, Al, W)</span>
+                <span class="text-xs font-mono font-bold px-3 py-1.5 rounded-xl mac-subtle">Conducts: Solid (s)</span>
+              </div>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                • <strong>Electron Sea Theory:</strong> Fixed +ve metal nuclei held by a mobile "sea" of valence electrons acting as non-directional glue.<br/>
+                • <strong>Properties:</strong> Shiny sheen, <strong>malleable</strong> (planes slide without breaking), conducts electricity as a solid. MP varies widely (Hg −39°C to W &gt;3000°C).<br/>
+                • <strong>Stronger when:</strong> Larger nuclear charge + <strong>more valence electrons</strong> (Group 2 &gt; Group 1).
+              </p>
+            </div>
+
+            <div class="mac-card p-7 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-sky-600 dark:text-sky-400">3. Molecular Crystals (Ice, I₂, CO₂)</span>
+                <span class="text-xs font-mono font-bold px-3 py-1.5 rounded-xl mac-subtle">Non-Conductor</span>
+              </div>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                • <strong>Structure:</strong> Neutral molecules held together by <strong>Intermolecular Forces</strong> (LDF, Dipole–Dipole, H-Bonding).<br/>
+                • <strong>Properties:</strong> <strong>Low melting points</strong>, soft, and <strong>never conduct electricity</strong> (no free ions or electrons).<br/>
+                • <strong>Stronger when:</strong> More electrons (LDF), flatter/longer shape, higher polarity.
+              </p>
+            </div>
+
+            <div class="mac-card p-7 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-emerald-600 dark:text-emerald-400">4. Covalent Network (C, SiO₂)</span>
+                <span class="text-xs font-mono font-bold px-3 py-1.5 rounded-xl mac-subtle">Graphite Conducts!</span>
+              </div>
+              <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
+                • <strong>Diamond (sp³):</strong> 4 covalent bonds per C in a 3D tetrahedral cage. Extreme hardness, <strong>3500°C MP</strong>, <strong>non-conductor</strong>.<br/>
+                • <strong>Graphite (sp²):</strong> 3 bonds per C in flat hexagonal sheets + <strong>1 delocalized p electron</strong> that moves along the sheet (<strong>conducts electricity!</strong>). Weak LDF between layers makes it <strong>slippery</strong>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ==========================================
+           MODE B: FLASHCARDS (WIDE & SPACIOUS)
+           ========================================== -->
+      <div id="view-flashcards" class="max-w-3xl mx-auto py-10 space-y-8 hidden">
+        <div class="text-center space-y-2">
+          <span class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">Active Recall</span>
+          <h2 class="text-3xl font-bold">Ch. 3 &amp; Ch. 4 Study Flashcards</h2>
+          <p class="text-base" style="color: var(--mac-muted);">Click the card to flip between Question and Answer.</p>
+        </div>
+
+        <div onclick="flipCard()" class="mac-card p-12 min-h-[320px] flex flex-col items-center justify-center text-center cursor-pointer select-none hover:scale-[1.005] transition-transform">
+          <span id="fc-badge" class="text-xs font-mono font-bold uppercase px-4 py-1.5 rounded-full mb-6" style="background: var(--mac-accent-soft); color: var(--mac-accent);">QUESTION 1 / 16</span>
+          <p id="fc-text" class="text-xl sm:text-2xl font-semibold leading-relaxed max-w-2xl"></p>
+          <span class="text-sm mt-10" style="color: var(--mac-muted);">Tap anywhere on card to flip ↻</span>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <button onclick="prevCard()" class="mac-card px-6 py-3 text-base font-semibold cursor-pointer hover:opacity-80">← Previous Card</button>
+          <span id="fc-counter" class="text-base font-mono font-semibold" style="color: var(--mac-muted);">1 / 16</span>
+          <button onclick="nextCard()" class="px-6 py-3 rounded-xl text-base font-semibold text-white cursor-pointer hover:opacity-90 shadow-sm" style="background: var(--mac-accent);">Next Card →</button>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           MODE C: PRACTICE QUIZ (WIDE 2-COLUMN GRID)
+           ========================================== -->
+      <div id="view-quiz" class="max-w-[1440px] mx-auto space-y-6 hidden">
+        <div class="flex items-center justify-between border-b border-[var(--mac-border)] pb-5">
+          <div>
+            <span class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">YRDSB Slide Questions (Ch. 3 &amp; Ch. 4)</span>
+            <h2 class="text-3xl font-bold mt-1">Practice Test (10 Questions)</h2>
+          </div>
+          <button onclick="resetQuiz()" class="mac-card px-5 py-2.5 text-sm font-semibold cursor-pointer hover:opacity-80">Reset Quiz</button>
+        </div>
+        <div id="quiz-list" class="grid grid-cols-1 xl:grid-cols-2 gap-6"></div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // --- THEME TOGGLE ---
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      document.getElementById('theme-label').textContent = isDark ? '☀️ Cream Mode' : '🌙 Dark Mode';
+    }
+
+    // --- MODE SWITCHER ---
+    function setStudyMode(mode) {
+      ['notes', 'flashcards', 'quiz'].forEach(m => {
+        document.getElementById('view-' + m).classList.toggle('hidden', m !== mode);
+        document.getElementById('mode-' + m).classList.toggle('active', m === mode);
+      });
+      const sidebar = document.getElementById('sidebar-nav');
+      if (mode === 'notes') {
+        sidebar.classList.remove('hidden');
+      } else {
+        sidebar.classList.add('hidden');
+      }
+    }
+
+    // --- TOPIC NAVIGATION ---
+    const topics = ['econfig', 'lewis', 'hybrid', 'vsepr', 'imf', 'solids'];
+    function showTopic(t) {
+      setStudyMode('notes');
+      topics.forEach(item => {
+        document.getElementById('topic-' + item).classList.toggle('hidden', item !== t);
+        const navBtn = document.getElementById('nav-' + item);
+        if (navBtn) navBtn.classList.toggle('active', item === t);
+      });
+    }
+
+    // --- CHAPTER 1: ELECTRON CONFIGURATION INTERACTIVE DATA ---
+    const econfigItems = [
+      {
+        id: 'oxygen', label: 'O (8e⁻)', name: 'Oxygen (O — 8 Electrons)',
+        longhand: '1s² 2s² 2p⁴',
+        shorthand: '[He] 2s² 2p⁴ (2 Core e⁻, 6 Valence e⁻)',
+        orb: [
+          { sub: '1s', boxes: ['↑↓'] },
+          { sub: '2s', boxes: ['↑↓'] },
+          { sub: '2p', boxes: ['↑↓', '↑', '↑'] }
+        ],
+        note: 'Hund’s Rule ("Empty Bus Seat Rule"): In the 2p sublevel (4e⁻), place one electron in each of the 3 boxes first before pairing the 4th electron! Has 2 unpaired e⁻ (Paramagnetic).'
+      },
+      {
+        id: 'sulfur', label: 'S (16e⁻)', name: 'Sulfur (S — 16 Electrons)',
+        longhand: '1s² 2s² 2p⁶ 3s² 3p⁴',
+        shorthand: '[Ne] 3s² 3p⁴ (10 Core e⁻ = [Ne], 6 Valence e⁻ = 3s² 3p⁴)',
+        orb: [
+          { sub: '[Ne] Core + 3s', boxes: ['↑↓'] },
+          { sub: '3p', boxes: ['↑↓', '↑', '↑'] }
+        ],
+        note: 'Shorthand Rule: Go up one row to Period 2 Noble Gas [Ne] (10 core e⁻), then write the remaining 6 valence electrons on Row 3 (3s² 3p⁴).'
+      },
+      {
+        id: 'germanium', label: 'Ge (32e⁻)', name: 'Germanium (Ge — 32 Electrons)',
+        longhand: '1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p²',
+        shorthand: '[Ar] 4s² 3d¹⁰ 4p²',
+        orb: [
+          { sub: '4s', boxes: ['↑↓'] },
+          { sub: '3d (n−1)', boxes: ['↑↓','↑↓','↑↓','↑↓','↑↓'] },
+          { sub: '4p', boxes: ['↑', '↑', ''] }
+        ],
+        note: 'Remember: In Row 4, the d-block is (n − 1) = 3d! So after [Ar], you fill 4s², then 3d¹⁰, then 4p².'
+      },
+      {
+        id: 'chromium', label: 'Cr (24e⁻ Exception!)', name: 'Chromium (Cr — 24e⁻ Stability Exception)',
+        longhand: 'Expected: [Ar] 4s² 3d⁴  →  ACTUAL: [Ar] 4s¹ 3d⁵',
+        shorthand: '[Ar] 4s¹ 3d⁵ (Half-Full d-Sublevel Stability!)',
+        orb: [
+          { sub: '4s¹', boxes: ['↑'] },
+          { sub: '3d⁵ (Half-Full!)', boxes: ['↑','↑','↑','↑','↑'] }
+        ],
+        note: 'EXAM EXCEPTION: Chromium promotes one electron from 4s into 3d so that both 4s and 3d are HALF-FULL (6 unpaired electrons), which lowers repulsion and increases stability!'
+      },
+      {
+        id: 'copper', label: 'Cu (29e⁻ Exception!)', name: 'Copper (Cu — 29e⁻ Stability Exception)',
+        longhand: 'Expected: [Ar] 4s² 3d⁹  →  ACTUAL: [Ar] 4s¹ 3d¹⁰',
+        shorthand: '[Ar] 4s¹ 3d¹⁰ (Full d-Sublevel Stability!)',
+        orb: [
+          { sub: '4s¹', boxes: ['↑'] },
+          { sub: '3d¹⁰ (Full!)', boxes: ['↑↓','↑↓','↑↓','↑↓','↑↓'] }
+        ],
+        note: 'EXAM EXCEPTION: Copper moves one electron from 4s to 3d to achieve a completely FULL 3d¹⁰ sublevel!'
+      },
+      {
+        id: 'zn2', label: 'Zn²⁺ & O²⁻ Ions', name: 'Ion Formation: Zinc Cation (Zn²⁺) & Oxide Anion (O²⁻)',
+        longhand: 'O²⁻ (10e⁻): [He] 2s² 2p⁶ ≡ [Ne]   |   Zn (30e⁻): [Ar] 4s² 3d¹⁰ → Zn²⁺: [Ar] 3d¹⁰',
+        shorthand: 'Zn²⁺ = [Ar] 3d¹⁰  (NOT [Ar] 4s² 3d⁸!)',
+        orb: [
+          { sub: '4s (Lost 2e⁻!)', boxes: [''] },
+          { sub: '3d¹⁰ (Kept Full)', boxes: ['↑↓','↑↓','↑↓','↑↓','↑↓'] }
+        ],
+        note: 'CATION RULE: Transition metals ALWAYS lose electrons from the highest principal quantum number "n" (4s) BEFORE 3d! Leaving 3d¹⁰ full makes Zn²⁺ very stable.'
+      }
+    ];
+
+    function initEconfig() {
+      const box = document.getElementById('econfig-pills');
+      box.innerHTML = econfigItems.map((it, idx) => `
+        <button onclick="pickEconfig('${it.id}')" id="ec-${it.id}" class="pill-choice ${idx===0 ? 'active' : ''} px-4 py-2 text-sm font-semibold cursor-pointer">${it.label}</button>
+      `).join('');
+      pickEconfig('oxygen');
+    }
+
+    function pickEconfig(id) {
+      const it = econfigItems.find(x => x.id === id);
+      econfigItems.forEach(x => {
+        const b = document.getElementById('ec-' + x.id);
+        b.classList.toggle('active', x.id === id);
+      });
+      const orbHtml = it.orb.map(group => `
+        <div class="flex flex-col items-center gap-1.5">
+          <div class="flex gap-1.5">
+            ${group.boxes.map(val => `<span class="orb-box" style="color: var(--mac-accent);">${val}</span>`).join('')}
+          </div>
+          <span class="text-xs font-mono font-bold" style="color: var(--mac-muted);">${group.sub}</span>
+        </div>
+      `).join('');
+
+      document.getElementById('econfig-stage').innerHTML = `
+        <div class="font-bold text-xl">${it.name}</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base">
+          <div class="p-4 rounded-xl" style="background: var(--mac-card);">
+            <span class="text-xs uppercase font-bold block" style="color: var(--mac-muted);">Longhand / Rule</span>
+            <span class="font-mono font-bold mt-1 block">${it.longhand}</span>
+          </div>
+          <div class="p-4 rounded-xl" style="background: var(--mac-card);">
+            <span class="text-xs uppercase font-bold block" style="color: var(--mac-muted);">Shorthand Notation</span>
+            <span class="font-mono font-bold mt-1 block" style="color: var(--mac-accent);">${it.shorthand}</span>
+          </div>
+        </div>
+        <div class="p-5 rounded-xl flex flex-wrap items-center gap-6" style="background: var(--mac-card);">
+          <span class="text-xs font-bold uppercase tracking-wider" style="color: var(--mac-muted);">Orbital Box Diagram:</span>
+          ${orbHtml}
+        </div>
+        <p class="text-base leading-relaxed" style="color: var(--mac-muted);">${it.note}</p>
+      `;
+    }
+
+    // --- CHAPTER 2: LEWIS EXAMPLES ---
+    const lewisItems = [
+      {
+        id: 'cf4', label: 'CF₄ (Octet)', title: 'Carbon Tetrafluoride (CF₄) — 32 Valence e⁻',
+        math: ['1 C (4e⁻) + 4 F (28e⁻) = 32 e⁻ total', '− 8 e⁻ for 4 single C–F bonds = 24 e⁻ left', '− 24 e⁻ placed as 3 lone pairs on each F = 0 e⁻'],
+        tip: 'Symmetrical tetrahedral (AX₄) → Nonpolar molecule!',
+        svg: `<svg viewBox="0 0 240 160" class="w-56 h-auto"><g stroke="currentColor" stroke-width="2.2"><line x1="120" y1="58" x2="120" y2="32"/><line x1="120" y1="102" x2="120" y2="128"/><line x1="96" y1="80" x2="68" y2="80"/><line x1="144" y1="80" x2="172" y2="80"/></g><g font-family="monospace" font-size="18" font-weight="bold" fill="currentColor" text-anchor="middle" dominant-baseline="central"><text x="120" y="80" fill="#0066cc">C</text><text x="120" y="18">F</text><text x="120" y="142">F</text><text x="52" y="80">F</text><text x="188" y="80">F</text></g></svg>`
+      },
+      {
+        id: 'becl2', label: 'BeCl₂ (Exception)', title: 'Beryllium Chloride (BeCl₂) — 16 Valence e⁻',
+        math: ['1 Be (2e⁻) + 2 Cl (14e⁻) = 16 e⁻ total', '− 4 e⁻ for 2 single Be–Cl bonds = 12 e⁻ left', '− 12 e⁻ on the two Cl atoms = 0 e⁻'],
+        tip: 'Octet Exception: Be is stable with only 4 valence e⁻ (2 bonds).',
+        svg: `<svg viewBox="0 0 240 120" class="w-56 h-auto"><g stroke="currentColor" stroke-width="2.2"><line x1="72" y1="60" x2="98" y2="60"/><line x1="142" y1="60" x2="168" y2="60"/></g><g font-family="monospace" font-size="18" font-weight="bold" fill="currentColor" text-anchor="middle" dominant-baseline="central"><text x="120" y="60" fill="#e11d48">Be</text><text x="52" y="60">Cl</text><text x="188" y="60">Cl</text></g></svg>`
+      },
+      {
+        id: 'co2', label: 'CO₂ (Double Bonds)', title: 'Carbon Dioxide (CO₂) — 16 Valence e⁻',
+        math: ['1 C (4e⁻) + 2 O (12e⁻) = 16 e⁻ total', 'Single bonds leave C short of an octet', 'Shift 1 lone pair from each O → two C=O double bonds!'],
+        tip: 'Linear (AX₂, 180°). Polar C=O bonds cancel out → Nonpolar!',
+        svg: `<svg viewBox="0 0 240 120" class="w-56 h-auto"><g stroke="currentColor" stroke-width="2.2"><line x1="70" y1="56" x2="102" y2="56"/><line x1="70" y1="64" x2="102" y2="64"/><line x1="138" y1="56" x2="170" y2="56"/><line x1="138" y1="64" x2="170" y2="64"/></g><g font-family="monospace" font-size="18" font-weight="bold" fill="currentColor" text-anchor="middle" dominant-baseline="central"><text x="120" y="60" fill="#0066cc">C</text><text x="52" y="60">O</text><text x="188" y="60">O</text></g></svg>`
+      },
+      {
+        id: 'ions', label: 'ClO₄⁻ & NH₄⁺', title: 'Polyatomic Ions: [ClO₄]⁻ (32e⁻) & [NH₄]⁺ (8e⁻)',
+        math: ['ClO₄⁻: 7 + 4(6) + 1 (for −1 charge) = 32 e⁻', 'NH₄⁺: 5 + 4(1) − 1 (for +1 charge) = 8 e⁻', 'Enclose in square brackets [ ] with charge outside.'],
+        tip: 'Both have 4 bonding pairs and 0 lone pairs → Tetrahedral (109.5°).',
+        svg: `<svg viewBox="0 0 240 130" class="w-56 h-auto"><text x="120" y="65" font-family="monospace" font-size="22" font-weight="bold" fill="currentColor" text-anchor="middle">[ClO₄]⁻  [NH₄]⁺</text></svg>`
+      },
+      {
+        id: 'o3', label: 'O₃ & NO₃⁻ Resonance', title: 'Resonance Hybrids: Ozone (O₃) & Nitrate (NO₃⁻)',
+        math: ['O₃ (18e⁻): 2 resonance structures (O=O–O ↔ O–O=O)', 'NO₃⁻ & SO₃ (24e⁻): 3 resonance structures', 'True bonds are identical (1.5 bond order in O₃).'],
+        tip: 'Draw all valid structures connected by a double-headed arrow (↔).',
+        svg: `<svg viewBox="0 0 260 120" class="w-60 h-auto"><text x="130" y="55" font-family="monospace" font-size="18" font-weight="bold" fill="#059669" text-anchor="middle">O=O–O  ↔  O–O=O</text><text x="130" y="85" font-family="monospace" font-size="11" fill="currentColor" opacity="0.7" text-anchor="middle">Delocalized π electrons</text></svg>`
+      }
+    ];
+
+    function initLewis() {
+      const box = document.getElementById('lewis-pills');
+      box.innerHTML = lewisItems.map((it, i) => `
+        <button onclick="pickLewis('${it.id}')" id="lp-${it.id}" class="pill-choice ${i===0 ? 'active' : ''} px-4 py-2 text-sm font-semibold cursor-pointer">${it.label}</button>
+      `).join('');
+      pickLewis('cf4');
+    }
+
+    function pickLewis(id) {
+      const it = lewisItems.find(x => x.id === id);
+      lewisItems.forEach(x => {
+        const b = document.getElementById('lp-' + x.id);
+        b.classList.toggle('active', x.id === id);
+      });
+      document.getElementById('lewis-title').textContent = it.title;
+      document.getElementById('lewis-math').innerHTML = it.math.map(m => `<div>• ${m}</div>`).join('');
+      document.getElementById('lewis-tip').textContent = it.tip;
+      document.getElementById('lewis-svg').innerHTML = it.svg;
+    }
+
+    // --- CHAPTER 4: VSEPR 13 SHAPES ---
+    const vseprData = [
+      { code:'AX₂', name:'Linear', epg:2, epgLabel:'Linear (sp)', angle:'180°', ex:'BeH₂, BeF₂, CO₂, CS₂, HCN', note:'2 bonding pairs, 0 lone pairs. Opposite sides (180°).', atoms:[{x:60,y:100},{x:240,y:100}], lps:[] },
+      { code:'AX₃', name:'Trigonal Planar', epg:3, epgLabel:'Trigonal Planar (sp²)', angle:'120°', ex:'BF₃, SO₃, NO₃⁻, CO₃²⁻', note:'3 bonding pairs flat in a plane at 120°.', atoms:[{x:150,y:30},{x:80,y:155},{x:220,y:155}], lps:[] },
+      { code:'AX₂E', name:'Bent (V-shaped)', epg:3, epgLabel:'Trigonal Planar (sp²)', angle:'< 120°', ex:'SO₂, O₃', note:'2 bonding + 1 lone pair. Lone pair compresses angle below 120°.', atoms:[{x:85,y:155},{x:215,y:155}], lps:[{x:150,y:35}] },
+      { code:'AX₄', name:'Tetrahedral', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'109.5°', ex:'CH₄, SiCl₄, SO₄²⁻, ClO₄⁻', note:'4 bonding pairs in a symmetrical 3D tetrahedron.', atoms:[{x:150,y:28},{x:75,y:145},{x:165,y:170},{x:230,y:130}], lps:[] },
+      { code:'AX₃E', name:'Trigonal Pyramidal', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'107°', ex:':NH₃, :PF₃, :ClO₃⁻, H₃O⁺', note:'3 bonding + 1 lone pair. Lone pair pushes bonds to 107°.', atoms:[{x:75,y:150},{x:160,y:172},{x:225,y:140}], lps:[{x:150,y:35}] },
+      { code:'AX₂E₂', name:'Bent (V-shaped)', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'104.5°', ex:'H₂O, :OF₂:, :SCl₂:', note:'2 bonding + 2 lone pairs. Strong LP–LP repulsion shrinks angle to 104.5°.', atoms:[{x:85,y:158},{x:215,y:158}], lps:[{x:115,y:40},{x:185,y:40}] },
+      { code:'AX₅', name:'Trigonal Bipyramidal', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'120° / 90°', ex:'PCl₅, PF₅, AsF₅, SOF₄', note:'5 bonding pairs: 3 equatorial (120°) + 2 axial (90°).', atoms:[{x:150,y:24},{x:150,y:176},{x:65,y:100},{x:225,y:75},{x:220,y:135}], lps:[] },
+      { code:'AX₄E', name:'Seesaw', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'103° / 179°', ex:':SF₄, :XeO₂F₂, :IF₄⁺', note:'1 lone pair sits in the equatorial plane (most room), reducing angles to 103° & 179°.', atoms:[{x:150,y:24},{x:150,y:176},{x:225,y:75},{x:220,y:135}], lps:[{x:70,y:100}] },
+      { code:'AX₃E₂', name:'T-Shaped', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'< 90° (86°)', ex:'::ClF₃, ::BrF₃', note:'2 lone pairs sit in equatorial plane; axial bonds pushed to 86°.', atoms:[{x:150,y:24},{x:150,y:176},{x:65,y:100}], lps:[{x:220,y:70},{x:220,y:130}] },
+      { code:'AX₂E₃', name:'Linear (5-Group)', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'180°', ex:':::XeF₂, :::I₃⁻, :::IF₂⁻', note:'All 3 lone pairs sit in the equatorial triangle, leaving a straight 180° molecule!', atoms:[{x:150,y:24},{x:150,y:176}], lps:[{x:70,y:100},{x:220,y:70},{x:220,y:130}] },
+      { code:'AX₆', name:'Octahedral', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'90°', ex:'SF₆, IOF₅', note:'6 bonding pairs arranged symmetrically at 90° angles.', atoms:[{x:150,y:22},{x:150,y:178},{x:75,y:75},{x:75,y:128},{x:225,y:75},{x:225,y:128}], lps:[] },
+      { code:'AX₅E', name:'Square Pyramidal', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'< 90°', ex:':BrF₅, :TeF₅⁻, :XeOF₄', note:'5 bonding + 1 lone pair at the bottom apex.', atoms:[{x:150,y:22},{x:75,y:75},{x:75,y:128},{x:225,y:75},{x:225,y:128}], lps:[{x:150,y:172}] },
+      { code:'AX₄E₂', name:'Square Planar', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'90°', ex:'::XeF₄, ::ICl₄⁻', note:'2 lone pairs opposite each other (180°), leaving 4 bonds in a flat square plane.', atoms:[{x:75,y:75},{x:75,y:128},{x:225,y:75},{x:225,y:128}], lps:[{x:150,y:28},{x:150,y:172}] }
+    ];
+
+    let curEPG = 'all';
+    let curVCode = 'AX₄';
+
+    function filterEPG(val) {
+      curEPG = val;
+      ['all', 2, 3, 4, 5, 6].forEach(k => {
+        const b = document.getElementById('epg-' + k);
+        b.classList.toggle('active', k === val);
+      });
+      renderVseprButtons();
+    }
+
+    function renderVseprButtons() {
+      const list = curEPG === 'all' ? vseprData : vseprData.filter(d => d.epg === curEPG);
+      if (!list.some(d => d.code === curVCode)) curVCode = list[0].code;
+      document.getElementById('vsepr-buttons').innerHTML = list.map(d => `
+        <button onclick="pickVsepr('${d.code}')" class="pill-choice ${d.code === curVCode ? 'active font-semibold' : ''} w-full text-left px-4 py-3 text-sm flex items-center justify-between cursor-pointer">
+          <span><strong class="font-mono mr-2">${d.code}</strong> ${d.name}</span>
+          <span class="font-mono opacity-80">${d.angle}</span>
+        </button>
+      `).join('');
+      pickVsepr(curVCode, false);
+    }
+
+    function pickVsepr(code, rerender = true) {
+      curVCode = code;
+      if (rerender) renderVseprButtons();
+      const s = vseprData.find(d => d.code === code);
+      document.getElementById('v-code').textContent = s.code;
+      document.getElementById('v-name').textContent = s.name;
+      document.getElementById('v-angle').textContent = s.angle;
+      document.getElementById('v-epg').textContent = s.epgLabel;
+      document.getElementById('v-ex').textContent = s.ex;
+      document.getElementById('v-note').textContent = s.note;
+
+      const cx = 150, cy = 100;
+      const lines = s.atoms.map(a => `<line x1="${cx}" y1="${cy}" x2="${a.x}" y2="${a.y}" stroke="#94a3b8" stroke-width="4.5" stroke-linecap="round"/>`).join('');
+      const balls = s.atoms.map(a => `<circle cx="${a.x}" cy="${a.y}" r="15" fill="#0284c7"/><text x="${a.x}" y="${a.y}" font-size="10" font-family="monospace" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="central">X</text>`).join('');
+      const lobes = s.lps.map(lp => `<line x1="${cx}" y1="${cy}" x2="${lp.x}" y2="${lp.y}" stroke="#d97706" stroke-width="2" stroke-dasharray="3 3"/><ellipse cx="${lp.x}" cy="${lp.y}" rx="19" ry="13" fill="rgba(245,158,11,0.22)" stroke="#d97706" stroke-width="1.8"/><circle cx="${lp.x-4.5}" cy="${lp.y}" r="2.8" fill="#d97706"/><circle cx="${lp.x+4.5}" cy="${lp.y}" r="2.8" fill="#d97706"/>`).join('');
+
+      document.getElementById('v-svg').innerHTML = `
+        <svg viewBox="0 0 300 200" class="w-72 h-auto">
+          ${lines}${lobes}
+          <circle cx="${cx}" cy="${cy}" r="20" fill="#e11d48"/>
+          <text x="${cx}" y="${cy}" font-size="13" font-family="monospace" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="central">A</text>
+          ${balls}
+        </svg>
+      `;
+    }
+
+    // --- FLASHCARDS (16 CARDS: CH 3 + CH 4) ---
+    const flashcards = [
+      { q: 'State Pauli Exclusion, Aufbau ("Lazy Tenant"), and Hund’s ("Empty Bus Seat") Rules.', a: 'Pauli: Max 2 e⁻ per orbital with opposite spins (↑↓). Aufbau: Fill lowest energy orbitals first. Hund’s: Place 1 e⁻ in each orbital of a sublevel before pairing up!' },
+      { q: 'What are the Electron Configuration Exceptions for Chromium (Cr, 24e⁻) and Copper (Cu, 29e⁻)?', a: 'Cr: [Ar] 4s¹ 3d⁵ (gains stability with a HALF-FULL d-sublevel). Cu: [Ar] 4s¹ 3d¹⁰ (gains stability with a FULL d-sublevel).' },
+      { q: 'When forming a transition metal cation like Zn²⁺ from Zn ([Ar] 4s² 3d¹⁰), which electrons are lost first?', a: 'Remove electrons from the highest principal energy level "n" (4s) FIRST! Zn²⁺ = [Ar] 3d¹⁰ (leaves a full 3d sublevel).' },
+      { q: 'What is the difference between Ferromagnetism and Paramagnetism?', a: 'Paramagnetism: Weak magnetism in individual atoms due to unpaired electrons (no domains). Ferromagnetism: Strong magnetism where atoms align in groups (domains) in the same direction.' },
+      { q: 'Why do lone pairs reduce bond angles in VSEPR theory?', a: 'Lone pairs are held by only 1 nucleus so they spread out more and repel stronger than bonding pairs (LP–LP > LP–BP > BP–BP).' },
+      { q: 'What are the bond angles in Tetrahedral (AX₄), Trigonal Pyramidal (AX₃E), and Bent (AX₂E₂)?', a: 'AX₄ (CH₄) = 109.5°  |  AX₃E (NH₃) = 107°  |  AX₂E₂ (H₂O) = 104.5°.' },
+      { q: 'Where do lone pairs ALWAYS go in a 5-group Trigonal Bipyramidal (sp³d) molecule?', a: 'In the equatorial trigonal plane (120° apart), where they have the most space! (Gives Seesaw AX₄E, T-shaped AX₃E₂, and Linear AX₂E₃).' },
+      { q: 'How does Linus Pauling explain Carbon forming 4 equal bonds in CH₄?', a: '1) Electron promotion from 2s to empty 2p orbital. 2) Hybridization of 1s + 3p orbitals into four identical sp³ hybrid orbitals.' },
+      { q: 'What is the difference between a Sigma (σ) bond and a Pi (π) bond?', a: 'σ bond = end-to-end overlap (allows free rotation). π bond = side-by-side overlap of unhybridized p orbitals (locks rotation!). Double bond = 1σ + 1π; Triple = 1σ + 2π.' },
+      { q: 'What two conditions are required for Hydrogen Bonding?', a: '1) H must be covalently bonded directly to N, O, or F. 2) The N, O, or F on a neighbouring molecule must have at least 1 lone pair.' },
+      { q: 'Why is solid ice less dense than liquid water?', a: 'Due to water’s bent shape, Hydrogen bonds arrange freezing water molecules into open hexagonal cages that are empty inside.' },
+      { q: 'What two factors increase the strength of London Dispersion Forces?', a: '1) More electrons (larger molecule = stronger temporary dipole, e.g. S₈ > Br₂ > Cl₂ > He). 2) Longer/flatter molecular shape (can pack closer).' },
+      { q: 'Why does water form a concave meniscus in glass while mercury forms a convex meniscus?', a: 'Water: Adhesion to polar glass > Cohesion between H₂O molecules. Mercury: Metallic cohesion between Hg atoms > Adhesion to glass.' },
+      { q: 'When do Ionic Crystals (like NaCl) conduct electricity, and why?', a: 'NOT as a solid (ions are locked in the crystal lattice). YES when molten (liquid) or dissolved in water (aqueous), because ions are free to move!' },
+      { q: 'What factors make an Ionic Crystal bond stronger?', a: '1) Smaller ion size (charge is concentrated over a smaller volume). 2) Higher ion charge (stronger electrostatic attraction).' },
+      { q: 'Compare Diamond vs. Graphite (both Covalent Network crystals of Carbon).', a: 'Diamond: sp³ 3D tetrahedral cage, 3500°C MP, non-conductor. Graphite: sp² flat hexagonal sheets with delocalized p electrons (conducts electricity!) and weak LDF between layers (slippery).' }
+    ];
+    let fcIndex = 0;
+    let fcFlipped = false;
+
+    function renderFlashcard() {
+      const card = flashcards[fcIndex];
+      document.getElementById('fc-badge').textContent = fcFlipped ? `ANSWER ${fcIndex + 1} / ${flashcards.length}` : `QUESTION ${fcIndex + 1} / ${flashcards.length}`;
+      document.getElementById('fc-text').textContent = fcFlipped ? card.a : card.q;
+      document.getElementById('fc-counter').textContent = `${fcIndex + 1} / ${flashcards.length}`;
+    }
+    function flipCard() { fcFlipped = !fcFlipped; renderFlashcard(); }
+    function nextCard() { fcIndex = (fcIndex + 1) % flashcards.length; fcFlipped = false; renderFlashcard(); }
+    function prevCard() { fcIndex = (fcIndex - 1 + flashcards.length) % flashcards.length; fcFlipped = false; renderFlashcard(); }
+
+    // --- PRACTICE QUIZ (10 QUESTIONS: CH 3 + CH 4) ---
+    const quizData = [
+      { id:1, q:'1. (Ch. 3) What is the actual ground-state shorthand electron configuration of Chromium (Cr, 24e⁻) and Copper (Cu, 29e⁻)?', opts:['a) Cr: [Ar] 4s² 3d⁴  |  Cu: [Ar] 4s² 3d⁹','b) Cr: [Ar] 4s¹ 3d⁵  |  Cu: [Ar] 4s¹ 3d¹⁰','c) Cr: [Ar] 3d⁶  |  Cu: [Ar] 3d¹¹'], ans:1, exp:'Chromium ([Ar] 4s¹ 3d⁵) gains extra stability from a half-full d-sublevel, and Copper ([Ar] 4s¹ 3d¹⁰) gains stability from a full d-sublevel!' },
+      { id:2, q:'2. (Ch. 3) When Zinc (Zn: [Ar] 4s² 3d¹⁰) forms a Zn²⁺ ion, what is its electron configuration?', opts:['a) [Ar] 4s² 3d⁸','b) [Ar] 3d¹⁰ (loses the two 4s electrons first)','c) [Ar] 4s¹ 3d⁹'], ans:1, exp:'Cations ALWAYS lose electrons from the highest principal energy level "n" (4s) before 3d! [Ar] 3d¹⁰ leaves a completely filled 3d sublevel.' },
+      { id:3, q:'3. (Ch. 3) Which rule states that electrons place one e⁻ per orbital within a sublevel before pairing up ("Empty Bus Seat Rule")?', opts:['a) Pauli Exclusion Principle','b) Aufbau Principle ("Lazy Tenant Rule")','c) Hund’s Rule'], ans:2, exp:'Hund’s Rule states that degenerate orbitals in a sublevel (p, d, f) are each singly occupied with parallel spins before any orbital is doubly occupied.' },
+      { id:4, q:'4. (Slide #13) Which of the following compounds is capable of hydrogen bonding with itself?', opts:['a) CH₃OCH₃','b) CH₃COCH₃','c) CH₃CH₂OH','d) H₂CO','e) CH₃F'], ans:2, exp:'CH₃CH₂OH (ethanol) is the only molecule with H directly bonded to O (–OH). In all others, H is bonded only to Carbon!' },
+      { id:5, q:'5. (Slide #16) Which of the following polar compounds is likely to have the highest boiling point?', opts:['a) CH₃OCH₃','b) CH₃CH₂OH','c) (CH₃)₂CO','d) H₂CO','e) CO'], ans:1, exp:'CH₃CH₂OH forms strong intermolecular Hydrogen Bonds, giving it a much higher boiling point than dipole–dipole molecules.' },
+      { id:6, q:'6. (Slide #19) Rank in terms of INCREASING boiling point: LiCl, C₃H₇OH, C₄H₈, N₂', opts:['a) LiCl < C₃H₇OH < C₄H₈ < N₂','b) N₂ < C₄H₈ < C₃H₇OH < LiCl','c) C₄H₈ < N₂ < C₃H₇OH < LiCl'], ans:1, exp:'N₂ (nonpolar, 14e⁻, weakest LDF) < C₄H₈ (nonpolar, 32e⁻, stronger LDF) < C₃H₇OH (H-bonding) < LiCl (Ionic crystal lattice).' },
+      { id:7, q:'7. (Slide #20) Both have formula C₃H₈O: Which boils higher, CH₃CH₂OCH₃ or CH₃CH₂CH₂OH?', opts:['a) CH₃CH₂OCH₃ (ether)','b) Equal boiling points','c) CH₃CH₂CH₂OH (1-propanol, forms H-bonds)'], ans:2, exp:'CH₃CH₂CH₂OH has an –OH group that forms Hydrogen Bonds (+ LDF + DD), whereas CH₃CH₂OCH₃ only has dipole–dipole + LDF.' },
+      { id:8, q:'8. (Slide #26) Rank in terms of INCREASING boiling point: CH₃CH₂OCH₂CH₃, CH₃CH₂OCH₃, CH₃CH₂CH₂CH₃, CH₃CH₂CH₂CH₂NH₂', opts:['a) CH₃CH₂CH₂CH₃ < CH₃CH₂OCH₃ < CH₃CH₂OCH₂CH₃ < CH₃CH₂CH₂CH₂NH₂','b) CH₃CH₂OCH₃ < CH₃CH₂CH₂CH₃ < CH₃CH₂OCH₂CH₃ < CH₃CH₂CH₂CH₂NH₂'], ans:0, exp:'Butane (nonpolar, LDF only) < Methoxyethane (smaller polar ether, DD + LDF) < Ethoxyethane (larger polar ether, more e⁻ = stronger LDF + DD) < 1-Butanamine (N–H Hydrogen Bonding).' },
+      { id:9, q:'9. (Your Turn!) Which has a higher BP (CH₄ vs. H₂S), and which dissolves in water (NH₃ vs. NI₃)?', opts:['a) CH₄ higher BP; NI₃ dissolves in water','b) H₂S higher BP (polar, DD + more e⁻); NH₃ dissolves in water (H-bonds with H₂O)'], ans:1, exp:'H₂S is bent and polar (dipole–dipole + 18e⁻) vs. nonpolar CH₄ (LDF + 10e⁻). NH₃ forms H-bonds with water.' },
+      { id:10, q:'10. What is the VSEPR shape and hybridization of ClF₃?', opts:['a) Trigonal Planar, sp²','b) Trigonal Pyramidal, sp³','c) T-Shaped (AX₃E₂), sp³d'], ans:2, exp:'ClF₃ has 3 bonds + 2 equatorial lone pairs = 5 electron groups (sp³d, T-Shaped).' }
+    ];
+    const picked = {};
+
+    function renderQuiz() {
+      document.getElementById('quiz-list').innerHTML = quizData.map(item => {
+        const u = picked[item.id];
+        const done = u !== undefined;
+        return `
+          <div class="mac-card p-6 space-y-4">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-base font-bold">${item.q}</h3>
+              ${done ? (u === item.ans ? '<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 shrink-0">✓ Correct</span>' : '<span class="text-xs font-bold text-rose-600 dark:text-rose-400 shrink-0">✗ Review</span>') : ''}
+            </div>
+            <div class="grid grid-cols-1 gap-2.5">
+              ${item.opts.map((o, idx) => {
+                let cls = 'pill-choice';
+                if (done) {
+                  if (idx === item.ans) cls = 'bg-emerald-500/15 border border-emerald-500 text-emerald-700 dark:text-emerald-300 font-semibold rounded-xl';
+                  else if (idx === u) cls = 'bg-rose-500/15 border border-rose-500 text-rose-700 dark:text-rose-300 rounded-xl';
+                }
+                return `<button onclick="answerQ(${item.id},${idx})" class="text-left px-4 py-3 text-sm cursor-pointer transition-all ${cls}">${o}</button>`;
+              }).join('')}
+            </div>
+            ${done ? `<p class="text-sm p-4 rounded-xl mac-subtle" style="color: var(--mac-muted);">${item.exp}</p>` : ''}
+          </div>
+        `;
+      }).join('');
+      const right = Object.keys(picked).filter(k => picked[k] === quizData.find(x => x.id === Number(k)).ans).length;
+      document.getElementById('score-pill').textContent = `Quiz Score: ${right} / ${quizData.length}`;
+    }
+    function answerQ(id, idx) { picked[id] = idx; renderQuiz(); }
+    function resetQuiz() { Object.keys(picked).forEach(k => delete picked[k]); renderQuiz(); }
+
+    // Init all modules
+    initEconfig();
+    initLewis();
+    renderVseprButtons();
+    renderFlashcard();
+    renderQuiz();
+  </script>
+</body>
+</html>
