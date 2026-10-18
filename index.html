@@ -1207,8 +1207,8 @@
         <div id="view-flashcards" class="max-w-3xl mx-auto py-10 space-y-8 hidden">
           <div class="text-center space-y-2">
             <span class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">Active Recall</span>
-            <h2 class="text-3xl font-bold">Ch. 3 &amp; Ch. 4 Study Flashcards</h2>
-            <p class="text-base" style="color: var(--mac-muted);">Click the card to flip between Question and Answer.</p>
+            <h2 id="fc-title" class="text-3xl font-bold">Ch. 3 &amp; Ch. 4 Study Flashcards</h2>
+            <p id="fc-subtitle" class="text-base" style="color: var(--mac-muted);">Active Recall (16 Cards) · Click the card to flip between Question and Answer.</p>
           </div>
 
           <div onclick="flipCard()" class="mac-card p-12 min-h-[320px] flex flex-col items-center justify-center text-center cursor-pointer select-none hover:scale-[1.005] transition-transform">
@@ -1230,8 +1230,8 @@
         <div id="view-quiz" class="max-w-[1400px] mx-auto space-y-6 hidden">
           <div class="flex items-center justify-between border-b border-[var(--mac-border)] pb-5">
             <div>
-              <span class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">YRDSB Slide Questions (Ch. 3 &amp; Ch. 4)</span>
-              <h2 class="text-3xl font-bold mt-1">Practice Test (10 Questions)</h2>
+              <span id="quiz-badge" class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">YRDSB Slide Questions (Ch. 3 &amp; Ch. 4)</span>
+              <h2 id="quiz-title" class="text-3xl font-bold mt-1">Practice Test (10 Questions)</h2>
             </div>
             <button onclick="resetQuiz()" class="mac-card px-5 py-2.5 text-sm font-semibold cursor-pointer hover:opacity-80">Reset Quiz</button>
           </div>
@@ -1243,6 +1243,7 @@
   </div>
 
   <script>
+
 
 
 
@@ -2516,8 +2517,10 @@
     window.toggleCellAnswers = toggleCellAnswers;
 
     // --- ENHANCED MODE SWITCHER ---
+    let currentStudyMode = 'notes';
     const origSetStudyMode = setStudyMode;
     setStudyMode = function(mode) {
+      currentStudyMode = mode;
       origSetStudyMode(mode);
       if (mode === 'flashcards') {
         renderFlashcard();
@@ -2527,18 +2530,25 @@
     };
     window.setStudyMode = setStudyMode;
 
-    // --- SUBJECT SWITCHER CONTROLLER ---
+    // --- SUBJECT SWITCHER CONTROLLERS ---
+    function setSubject(subj) {
+      switchSubject(subj);
+    }
+    window.setSubject = setSubject;
+
     function switchSubject(subj) {
       currentSubject = subj;
       const isChem = subj === 'chem';
 
-      const btnChem = document.getElementById('subj-btn-chem');
-      const btnBio = document.getElementById('subj-btn-bio');
+      // 1. Update subject buttons in Header
+      const btnChem = document.getElementById('sub-chem') || document.getElementById('subj-btn-chem');
+      const btnBio = document.getElementById('sub-bio') || document.getElementById('subj-btn-bio');
       if (btnChem && btnBio) {
         btnChem.classList.toggle('active', isChem);
         btnBio.classList.toggle('active', !isChem);
       }
 
+      // 2. Update Header Title & Badge
       const courseTitle = document.getElementById('course-title');
       const courseBadge = document.getElementById('course-badge');
       if (courseTitle && courseBadge) {
@@ -2546,6 +2556,7 @@
         courseBadge.textContent = isChem ? 'YRDSB Grade 12 · Structure & Properties' : 'YRDSB Grade 12 · Unit 1 Biochemistry & Transport';
       }
 
+      // 3. Update Sidebar Navigation Groups
       const sbTitle = document.getElementById('sidebar-unit-title');
       if (sbTitle) {
         sbTitle.textContent = isChem ? 'Chemistry Chapters' : 'Biology Chapters';
@@ -2555,16 +2566,41 @@
       const navBio = document.getElementById('nav-bio-group');
       if (navBio) navBio.classList.toggle('hidden', isChem);
 
+      // 4. Update Exam Traps
       const trapChem = document.getElementById('trap-chem');
       const trapBio = document.getElementById('trap-bio');
       if (trapChem) trapChem.classList.toggle('hidden', !isChem);
       if (trapBio) trapBio.classList.toggle('hidden', isChem);
 
+      // 5. Update Notes Containers
       const notesChem = document.getElementById('notes-chem');
       if (notesChem) notesChem.classList.toggle('hidden', !isChem);
       const notesBio = document.getElementById('notes-bio');
       if (notesBio) notesBio.classList.toggle('hidden', isChem);
 
+      // 6. Update Flashcard Header Titles
+      const fcTitle = document.getElementById('fc-title');
+      const fcSub = document.getElementById('fc-subtitle');
+      if (fcTitle) {
+        fcTitle.textContent = isChem ? 'Ch. 3 & Ch. 4 Study Flashcards' : 'Unit 1 Biochemistry & Cells Flashcards';
+      }
+      if (fcSub) {
+        fcSub.textContent = isChem 
+          ? 'Active Recall (16 Cards) · Click the card to flip between Question and Answer.' 
+          : 'Active Recall (24 Cards) · Click the card to flip between Question and Answer.';
+      }
+
+      // 7. Update Quiz Header Titles
+      const quizBadge = document.getElementById('quiz-badge');
+      const quizTitle = document.getElementById('quiz-title');
+      if (quizBadge) {
+        quizBadge.textContent = isChem ? 'YRDSB Slide Questions (Ch. 3 & Ch. 4)' : 'YRDSB Exam Questions (SBI4U Unit 1)';
+      }
+      if (quizTitle) {
+        quizTitle.textContent = isChem ? 'Practice Test (10 Questions)' : 'Practice Test (16 Questions)';
+      }
+
+      // 8. Update Counter Badges in Header Mode Switcher
       const activeDeck = isChem ? flashcards : bioFlashcards;
       const activeQuiz = isChem ? quizData : bioQuizData;
       const fcPill = document.getElementById('fc-count-pill');
@@ -2574,14 +2610,19 @@
 
       fcIndex = 0;
       fcFlipped = false;
-      renderFlashcard();
-      renderQuiz();
 
-      if (isChem) {
-        showTopic('econfig');
+      // 9. Re-render mode or initialize notes
+      if (currentStudyMode === 'flashcards') {
+        renderFlashcard();
+      } else if (currentStudyMode === 'quiz') {
+        renderQuiz();
       } else {
-        showTopic('biomol');
-        initBioPillDecks();
+        if (isChem) {
+          showTopic('econfig');
+        } else {
+          showTopic('biomol');
+          initBioPillDecks();
+        }
       }
     }
     window.switchSubject = switchSubject;
