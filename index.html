@@ -149,54 +149,53 @@
       font-size: 16px;
     }
 
-    /* Soft, muted pastel study highlights that blend with the warm cream & dark themes */
-    p strong, li strong, .hl-amber {
-      background: rgba(217, 155, 38, 0.16);
+    /* Regular bold stays clean text; only explicit .hl-* classes get coloured highlights */
+    p strong, li strong {
       color: var(--mac-text);
-      padding: 1.5px 6px;
+      font-weight: 650;
+    }
+
+    .hl-amber, .hl-blue, .hl-green, .hl-rose {
+      padding: 2px 7px;
       border-radius: 6px;
       font-weight: 650;
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
     }
-    html.dark p strong, html.dark li strong, html.dark .hl-amber {
-      background: rgba(245, 185, 66, 0.17);
+
+    .hl-amber {
+      background: rgba(245, 166, 35, 0.22);
+      color: #8a5000;
+    }
+    html.dark .hl-amber {
+      background: rgba(245, 185, 66, 0.22);
       color: #fde68a;
     }
 
     .hl-blue {
-      background: rgba(0, 102, 204, 0.11);
-      color: #004c99;
-      padding: 1.5px 6px;
-      border-radius: 6px;
-      font-weight: 650;
+      background: rgba(14, 116, 224, 0.16);
+      color: #0b4f9c;
     }
     html.dark .hl-blue {
-      background: rgba(56, 189, 248, 0.16);
+      background: rgba(56, 189, 248, 0.20);
       color: #bae6fd;
     }
 
     .hl-green {
-      background: rgba(16, 145, 95, 0.13);
-      color: #0c5e3e;
-      padding: 1.5px 6px;
-      border-radius: 6px;
-      font-weight: 650;
+      background: rgba(16, 163, 108, 0.18);
+      color: #0a6342;
     }
     html.dark .hl-green {
-      background: rgba(52, 211, 153, 0.16);
+      background: rgba(52, 211, 153, 0.20);
       color: #a7f3d0;
     }
 
     .hl-rose {
-      background: rgba(210, 65, 90, 0.12);
-      color: #8c2235;
-      padding: 1.5px 6px;
-      border-radius: 6px;
-      font-weight: 650;
+      background: rgba(225, 60, 95, 0.16);
+      color: #9e1c38;
     }
     html.dark .hl-rose {
-      background: rgba(251, 113, 133, 0.17);
+      background: rgba(251, 113, 133, 0.20);
       color: #fecdd3;
     }
 
@@ -288,7 +287,7 @@
         <div class="mac-card p-5 text-sm space-y-2 mt-6 hidden lg:block">
           <div class="font-bold text-base" style="color: var(--mac-accent);">💡 #1 Exam Trap</div>
           <p class="leading-relaxed" style="color: var(--mac-muted);">
-            <strong>Symmetrical</strong> molecules (<code class="font-mono">CO₂, CF₄, CCl₄, XeF₄</code>) are <strong>always Nonpolar</strong> (London Dispersion forces only), even if their individual bonds have a big ΔEN!
+            <strong>Symmetrical</strong> molecules (<code class="font-mono">CO₂, CF₄, CCl₄, XeF₄</code>) are <span class="hl-rose">always Nonpolar</span> (London Dispersion forces only), even if their individual bonds have a big ΔEN!
           </p>
         </div>
       </aside>
@@ -313,7 +312,7 @@
               <div>
                 <span class="text-xs font-bold uppercase tracking-wider" style="color: var(--mac-accent);">Slide Diagrams · Energy Level Graphs</span>
                 <h2 class="text-xl font-bold mt-1">How Orbitals Split &amp; Overlap by Energy (<code class="font-mono">4s</code> is Lower than <code class="font-mono">3d</code>!)</h2>
-                <p class="text-base mt-1" style="color: var(--mac-muted);">Look at the energy axis on the left: as energy increases, sublevels split (<code class="font-mono">s &lt; p &lt; d &lt; f</code>) and <code class="font-mono">4s</code> sits slightly below <code class="font-mono">3d</code>, so electrons fill <code class="font-mono">4s</code> first.</p>
+                <p class="text-base mt-1" style="color: var(--mac-muted);">Look at the energy axis on the left: as energy increases, sublevels split (<code class="font-mono">s &lt; p &lt; d &lt; f</code>) and <span class="hl-amber">4s sits below 3d</span>, so electrons fill <code class="font-mono">4s</code> first.</p>
               </div>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                 <div class="slide-fig">
@@ -333,7 +332,7 @@
                 <div class="text-xs font-bold uppercase tracking-wider" style="color: var(--mac-accent);">Rule 1 · Pauli Exclusion Principle</div>
                 <div class="font-bold text-xl">Max 2 e⁻ per Orbital</div>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                  Each orbital box can hold at most <strong>TWO electrons</strong>, and they must have <strong>opposite spins</strong> (<code class="font-mono font-bold">↑↓</code>).
+                  Each orbital box can hold at most TWO electrons, and they must have <span class="hl-blue">opposite spins (↑↓)</span>.
                 </p>
               </div>
 
@@ -341,7 +340,7 @@
                 <div class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Rule 2 · Aufbau Principle</div>
                 <div class="font-bold text-xl">“Lazy Tenant Rule”</div>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                  Electrons fill the <strong>lowest energy orbitals first</strong> (<code class="font-mono">1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p</code>).
+                  Electrons fill the <span class="hl-green">lowest energy orbitals first</span> (<code class="font-mono">1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p</code>).
                 </p>
               </div>
 
@@ -349,7 +348,7 @@
                 <div class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Rule 3 · Hund’s Rule</div>
                 <div class="font-bold text-xl">“Empty Bus Seat Rule”</div>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                  Within a sublevel (like <em>2p</em> or <em>3d</em>), place <strong>one electron in each orbital box first</strong> (<code class="font-mono font-bold">↑ ↑ ↑</code>) before pairing any of them up!
+                  Within a sublevel (like <em>2p</em> or <em>3d</em>), place <span class="hl-amber">one electron in each box first (↑ ↑ ↑)</span> before pairing any of them up!
                 </p>
               </div>
             </div>
@@ -378,7 +377,7 @@
                   <div class="font-bold">How to Read Shorthand Off This Map (e.g., Germanium, Ge = 32e⁻):</div>
                   <p style="color: var(--mac-muted);">
                     1. <strong>Core e⁻:</strong> Go up one row to the Noble Gas → <code class="font-mono font-bold">[Ar]</code>.<br/>
-                    2. <strong>Row 4 e⁻:</strong> Read across Row 4 → <code class="font-mono font-bold">[Ar] 4s² 3d¹⁰ 4p²</code> (remember d-block is <code class="font-mono">n−1 = 3d</code>!).
+                    2. <strong>Row 4 e⁻:</strong> Read across Row 4 → <code class="font-mono font-bold">[Ar] 4s² 3d¹⁰ 4p²</code> (remember d-block is <span class="hl-blue">n − 1 = 3d</span>!).
                   </p>
                 </div>
               </div>
@@ -388,9 +387,9 @@
                   <span class="text-xs font-bold uppercase px-3 py-1 rounded-lg bg-rose-500/15 text-rose-700 dark:text-rose-300">Must Memorize for Exam!</span>
                   <h3 class="text-xl font-bold">D1. Stability Exceptions: Chromium (Cr) &amp; Copper (Cu)</h3>
                   <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                    <strong>Stability Rank:</strong> Full energy level &gt; Full sublevel &gt; <strong>Half-full sublevel</strong>.<br/>
-                    • <strong>Chromium (Cr, 24e⁻):</strong> Expected <code class="font-mono line-through opacity-70">[Ar] 4s² 3d⁴</code> → Actual: <code class="font-mono font-bold text-emerald-600 dark:text-emerald-400">[Ar] 4s¹ 3d⁵</code> (Gains stability with a <strong>half-full d-sublevel</strong>).<br/>
-                    • <strong>Copper (Cu, 29e⁻):</strong> Expected <code class="font-mono line-through opacity-70">[Ar] 4s² 3d⁹</code> → Actual: <code class="font-mono font-bold text-emerald-600 dark:text-emerald-400">[Ar] 4s¹ 3d¹⁰</code> (Gains stability with a <strong>full d-sublevel</strong>).
+                    <strong>Stability Rank:</strong> Full energy level &gt; Full sublevel &gt; Half-full sublevel.<br/>
+                    • <strong>Chromium (Cr, 24e⁻):</strong> Expected <code class="font-mono line-through opacity-70">[Ar] 4s² 3d⁴</code> → Actual: <span class="hl-rose">[Ar] 4s¹ 3d⁵</span> (half-full d-sublevel).<br/>
+                    • <strong>Copper (Cu, 29e⁻):</strong> Expected <code class="font-mono line-through opacity-70">[Ar] 4s² 3d⁹</code> → Actual: <span class="hl-rose">[Ar] 4s¹ 3d¹⁰</span> (full d-sublevel).
                   </p>
                 </div>
 
@@ -398,10 +397,10 @@
                   <span class="text-xs font-bold uppercase px-3 py-1 rounded-lg bg-purple-500/15 text-purple-700 dark:text-purple-300">Ions &amp; Magnetism</span>
                   <h3 class="text-xl font-bold">D2. Ion Configurations &amp; Magnetism</h3>
                   <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                    • <strong>Anions (−):</strong> Gain electrons to become <em>isoelectronic</em> with a Noble Gas (<code class="font-mono">O²⁻ = 10e⁻ = [He] 2s² 2p⁶ ≡ [Ne]</code>).<br/>
-                    • <strong>Cations (+):</strong> Lose electrons from the <strong>highest “n” shell FIRST</strong>! For <code class="font-mono">Zn ([Ar] 4s² 3d¹⁰)</code>, remove <code class="font-mono">4s²</code> first → <code class="font-mono font-bold">Zn²⁺ = [Ar] 3d¹⁰</code>.<br/>
-                    • <strong>Paramagnetism:</strong> Magnetism of individual atoms caused by <strong>unpaired electrons</strong> (no domains).<br/>
-                    • <strong>Ferromagnetism:</strong> Strong magnetism where a collection of atoms align in the same direction to form <strong>domains</strong>.
+                    • <strong>Anions (−):</strong> Gain electrons to match a Noble Gas (<code class="font-mono">O²⁻ = 10e⁻ = [He] 2s² 2p⁶ ≡ [Ne]</code>).<br/>
+                    • <strong>Cations (+):</strong> Lose electrons from the <span class="hl-amber">highest “n” shell FIRST</span>! For <code class="font-mono">Zn ([Ar] 4s² 3d¹⁰)</code>, remove <code class="font-mono">4s²</code> first → <code class="font-mono font-bold">Zn²⁺ = [Ar] 3d¹⁰</code>.<br/>
+                    • <strong>Paramagnetism:</strong> Individual atoms attracted to a magnet due to <span class="hl-blue">unpaired electrons</span> (no domains).<br/>
+                    • <strong>Ferromagnetism:</strong> Strong magnetism where atoms align in the same direction to form <span class="hl-green">domains</span>.
                   </p>
                 </div>
               </div>
@@ -456,7 +455,7 @@
                 <div class="text-xs font-bold uppercase tracking-wide" style="color: var(--mac-accent);">1. Octet &amp; Charge Rule</div>
                 <div class="font-bold text-xl">8 Valence Electrons</div>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                  Atoms share or transfer electrons to reach <strong>8 valence e⁻</strong> (2 in <em>s</em> + 6 in <em>p</em>).<br/><br/>
+                  Atoms share or transfer electrons to reach <span class="hl-blue">8 valence e⁻</span> (2 in <em>s</em> + 6 in <em>p</em>).<br/><br/>
                   • <strong>Anion (−):</strong> ADD e⁻ to total<br/>
                   • <strong>Cation (+):</strong> SUBTRACT e⁻ from total<br/>
                   • Enclose ions in <code class="font-mono font-bold">[ ]±</code> brackets.
@@ -468,9 +467,9 @@
                 <div class="font-bold text-xl">Underfilled &amp; Expanded</div>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
                   • <strong>Underfilled (&lt;8e⁻):</strong><br/>
-                  &nbsp;&nbsp;<strong>H</strong> = 2e⁻, <strong>Be</strong> = 4e⁻ (<code class="font-mono">BeCl₂</code>), <strong>B</strong> = 6e⁻ (<code class="font-mono">BF₃</code>).<br/>
+                  &nbsp;&nbsp;<span class="hl-amber">H = 2e⁻, Be = 4e⁻, B = 6e⁻</span>.<br/>
                   • <strong>Expanded (&gt;8e⁻):</strong><br/>
-                  &nbsp;&nbsp;Period 3+ (<code class="font-mono">PCl₅</code> = 10e⁻, <code class="font-mono">SF₆</code> = 12e⁻).<br/>
+                  &nbsp;&nbsp;<span class="hl-rose">Period 3+ only</span> (<code class="font-mono">PCl₅</code> = 10e⁻, <code class="font-mono">SF₆</code> = 12e⁻).<br/>
                   • <strong>Radicals:</strong> Odd e⁻ (<code class="font-mono">NO</code> = 11e⁻, unstable!).
                 </p>
               </div>
@@ -480,7 +479,7 @@
                 <div class="font-bold text-xl">Delocalized Bonding</div>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
                   When 1 Lewis diagram cannot show the true bonding (<code class="font-mono">O₃, SO₃, NO₃⁻</code>).<br/><br/>
-                  • The real molecule is a <strong>hybrid average</strong> of all resonance forms with equal partial double bonds.
+                  • The real molecule is a <span class="hl-green">hybrid average</span> of all resonance forms with equal partial double bonds.
                 </p>
               </div>
             </div>
@@ -525,17 +524,17 @@
                 <div class="slide-fig">
                   <img src="images/deck_2_image6.png" alt="Ethane sp3 sigma bonding diagram" class="max-h-56 w-auto object-contain" />
                   <span class="text-xs font-bold text-neutral-800 mt-3">1. Ethane (<code class="font-mono">C₂H₆</code>) — <code class="font-mono">sp³</code> Hybrids</span>
-                  <span class="text-xs text-neutral-600 text-center mt-1">End-to-end <strong>σ bond</strong> overlap allows free rotation around the C–C single bond.</span>
+                  <span class="text-xs text-neutral-600 text-center mt-1">End-to-end <span class="hl-green">σ bond (free rotation)</span> around the C–C single bond.</span>
                 </div>
                 <div class="slide-fig">
                   <img src="images/deck_2_image15.png" alt="Ethene sp2 sigma and pi bonding diagram" class="max-h-56 w-auto object-contain" />
                   <span class="text-xs font-bold text-neutral-800 mt-3">2. Ethene (<code class="font-mono">C₂H₄</code>) — <code class="font-mono">sp²</code> Hybrids</span>
-                  <span class="text-xs text-neutral-600 text-center mt-1">Double bond = <strong>1 σ bond</strong> (green) + <strong>1 π bond</strong> (yellow side-by-side <em>p</em> overlap above &amp; below plane). Locks rotation!</span>
+                  <span class="text-xs text-neutral-600 text-center mt-1">Double bond = <span class="hl-amber">1 σ + 1 π bond</span> (side-by-side <em>p</em> overlap locks rotation!).</span>
                 </div>
                 <div class="slide-fig">
                   <img src="images/deck_2_image13.png" alt="Ethyne sp sigma and two pi bonds diagram" class="max-h-56 w-auto object-contain" />
                   <span class="text-xs font-bold text-neutral-800 mt-3">3. Ethyne (<code class="font-mono">C₂H₂</code>) — <code class="font-mono">sp</code> Hybrids</span>
-                  <span class="text-xs text-neutral-600 text-center mt-1">Triple bond = <strong>1 σ bond</strong> (green) + <strong>2 perpendicular π bonds</strong> (yellow <em>p</em> overlaps).</span>
+                  <span class="text-xs text-neutral-600 text-center mt-1">Triple bond = <span class="hl-blue">1 σ + 2 π bonds</span> (two perpendicular <em>p</em> overlaps).</span>
                 </div>
               </div>
 
@@ -565,7 +564,7 @@
 
             <div class="mac-card p-8">
               <h2 class="text-xl font-bold mb-1">Hybridization Cheat Table</h2>
-              <p class="text-base mb-5" style="color: var(--mac-muted);">Count the <strong>Total Electron Groups (Bonding + Lone Pairs)</strong> on the central atom:</p>
+              <p class="text-base mb-5" style="color: var(--mac-muted);">Count the <span class="hl-blue">Total Electron Groups (Bonding + Lone Pairs)</span> on the central atom:</p>
               <div class="overflow-x-auto">
                 <table class="w-full text-base text-left border-collapse">
                   <thead>
@@ -748,7 +747,7 @@
                 </div>
                 <h3 class="text-xl font-bold">London Dispersion Forces (Temporary Dipoles)</h3>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                  Momentary electron imbalances create a short-lived temporary dipole. Larger molecules have more electrons zipping around → stronger London forces!
+                  Momentary electron imbalances create a short-lived temporary dipole. Larger molecules have <span class="hl-blue">more electrons + larger surface area</span> → stronger London forces!
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
                   <div class="slide-fig">
@@ -770,7 +769,7 @@
                 </div>
                 <h3 class="text-xl font-bold">Dipole–Dipole Forces (<code class="font-mono">δ⁺ ··· δ⁻</code>)</h3>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                  Oppositely charged ends of polar molecules attract each other. The more polar the molecule (higher ΔEN), the stronger the dipole–dipole force and the higher the melting/boiling point.
+                  Oppositely charged ends of <span class="hl-amber">asymmetrical polar molecules</span> attract each other. Higher ΔEN = stronger dipole–dipole force and higher boiling point.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
                   <div class="slide-fig">
@@ -792,7 +791,7 @@
                 </div>
                 <h3 class="text-xl font-bold">Hydrogen Bonding (H–N, H–O, H–F + Lone Pair)</h3>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                  An unusually strong dipole–dipole attraction between a hydrogen atom covalently bonded to <strong>N, O, or F</strong> and a <strong>lone pair of electrons</strong> on a neighbouring N, O, or F atom.
+                  An unusually strong dipole–dipole attraction between a hydrogen atom covalently bonded to <span class="hl-rose">N, O, or F</span> and a <span class="hl-amber">lone pair of electrons</span> on a neighbouring N, O, or F atom.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
                   <div class="slide-fig">
@@ -814,7 +813,7 @@
                 </div>
                 <h3 class="text-xl font-bold">Why Ice Floats &amp; Why Salt Dissolves in Water</h3>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                  • <strong>Ice vs. Liquid Water:</strong> Stable H-bonds lock ice into open <strong>hexagonal cages</strong> (less dense than liquid!).<br/>
+                  • <strong>Ice vs. Liquid Water:</strong> Stable H-bonds lock ice into open <span class="hl-green">hexagonal cages</span> (less dense than liquid!).<br/>
                   • <strong>Ion–Dipole Attractions:</strong> Polar <code class="font-mono">H₂O</code> surrounds <code class="font-mono">Cl⁻</code> (with δ⁺ H) and <code class="font-mono">Na⁺</code> (with 2δ⁻ O).
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
@@ -850,8 +849,8 @@
                 </div>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
                   • <strong>Structure:</strong> Alternating +ve and −ve ions in a 3D crystal lattice held by electrostatic attraction.<br/>
-                  • <strong>Properties:</strong> Hard, brittle, high MP, water-soluble. Does <strong>NOT conduct as a solid</strong> (ions locked), but <strong>conducts when molten (l) or dissolved (aq)</strong>!<br/>
-                  • <strong>Stronger when:</strong> Ions are <strong>smaller</strong> and have <strong>higher charges</strong>.
+                  • <strong>Properties:</strong> Hard, brittle, high MP. Does NOT conduct as a solid, but <span class="hl-green">conducts when molten (l) or dissolved (aq)</span>!<br/>
+                  • <strong>Stronger when:</strong> Ions are <span class="hl-amber">smaller + higher charge</span>.
                 </p>
                 <div class="grid grid-cols-2 gap-4">
                   <div class="slide-fig">
@@ -872,9 +871,9 @@
                   <span class="text-xs font-mono font-bold px-3 py-1.5 rounded-xl mac-subtle">Conducts: Solid (s)</span>
                 </div>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                  • <strong>Electron Sea Theory:</strong> Fixed +ve metal nuclei held by a mobile "sea" of valence electrons acting as non-directional glue.<br/>
-                  • <strong>Properties:</strong> Shiny sheen, <strong>malleable</strong> (planes slide without breaking), conducts electricity as a solid. MP varies widely (Hg −39°C to W &gt;3000°C).<br/>
-                  • <strong>Stronger when:</strong> Larger nuclear charge + <strong>more valence electrons</strong> (Group 2 &gt; Group 1).
+                  • <strong>Electron Sea Theory:</strong> Fixed +ve metal nuclei held by a <span class="hl-amber">mobile "sea" of valence electrons</span>.<br/>
+                  • <strong>Properties:</strong> Shiny sheen, malleable (planes slide without breaking), conducts electricity as a solid.<br/>
+                  • <strong>Stronger when:</strong> Larger nuclear charge + more valence electrons (Group 2 &gt; Group 1).
                 </p>
                 <div class="grid grid-cols-2 gap-4">
                   <div class="slide-fig">
@@ -895,8 +894,8 @@
                   <span class="text-xs font-mono font-bold px-3 py-1.5 rounded-xl mac-subtle">Non-Conductor</span>
                 </div>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                  • <strong>Structure:</strong> Neutral molecules held together by <strong>Intermolecular Forces</strong> (LDF, Dipole–Dipole, H-Bonding).<br/>
-                  • <strong>Properties:</strong> <strong>Low melting points</strong>, soft, and <strong>never conduct electricity</strong> (no free ions or electrons).<br/>
+                  • <strong>Structure:</strong> Neutral molecules held together by <span class="hl-blue">Intermolecular Forces (LDF, DD, H-Bonds)</span>.<br/>
+                  • <strong>Properties:</strong> Low melting points, soft, and <span class="hl-rose">never conduct electricity</span> (no free ions or electrons).<br/>
                   • <strong>Stronger when:</strong> More electrons (LDF), flatter/longer shape, higher polarity.
                 </p>
                 <div class="grid grid-cols-2 gap-4">
@@ -918,8 +917,8 @@
                   <span class="text-xs font-mono font-bold px-3 py-1.5 rounded-xl mac-subtle">Graphite Conducts!</span>
                 </div>
                 <p class="text-base leading-relaxed" style="color: var(--mac-muted);">
-                  • <strong>Diamond (sp³):</strong> 4 covalent bonds per C in a 3D tetrahedral cage. Extreme hardness, <strong>3500°C MP</strong>, <strong>non-conductor</strong>.<br/>
-                  • <strong>Graphite (sp²):</strong> 3 bonds per C in flat hexagonal sheets + <strong>1 delocalized p electron</strong> that moves along the sheet (<strong>conducts electricity!</strong>). Weak LDF between layers makes it <strong>slippery</strong>.
+                  • <strong>Diamond (sp³):</strong> 4 covalent bonds per C in a 3D tetrahedral cage. Extreme hardness, 3500°C MP, non-conductor.<br/>
+                  • <strong>Graphite (sp²):</strong> 3 bonds per C in flat hexagonal sheets + <span class="hl-green">1 delocalized p electron (conducts!)</span>. Weak LDF between layers makes it slippery.
                 </p>
                 <div class="grid grid-cols-2 gap-4">
                   <div class="slide-fig">
@@ -1023,7 +1022,7 @@
           { sub: '2s', boxes: ['↑↓'] },
           { sub: '2p', boxes: ['↑↓', '↑', '↑'] }
         ],
-        note: '<strong>Hund’s Rule ("Empty Bus Seat Rule")</strong>: In the 2p sublevel (4e⁻), place <strong>one electron in each of the 3 boxes first</strong> before pairing the 4th electron! Has <strong>2 unpaired e⁻ (Paramagnetic)</strong>.'
+        note: '<strong>Hund’s Rule ("Empty Bus Seat Rule")</strong>: In the 2p sublevel (4e⁻), place <span class="hl-amber">one electron in each of the 3 boxes first</span> before pairing the 4th electron! Has 2 unpaired e⁻ (Paramagnetic).'
       },
       {
         id: 'sulfur', label: 'S (16e⁻)', name: 'Sulfur (S — 16 Electrons)',
@@ -1033,7 +1032,7 @@
           { sub: '[Ne] Core + 3s', boxes: ['↑↓'] },
           { sub: '3p', boxes: ['↑↓', '↑', '↑'] }
         ],
-        note: '<strong>Shorthand Rule</strong>: Go up one row to Period 2 Noble Gas <strong>[Ne] (10 core e⁻)</strong>, then write the remaining <strong>6 valence electrons</strong> on Row 3 (<strong>3s² 3p⁴</strong>).'
+        note: '<strong>Shorthand Rule</strong>: Go up one row to Period 2 Noble Gas <strong>[Ne]</strong> (10 core e⁻), then write the remaining <span class="hl-blue">6 valence electrons (3s² 3p⁴)</span>.'
       },
       {
         id: 'germanium', label: 'Ge (32e⁻)', name: 'Germanium (Ge — 32 Electrons)',
@@ -1044,7 +1043,7 @@
           { sub: '3d (n−1)', boxes: ['↑↓','↑↓','↑↓','↑↓','↑↓'] },
           { sub: '4p', boxes: ['↑', '↑', ''] }
         ],
-        note: 'Remember: In Row 4, the d-block is <strong>(n − 1) = 3d</strong>! So after <strong>[Ar]</strong>, you fill <strong>4s²</strong>, then <strong>3d¹⁰</strong>, then <strong>4p²</strong>.'
+        note: 'Remember: In Row 4, the d-block is <span class="hl-amber">(n − 1) = 3d</span>! So after [Ar], you fill 4s², then 3d¹⁰, then 4p².'
       },
       {
         id: 'chromium', label: 'Cr (24e⁻ Exception!)', name: 'Chromium (Cr — 24e⁻ Stability Exception)',
@@ -1054,7 +1053,7 @@
           { sub: '4s¹', boxes: ['↑'] },
           { sub: '3d⁵ (Half-Full!)', boxes: ['↑','↑','↑','↑','↑'] }
         ],
-        note: '<span class="hl-rose">EXAM EXCEPTION:</span> Chromium promotes one electron from 4s into 3d so that both 4s and 3d are <strong>HALF-FULL (4s¹ 3d⁵)</strong>, which lowers repulsion and increases stability!'
+        note: '<strong>Exam Exception:</strong> Chromium promotes one electron from 4s into 3d so that both 4s and 3d are <span class="hl-rose">HALF-FULL (4s¹ 3d⁵)</span>, which lowers repulsion and increases stability!'
       },
       {
         id: 'copper', label: 'Cu (29e⁻ Exception!)', name: 'Copper (Cu — 29e⁻ Stability Exception)',
@@ -1064,7 +1063,7 @@
           { sub: '4s¹', boxes: ['↑'] },
           { sub: '3d¹⁰ (Full!)', boxes: ['↑↓','↑↓','↑↓','↑↓','↑↓'] }
         ],
-        note: '<span class="hl-rose">EXAM EXCEPTION:</span> Copper moves one electron from 4s to 3d to achieve a completely <strong>FULL 3d¹⁰ sublevel (4s¹ 3d¹⁰)</strong>!'
+        note: '<strong>Exam Exception:</strong> Copper moves one electron from 4s to 3d to achieve a completely <span class="hl-rose">FULL 3d¹⁰ sublevel (4s¹ 3d¹⁰)</span>!'
       },
       {
         id: 'zn2', label: 'Zn²⁺ & O²⁻ Ions', name: 'Ion Formation: Zinc Cation (Zn²⁺) & Oxide Anion (O²⁻)',
@@ -1074,7 +1073,7 @@
           { sub: '4s (Lost 2e⁻!)', boxes: [''] },
           { sub: '3d¹⁰ (Kept Full)', boxes: ['↑↓','↑↓','↑↓','↑↓','↑↓'] }
         ],
-        note: '<span class="hl-blue">CATION RULE:</span> Transition metals ALWAYS lose electrons from the <strong>highest principal quantum number "n" (4s) BEFORE 3d</strong>! Leaving <strong>3d¹⁰ full</strong> makes Zn²⁺ very stable.'
+        note: '<strong>Cation Rule:</strong> Transition metals ALWAYS lose electrons from the <span class="hl-blue">highest "n" shell (4s) BEFORE 3d</span>! Leaving 3d¹⁰ full makes Zn²⁺ very stable.'
       }
     ];
 
@@ -1177,19 +1176,19 @@
 
     // --- CHAPTER 4: VSEPR 13 SHAPES (MAPPED TO ACTUAL SLIDE IMAGES!) ---
     const vseprData = [
-      { code:'AX₂', name:'Linear', epg:2, epgLabel:'Linear (sp)', angle:'180°', ex:'BeH₂, BeF₂, CO₂, CS₂, HCN', note:'<strong>2 bonding pairs, 0 lone pairs</strong>. Opposite sides (<strong>180°</strong>). Works for single (F–Be–F) and double bonds (O=C=O).', img1:'images/deck_1_image3.jpg', img2:'images/deck_1_image18.jpg' },
-      { code:'AX₃', name:'Trigonal Planar', epg:3, epgLabel:'Trigonal Planar (sp²)', angle:'120°', ex:'BF₃, SO₃, NO₃⁻, CO₃²⁻', note:'<strong>3 bonding pairs</strong> flat in a single plane at <strong>120°</strong>.', img1:'images/deck_1_image8.jpg', img2:'images/deck_1_image13.jpg' },
-      { code:'AX₂E', name:'Bent (V-shaped)', epg:3, epgLabel:'Trigonal Planar (sp²)', angle:'< 120°', ex:'SO₂, O₃', note:'<strong>2 bonding + 1 lone pair</strong>. The lone pair repels strongly and compresses the bond angle to <strong>&lt; 120°</strong>.', img1:'images/deck_1_image9.jpg', img2:'images/deck_1_image27.png' },
-      { code:'AX₄', name:'Tetrahedral', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'109.5°', ex:'CH₄, SiCl₄, SO₄²⁻, ClO₄⁻', note:'<strong>4 bonding pairs</strong> in a symmetrical 3D tetrahedron (<strong>109.5°</strong>).', img1:'images/deck_1_image15.jpg', img2:'images/deck_1_image20.jpg' },
-      { code:'AX₃E', name:'Trigonal Pyramidal', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'107°', ex:':NH₃, :PF₃, :ClO₃⁻, H₃O⁺', note:'<strong>3 bonding + 1 lone pair</strong> at the apex. Lone pair repulsion pushes the 3 bonds down to <strong>107°</strong>.', img1:'images/deck_1_image19.jpg', img2:'images/deck_1_image6.png' },
-      { code:'AX₂E₂', name:'Bent (V-shaped)', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'104.5°', ex:'H₂O, :OF₂:, :SCl₂:', note:'<strong>2 bonding + 2 lone pairs</strong>. Strong LP–LP and LP–BP repulsion shrinks the bond angle to <strong>104.5°</strong>.', img1:'images/deck_1_image21.jpg', img2:'images/deck_1_image17.png' },
-      { code:'AX₅', name:'Trigonal Bipyramidal', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'120° / 90°', ex:'PCl₅, PF₅, AsF₅, SOF₄', note:'<strong>5 bonding pairs</strong>: 3 equatorial in the trigonal plane (<strong>120°</strong>) + 2 axial top/bottom (<strong>90°</strong>).', img1:'images/deck_1_image24.jpg', img2:'images/deck_1_image23.jpg' },
-      { code:'AX₄E', name:'Seesaw', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'103° / 179°', ex:':SF₄, :XeO₂F₂, :IF₄⁺', note:'<strong>1 lone pair sits in the equatorial plane</strong> (most room), reducing SF₄ bond angles from 120° → <strong>103°</strong> and 180° → <strong>179°</strong>.', img1:'images/deck_1_image32.jpg', img2:'images/deck_1_image23.jpg' },
-      { code:'AX₃E₂', name:'T-Shaped', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'< 90° (86°)', ex:'::ClF₃, ::BrF₃', note:'<strong>2 lone pairs sit in the equatorial plane</strong>; axial Br–F bonds are pushed back slightly to <strong>86°</strong>.', img1:'images/deck_1_image34.jpg', img2:'images/deck_2_image7.png' },
-      { code:'AX₂E₃', name:'Linear (5-Group)', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'180°', ex:':::XeF₂, :::I₃⁻, :::IF₂⁻', note:'<strong>All 3 lone pairs sit in the equatorial triangle</strong> (120° apart), leaving the 2 axial atoms in a straight <strong>180° line</strong>!', img1:'images/deck_1_image28.jpg', img2:'images/deck_2_image11.png' },
-      { code:'AX₆', name:'Octahedral', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'90°', ex:'SF₆, IOF₅', note:'<strong>6 bonding pairs</strong> arranged symmetrically at <strong>90° angles</strong> around the central atom.', img1:'images/deck_1_image35.jpg', img2:'images/deck_1_image29.jpg' },
-      { code:'AX₅E', name:'Square Pyramidal', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'< 90°', ex:':BrF₅, :TeF₅⁻, :XeOF₄', note:'<strong>5 bonding + 1 lone pair</strong> at the bottom axial position (<strong>&lt; 90°</strong>).', img1:'images/deck_1_image38.jpg', img2:'images/deck_1_image29.jpg' },
-      { code:'AX₄E₂', name:'Square Planar', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'90°', ex:'::XeF₄, ::ICl₄⁻', note:'<strong>2 lone pairs sit directly opposite each other (180°)</strong>, leaving 4 bonds in a flat <strong>90° square plane</strong>.', img1:'images/deck_1_image33.jpg', img2:'images/deck_1_image29.jpg' }
+      { code:'AX₂', name:'Linear', epg:2, epgLabel:'Linear (sp)', angle:'180°', ex:'BeH₂, BeF₂, CO₂, CS₂, HCN', note:'2 bonding pairs, 0 lone pairs. Opposite sides (<span class="hl-green">180°</span>). Works for single (F–Be–F) and double bonds (O=C=O).', img1:'images/deck_1_image3.jpg', img2:'images/deck_1_image18.jpg' },
+      { code:'AX₃', name:'Trigonal Planar', epg:3, epgLabel:'Trigonal Planar (sp²)', angle:'120°', ex:'BF₃, SO₃, NO₃⁻, CO₃²⁻', note:'3 bonding pairs flat in a single plane at <span class="hl-green">120°</span>.', img1:'images/deck_1_image8.jpg', img2:'images/deck_1_image13.jpg' },
+      { code:'AX₂E', name:'Bent (V-shaped)', epg:3, epgLabel:'Trigonal Planar (sp²)', angle:'< 120°', ex:'SO₂, O₃', note:'2 bonding + 1 lone pair. Lone pair repels strongly and compresses the bond angle to <span class="hl-amber">&lt; 120°</span>.', img1:'images/deck_1_image9.jpg', img2:'images/deck_1_image27.png' },
+      { code:'AX₄', name:'Tetrahedral', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'109.5°', ex:'CH₄, SiCl₄, SO₄²⁻, ClO₄⁻', note:'4 bonding pairs in a symmetrical 3D tetrahedron (<span class="hl-green">109.5°</span>).', img1:'images/deck_1_image15.jpg', img2:'images/deck_1_image20.jpg' },
+      { code:'AX₃E', name:'Trigonal Pyramidal', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'107°', ex:':NH₃, :PF₃, :ClO₃⁻, H₃O⁺', note:'3 bonding + 1 lone pair at the apex. Lone pair repulsion pushes the 3 bonds down to <span class="hl-amber">107°</span>.', img1:'images/deck_1_image19.jpg', img2:'images/deck_1_image6.png' },
+      { code:'AX₂E₂', name:'Bent (V-shaped)', epg:4, epgLabel:'Tetrahedral (sp³)', angle:'104.5°', ex:'H₂O, :OF₂:, :SCl₂:', note:'2 bonding + 2 lone pairs. Strong LP–LP and LP–BP repulsion shrinks the bond angle to <span class="hl-rose">104.5°</span>.', img1:'images/deck_1_image21.jpg', img2:'images/deck_1_image17.png' },
+      { code:'AX₅', name:'Trigonal Bipyramidal', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'120° / 90°', ex:'PCl₅, PF₅, AsF₅, SOF₄', note:'5 bonding pairs: 3 equatorial in the trigonal plane (<span class="hl-blue">120°</span>) + 2 axial top/bottom (<span class="hl-blue">90°</span>).', img1:'images/deck_1_image24.jpg', img2:'images/deck_1_image23.jpg' },
+      { code:'AX₄E', name:'Seesaw', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'103° / 179°', ex:':SF₄, :XeO₂F₂, :IF₄⁺', note:'<span class="hl-amber">1 lone pair in the equatorial plane</span> (most room), reducing SF₄ bond angles to 103° and 179°.', img1:'images/deck_1_image32.jpg', img2:'images/deck_1_image23.jpg' },
+      { code:'AX₃E₂', name:'T-Shaped', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'< 90° (86°)', ex:'::ClF₃, ::BrF₃', note:'<span class="hl-amber">2 lone pairs in the equatorial plane</span>; axial Br–F bonds are pushed back slightly to 86°.', img1:'images/deck_1_image34.jpg', img2:'images/deck_2_image7.png' },
+      { code:'AX₂E₃', name:'Linear (5-Group)', epg:5, epgLabel:'Trig. Bipyramidal (sp³d)', angle:'180°', ex:':::XeF₂, :::I₃⁻, :::IF₂⁻', note:'<span class="hl-green">All 3 lone pairs in the equatorial triangle</span> (120° apart), leaving the 2 axial atoms in a straight 180° line!', img1:'images/deck_1_image28.jpg', img2:'images/deck_2_image11.png' },
+      { code:'AX₆', name:'Octahedral', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'90°', ex:'SF₆, IOF₅', note:'6 bonding pairs arranged symmetrically at <span class="hl-green">90° angles</span> around the central atom.', img1:'images/deck_1_image35.jpg', img2:'images/deck_1_image29.jpg' },
+      { code:'AX₅E', name:'Square Pyramidal', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'< 90°', ex:':BrF₅, :TeF₅⁻, :XeOF₄', note:'5 bonding + 1 lone pair at the bottom axial position (<span class="hl-amber">&lt; 90°</span>).', img1:'images/deck_1_image38.jpg', img2:'images/deck_1_image29.jpg' },
+      { code:'AX₄E₂', name:'Square Planar', epg:6, epgLabel:'Octahedral (sp³d²)', angle:'90°', ex:'::XeF₄, ::ICl₄⁻', note:'<span class="hl-rose">2 lone pairs sit opposite each other (180°)</span>, leaving 4 bonds in a flat 90° square plane (Nonpolar!).', img1:'images/deck_1_image33.jpg', img2:'images/deck_1_image29.jpg' }
     ];
 
     let curEPG = 'all';
