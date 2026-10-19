@@ -337,7 +337,7 @@
 
         </div>
 
-        <div id="trap-chem" class="mac-card p-5 text-sm space-y-2 mt-6 hidden lg:block">
+        <div id="trap-chem" class="mac-card p-5 text-sm space-y-2 mt-6">
           <div class="font-bold text-base" style="color: var(--mac-accent);">💡 #1 Chem Exam Trap</div>
           <p class="leading-relaxed" style="color: var(--mac-muted);">
             <strong>Symmetrical</strong> molecules (<code class="font-mono">CO₂, CF₄, CCl₄, XeF₄</code>) are <span class="hl-rose">always Nonpolar</span> (London Dispersion forces only), even if their individual bonds have a big ΔEN!
@@ -1278,6 +1278,7 @@
   </div>
 
   <script>
+
 
 
 
@@ -2464,15 +2465,31 @@
 
     // --- CONTROLLER FUNCTIONS FOR PILL DECKS ---
 
-    function initBioPillDecks() {
-      setupPillDeck('bio-biomol-pills', bioBiomolItems, 'pickBiomol', 'water');
-      setupPillDeck('bio-enzyme-pills', bioEnzymeItems, 'pickEnzyme', 'catalysis');
-      setupPillDeck('bio-cell-pills', bioCellItems, 'pickCell', 'microscopy');
-      setupPillDeck('bio-mosaic-pills', bioMosaicItems, 'pickMosaic', 'bilayer_handout');
-      setupPillDeck('bio-cftr-pills', bioCftrItems, 'pickCftr', 'functions_6');
-      setupPillDeck('bio-passive-pills', bioPassiveItems, 'pickPassive', 'permeability');
-      setupPillDeck('bio-active-pills', bioActiveItems, 'pickActive', 'primary_pump');
-    }
+    function pickBiomol(id) { renderStageContent('bio-biomol-stage', 'bio-biomol-pills', bioBiomolItems, id); }
+    function pickEnzyme(id) { renderStageContent('bio-enzyme-stage', 'bio-enzyme-pills', bioEnzymeItems, id); }
+    function pickCell(id) { renderStageContent('bio-cell-stage', 'bio-cell-pills', bioCellItems, id); }
+    function pickMosaic(id) { renderStageContent('bio-mosaic-stage', 'bio-mosaic-pills', bioMosaicItems, id); }
+    function pickCftr(id) { renderStageContent('bio-cftr-stage', 'bio-cftr-pills', bioCftrItems, id); }
+    function pickPassive(id) { renderStageContent('bio-passive-stage', 'bio-passive-pills', bioPassiveItems, id); }
+    function pickActive(id) { renderStageContent('bio-active-stage', 'bio-active-pills', bioActiveItems, id); }
+
+    const bioPickMap = {
+      'pickBiomol': pickBiomol,
+      'pickEnzyme': pickEnzyme,
+      'pickCell': pickCell,
+      'pickMosaic': pickMosaic,
+      'pickCftr': pickCftr,
+      'pickPassive': pickPassive,
+      'pickActive': pickActive,
+    };
+
+    window.pickBiomol = pickBiomol;
+    window.pickEnzyme = pickEnzyme;
+    window.pickCell = pickCell;
+    window.pickMosaic = pickMosaic;
+    window.pickCftr = pickCftr;
+    window.pickPassive = pickPassive;
+    window.pickActive = pickActive;
 
     function setupPillDeck(containerId, items, pickFnName, defaultId) {
       const box = document.getElementById(containerId);
@@ -2480,8 +2497,9 @@
       box.innerHTML = items.map((it) => `
         <button onclick="${pickFnName}('${it.id}')" id="pill-${containerId}-${it.id}" class="pill-choice ${it.id===defaultId ? 'active' : ''} px-4 py-2 text-sm font-semibold cursor-pointer">${it.label}</button>
       `).join('');
-      if (window[pickFnName]) {
-        window[pickFnName](defaultId);
+      const fn = bioPickMap[pickFnName] || window[pickFnName];
+      if (typeof fn === 'function') {
+        fn(defaultId);
       }
     }
 
@@ -2526,13 +2544,28 @@
       stage.innerHTML = inner;
     }
 
-    function pickBiomol(id) { renderStageContent('bio-biomol-stage', 'bio-biomol-pills', bioBiomolItems, id); }
-    function pickEnzyme(id) { renderStageContent('bio-enzyme-stage', 'bio-enzyme-pills', bioEnzymeItems, id); }
-    function pickCell(id) { renderStageContent('bio-cell-stage', 'bio-cell-pills', bioCellItems, id); }
-    function pickMosaic(id) { renderStageContent('bio-mosaic-stage', 'bio-mosaic-pills', bioMosaicItems, id); }
-    function pickCftr(id) { renderStageContent('bio-cftr-stage', 'bio-cftr-pills', bioCftrItems, id); }
-    function pickPassive(id) { renderStageContent('bio-passive-stage', 'bio-passive-pills', bioPassiveItems, id); }
-    function pickActive(id) { renderStageContent('bio-active-stage', 'bio-active-pills', bioActiveItems, id); }
+    const bioPillDeckDefs = [
+      { container: 'bio-biomol-pills', stage: 'bio-biomol-stage', items: bioBiomolItems, pickFn: 'pickBiomol', defaultId: 'water' },
+      { container: 'bio-enzyme-pills', stage: 'bio-enzyme-stage', items: bioEnzymeItems, pickFn: 'pickEnzyme', defaultId: 'catalysis' },
+      { container: 'bio-cell-pills', stage: 'bio-cell-stage', items: bioCellItems, pickFn: 'pickCell', defaultId: 'microscopy' },
+      { container: 'bio-mosaic-pills', stage: 'bio-mosaic-stage', items: bioMosaicItems, pickFn: 'pickMosaic', defaultId: 'bilayer_handout' },
+      { container: 'bio-cftr-pills', stage: 'bio-cftr-stage', items: bioCftrItems, pickFn: 'pickCftr', defaultId: 'functions_6' },
+      { container: 'bio-passive-pills', stage: 'bio-passive-stage', items: bioPassiveItems, pickFn: 'pickPassive', defaultId: 'permeability' },
+      { container: 'bio-active-pills', stage: 'bio-active-stage', items: bioActiveItems, pickFn: 'pickActive', defaultId: 'primary_pump' }
+    ];
+
+    function initBioPillDecks(force = false) {
+      bioPillDeckDefs.forEach(d => {
+        const box = document.getElementById(d.container);
+        const stage = document.getElementById(d.stage);
+        if (!box) return;
+        if (!force && box.children.length > 0 && stage && stage.children.length > 0) {
+          return;
+        }
+        setupPillDeck(d.container, d.items, d.pickFn, d.defaultId);
+      });
+    }
+    window.initBioPillDecks = initBioPillDecks;
 
     function toggleCellAnswers() {
       const box = document.getElementById('cell-answers-box');
@@ -2542,15 +2575,6 @@
       box.classList.toggle('hidden', !isHidden);
       btn.textContent = isHidden ? '🙈 Hide Answer Key' : '👁️ Reveal Answer Key (A to Q)';
     }
-
-    // Bind to window for HTML event handlers
-    window.pickBiomol = pickBiomol;
-    window.pickEnzyme = pickEnzyme;
-    window.pickCell = pickCell;
-    window.pickMosaic = pickMosaic;
-    window.pickCftr = pickCftr;
-    window.pickPassive = pickPassive;
-    window.pickActive = pickActive;
     window.toggleCellAnswers = toggleCellAnswers;
 
     // --- ENHANCED MODE SWITCHER ---
@@ -2559,7 +2583,14 @@
     setStudyMode = function(mode) {
       currentStudyMode = mode;
       origSetStudyMode(mode);
-      if (mode === 'flashcards') {
+      if (mode === 'notes') {
+        if (currentSubject === 'bio') {
+          initBioPillDecks();
+          showTopic(currentBioTopic || 'biomol');
+        } else {
+          showTopic('econfig');
+        }
+      } else if (mode === 'flashcards') {
         renderFlashcard();
       } else if (mode === 'quiz') {
         renderQuiz();
@@ -2605,11 +2636,17 @@
       const navBio = document.getElementById('nav-bio-group');
       if (navBio) navBio.classList.toggle('hidden', isChem);
 
-      // 4. Update Exam Traps
+      // 4. Update Exam Traps (explicit display styles to override any Tailwind desktop media query specificity)
       const trapChem = document.getElementById('trap-chem');
       const trapBio = document.getElementById('trap-bio');
-      if (trapChem) trapChem.classList.toggle('hidden', !isChem);
-      if (trapBio) trapBio.classList.toggle('hidden', isChem);
+      if (trapChem) {
+        trapChem.classList.toggle('hidden', !isChem);
+        trapChem.style.display = isChem ? 'block' : 'none';
+      }
+      if (trapBio) {
+        trapBio.classList.toggle('hidden', isChem);
+        trapBio.style.display = isChem ? 'none' : 'block';
+      }
 
       // 5. Update Notes Containers
       const notesChem = document.getElementById('notes-chem');
@@ -2673,6 +2710,11 @@
       fcIndex = 0;
       fcFlipped = false;
 
+      // Unconditionally ensure Biology pills are ready
+      if (!isChem) {
+        initBioPillDecks();
+      }
+
       // 10. Re-render mode or initialize notes
       if (currentStudyMode === 'flashcards') {
         renderFlashcard();
@@ -2684,8 +2726,7 @@
         if (isChem) {
           showTopic('econfig');
         } else {
-          showTopic('biomol');
-          initBioPillDecks();
+          showTopic(currentBioTopic || 'biomol');
         }
       }
     }
@@ -3152,7 +3193,8 @@
 
     // Show Topic override
     showTopic = function(t) {
-      setStudyMode('notes');
+      currentStudyMode = 'notes';
+      origSetStudyMode('notes');
       if (currentSubject === 'chem') {
         topics.forEach(item => {
           const el = document.getElementById('topic-' + item);
@@ -3162,6 +3204,7 @@
         });
       } else {
         currentBioTopic = t;
+        initBioPillDecks();
         bioTopics.forEach(item => {
           const el = document.getElementById('topic-' + item);
           if (el) el.classList.toggle('hidden', item !== t);
@@ -3284,9 +3327,14 @@
     initEconfig();
     initLewis();
     renderVseprButtons();
+    initBioPillDecks(true);
     renderFlashcard();
     renderQuiz();
     renderVideos();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initBioPillDecks();
+    });
   </script>
 </body>
 </html>
