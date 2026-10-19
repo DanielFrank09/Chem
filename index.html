@@ -238,9 +238,10 @@
 
       <!-- Center: Mode Switcher -->
       <div class="flex items-center p-1.5 rounded-2xl border border-[var(--mac-border)]" style="background: var(--mac-subtle);">
-        <button onclick="setStudyMode('notes')" id="mode-notes" class="seg-btn active px-4 sm:px-5 py-1.5 text-sm cursor-pointer">📖 Study Guide</button>
-        <button onclick="setStudyMode('flashcards')" id="mode-flashcards" class="seg-btn px-4 sm:px-5 py-1.5 text-sm cursor-pointer">🗂️ Flashcards (<span id="fc-count-pill">16</span>)</button>
-        <button onclick="setStudyMode('quiz')" id="mode-quiz" class="seg-btn px-4 sm:px-5 py-1.5 text-sm cursor-pointer">✅ Practice Quiz (<span id="quiz-count-pill">10</span>)</button>
+        <button onclick="setStudyMode('notes')" id="mode-notes" class="seg-btn active px-3 sm:px-4 py-1.5 text-xs sm:text-sm cursor-pointer">📖 Study Guide</button>
+        <button onclick="setStudyMode('flashcards')" id="mode-flashcards" class="seg-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm cursor-pointer">🗂️ Flashcards (<span id="fc-count-pill">16</span>)</button>
+        <button onclick="setStudyMode('quiz')" id="mode-quiz" class="seg-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm cursor-pointer">✅ Practice Quiz (<span id="quiz-count-pill">10</span>)</button>
+        <button onclick="setStudyMode('videos')" id="mode-videos" class="seg-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm cursor-pointer">🎬 Video Lessons (<span id="video-count-pill">5</span>)</button>
       </div>
 
       <!-- Right: Score & Theme Toggle -->
@@ -1238,11 +1239,47 @@
           <div id="quiz-list" class="grid grid-cols-1 xl:grid-cols-2 gap-6"></div>
         </div>
 
+      
+
+
+        <!-- ==========================================
+             MODE D: VIDEO LESSONS (VISUAL & AUDITORY)
+             ========================================== -->
+        <div id="view-videos" class="max-w-[1400px] mx-auto space-y-8 hidden">
+          <!-- Video Header -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[var(--mac-border)] pb-6">
+            <div>
+              <span id="video-badge" class="text-sm font-bold uppercase tracking-wider" style="color: var(--mac-accent);">SCH4U Chemistry · Visual &amp; Auditory Masterclass</span>
+              <h2 id="video-title" class="text-3xl font-bold mt-1">Curated High-Yield Video Lessons</h2>
+              <p id="video-desc" class="text-base mt-1" style="color: var(--mac-muted);">Hand-picked video tutorials optimized for visual learners (3D spatial models, orbital diagrams) and auditory learners (vocal mnemonics, step-by-step spoken pacing).</p>
+            </div>
+            <!-- Video Filter Pills -->
+            <div id="video-filter-pills" class="flex flex-wrap items-center gap-2"></div>
+          </div>
+
+          <!-- Featured Video Hero Player -->
+          <div id="video-hero-player" class="mac-card p-6 lg:p-8 space-y-6"></div>
+
+          <!-- Video Grid Directory -->
+          <div class="space-y-4 pt-2">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-bold flex items-center gap-2">
+                <span>🎬</span> <span>Complete Video Lesson Library</span>
+              </h3>
+              <span id="video-library-count" class="text-xs font-mono font-bold px-3 py-1 rounded-full" style="background: var(--mac-subtle); color: var(--mac-muted);">5 Lessons</span>
+            </div>
+            <div id="video-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+          </div>
+        </div>
+    
+
       </main>
     </div>
   </div>
 
   <script>
+
+
 
 
 
@@ -1257,7 +1294,7 @@
 
     // --- MODE SWITCHER ---
     function setStudyMode(mode) {
-      ['notes', 'flashcards', 'quiz'].forEach(m => {
+      ['notes', 'flashcards', 'quiz', 'videos'].forEach(m => {
         document.getElementById('view-' + m).classList.toggle('hidden', m !== mode);
         document.getElementById('mode-' + m).classList.toggle('active', m === mode);
       });
@@ -2526,6 +2563,8 @@
         renderFlashcard();
       } else if (mode === 'quiz') {
         renderQuiz();
+      } else if (mode === 'videos') {
+        renderVideos();
       }
     };
     window.setStudyMode = setStudyMode;
@@ -2600,22 +2639,47 @@
         quizTitle.textContent = isChem ? 'Practice Test (10 Questions)' : 'Practice Test (16 Questions)';
       }
 
-      // 8. Update Counter Badges in Header Mode Switcher
+      // 8. Update Video Header Titles
+      const vBadge = document.getElementById('video-badge');
+      const vTitle = document.getElementById('video-title');
+      const vDesc = document.getElementById('video-desc');
+      if (vBadge) {
+        vBadge.textContent = isChem 
+          ? 'SCH4U Chemistry · Visual & Auditory Masterclass' 
+          : 'SBI4U Biology · Visual & Auditory Masterclass';
+      }
+      if (vTitle) {
+        vTitle.textContent = isChem 
+          ? 'Curated High-Yield Chemistry Video Lessons' 
+          : 'Curated High-Yield Biology Video Lessons';
+      }
+      if (vDesc) {
+        vDesc.textContent = isChem
+          ? 'Hand-picked video tutorials optimized for visual learners (3D spatial models, orbital diagrams) and auditory learners (vocal mnemonics, step-by-step spoken pacing).'
+          : 'Hand-picked video tutorials optimized for visual learners (3D animations, cellular transport models) and auditory learners (vocal analogies, step-by-step spoken pacing).';
+      }
+
+      // 9. Update Counter Badges in Header Mode Switcher
       const activeDeck = isChem ? flashcards : bioFlashcards;
       const activeQuiz = isChem ? quizData : bioQuizData;
+      const activeVideos = isChem ? chemVideos : bioVideos;
       const fcPill = document.getElementById('fc-count-pill');
       if (fcPill) fcPill.textContent = activeDeck.length;
       const qPill = document.getElementById('quiz-count-pill');
       if (qPill) qPill.textContent = activeQuiz.length;
+      const vPill = document.getElementById('video-count-pill');
+      if (vPill) vPill.textContent = activeVideos.length;
 
       fcIndex = 0;
       fcFlipped = false;
 
-      // 9. Re-render mode or initialize notes
+      // 10. Re-render mode or initialize notes
       if (currentStudyMode === 'flashcards') {
         renderFlashcard();
       } else if (currentStudyMode === 'quiz') {
         renderQuiz();
+      } else if (currentStudyMode === 'videos') {
+        renderVideos();
       } else {
         if (isChem) {
           showTopic('econfig');
@@ -2626,6 +2690,465 @@
       }
     }
     window.switchSubject = switchSubject;
+
+
+    // ==========================================
+    // VIDEO MASTERCLASS DATASETS & CONTROLLER
+    // ==========================================
+
+    const chemVideos = [
+    {
+        "id": "chem_vsepr",
+        "subject": "chem",
+        "category": "VSEPR Geometry",
+        "title": "VSEPR Theory: 3D Molecular Shapes & Lone Pair Repulsion",
+        "creator": "Tyler DeWitt",
+        "duration": "18 min",
+        "youtubeId": "nxebQZUVvTg",
+        "summary": "Masterclass converting flat 2D Lewis structures into 3D molecular shapes using physical balloon models, steric numbers, and bond angle contractions.",
+        "visualHighlights": [
+            "Physical balloon clusters dynamically demonstrating electron cloud repulsion around a central atom.",
+            "Color-coded 3D spatial models showing Linear (180°), Trigonal Planar (120°), Tetrahedral (109.5°), and Bent geometries.",
+            "Side-by-side comparative chart mapping total electron domains and lone pairs to molecular geometry."
+        ],
+        "auditoryHighlights": [
+            "Clear, conversational vocal pacing explaining *why* valence electron clouds push apart as far as possible.",
+            "Memorable spoken mnemonics for bond angles (e.g., explaining why bulky lone pairs compress H₂O to 104.5°).",
+            "Active verbal walkthrough predicting 3D shapes step-by-step before showing the answer."
+        ],
+        "takeaways": [
+            "Steric number = bonded atoms + lone pairs on central atom.",
+            "Lone pairs exert stronger electrostatic repulsion than bonding pairs, squeezing bond angles.",
+            "Symmetrical geometries with identical surrounding atoms have bond dipoles cancel, making them nonpolar."
+        ]
+    },
+    {
+        "id": "chem_econfig",
+        "subject": "chem",
+        "category": "Electron Config",
+        "title": "Electron Configurations, Orbital Notation & Noble Gas Core",
+        "creator": "The Organic Chemistry Tutor",
+        "duration": "15 min",
+        "youtubeId": "NIwcDnFjj98",
+        "summary": "Step-by-step guide to writing complete electron configurations, noble gas shorthand notation, orbital box diagrams (Aufbau, Pauli, Hund), and exceptions.",
+        "visualHighlights": [
+            "Periodic table color-coded by quantum subshells: s-block (blue), p-block (yellow), d-block (green), f-block (purple).",
+            "Animated diagonal Aufbau rule arrows clearly tracing filling order (1s → 2s → 2p → 3s → 3p → 4s → 3d).",
+            "Orbital box diagrams with spin arrows (↑↓) showing Hund's rule: fill orbitals singly before pairing."
+        ],
+        "auditoryHighlights": [
+            "Repetitive, clear audio pronunciation of the filling sequences and quantum numbers.",
+            "Detailed spoken explanation of the stability of half-filled and fully filled d-subshells (Chromium: [Ar] 4s¹ 3d⁵, Copper: [Ar] 4s¹ 3d¹⁰).",
+            "Vocal emphasis on transition metal cation rules: electrons are always lost from the highest principal quantum number (4s) first!"
+        ],
+        "takeaways": [
+            "Aufbau Principle: Electrons occupy lowest energy orbitals first.",
+            "Pauli Exclusion: Max 2 electrons per orbital with opposite spins (↑↓).",
+            "Hund's Rule: Parallel spins fill degenerate orbitals singly before pairing up."
+        ]
+    },
+    {
+        "id": "chem_lewis",
+        "subject": "chem",
+        "category": "Lewis & Resonance",
+        "title": "Lewis Structures, Formal Charges & Resonance Contributors",
+        "creator": "The Organic Chemistry Tutor",
+        "duration": "22 min",
+        "youtubeId": "PeY_sihSh8E",
+        "summary": "Comprehensive tutorial covering valence electron summation, skeletal arrangements, octet exceptions (incomplete & expanded), formal charge calculations, and resonance hybrids.",
+        "visualHighlights": [
+            "Color-coded arithmetic counting total valence electrons and tracking bonding vs non-bonding electron pairs.",
+            "Step-by-step drawing of expanded octets (SF₆, PCl₅, XeF₄) using central row 3+ elements with accessible d-orbitals.",
+            "Resonance hybrid diagrams with dashed bonds (---) showing delocalized pi electrons over multiple structures."
+        ],
+        "auditoryHighlights": [
+            "Rhythmic verbal formula for Formal Charge: FC = Valence - Lone electrons - (Bonds).",
+            "Audio explanations of the octet hierarchy: carbon, nitrogen, oxygen, and fluorine STRICTLY follow the octet rule.",
+            "Clear spoken rule for major resonance contributors: formal charges closest to zero, negative formal charge on the most electronegative atom."
+        ],
+        "takeaways": [
+            "Sum valence electrons first; place the least electronegative element at the center.",
+            "Minimize formal charges across all atoms; total formal charges must equal the net molecular charge.",
+            "Resonance contributors represent electron delocalization, not a molecule flipping between forms."
+        ]
+    },
+    {
+        "id": "chem_hybrid",
+        "subject": "chem",
+        "category": "Hybridization",
+        "title": "Valence Bond Theory: sp³, sp², sp Hybrid Orbitals & σ/π Bonds",
+        "creator": "Professor Dave Explains",
+        "duration": "12 min",
+        "youtubeId": "I2k61JMk71M",
+        "summary": "3D visualization of atomic orbital mixing, explaining how s and p orbitals hybridize to form equivalent directional lobes, and contrasting axial sigma (σ) overlap with lateral pi (π) overlap.",
+        "visualHighlights": [
+            "High-definition 3D orbital lobes showing orbital mixing (one s + three p → four sp³ lobes pointing to tetrahedron corners).",
+            "Clear visual distinction between head-on end-to-end sigma (σ) overlap along the internuclear axis vs side-by-side unhybridized p-orbital pi (π) overlap.",
+            "Color-coded breakdown of multiple bonds: single bond (1σ), double bond (1σ + 1π), triple bond (1σ + 2π)."
+        ],
+        "auditoryHighlights": [
+            "Concise, articulate narration linking steric number directly to hybridization state in seconds.",
+            "Clear verbal analogies for electron promotion and energy minimization during bond formation.",
+            "Explains why pi bonds restrict rotation around carbon-carbon double bonds, creating cis/trans isomers."
+        ],
+        "takeaways": [
+            "Steric Number 2 = sp (180°), Steric Number 3 = sp² (120°), Steric Number 4 = sp³ (109.5°).",
+            "Sigma (σ) bonds form from axial orbital overlap and allow free rotation.",
+            "Pi (π) bonds form from parallel overlap of unhybridized p orbitals and prevent rotation."
+        ]
+    },
+    {
+        "id": "chem_imf",
+        "subject": "chem",
+        "category": "IMFs & Solids",
+        "title": "Intermolecular Forces: London Dispersion, Dipole & Hydrogen Bonds",
+        "creator": "Professor Dave Explains",
+        "duration": "14 min",
+        "youtubeId": "S094BmsiEio",
+        "summary": "Deep dive into intermolecular forces (IMFs) vs intramolecular covalent bonds, exploring London dispersion forces, dipole-dipole attractions, hydrogen bonding (FON), and macroscopic boiling point trends.",
+        "visualHighlights": [
+            "Particle animations showing momentary distortion of electron clouds creating instantaneous induced dipoles.",
+            "Permanent dipole alignment animations with partial positive (δ+) attracting partial negative (δ-) ends.",
+            "Clear visual ranking of IMF strengths: Ionic/Network > Hydrogen Bonding > Dipole-Dipole > London Dispersion."
+        ],
+        "auditoryHighlights": [
+            "Crystal-clear vocal explanations explaining why polarizability increases with total electron count and molecular weight.",
+            "Spoken mnemonic for Hydrogen Bonding: Hydrogen bonded directly to 'FON' (Fluorine, Oxygen, or Nitrogen).",
+            "Verbal analysis of boiling point graphs comparing Group 14, 15, 16, and 17 hydrides."
+        ],
+        "takeaways": [
+            "London Dispersion Forces (LDF) exist between ALL molecules; strength increases with polarizability and surface area.",
+            "Dipole-dipole forces occur exclusively between polar molecules with permanent net dipole moments.",
+            "Hydrogen bonding is an unusually strong dipole-dipole attraction occurring only when H is bonded to F, O, or N."
+        ]
+    }
+];
+    const bioVideos = [
+    {
+        "id": "bio_macromol",
+        "subject": "bio",
+        "category": "Biomolecules",
+        "title": "Biomolecules: Carbs, Lipids, Proteins & Nucleic Acids",
+        "creator": "Amoeba Sisters",
+        "duration": "10 min",
+        "youtubeId": "YO244P1e9QM",
+        "summary": "Vibrant visual walkthrough of the four essential organic macromolecules, monomer-to-polymer assembly, condensation dehydration synthesis, and nutritional functions.",
+        "visualHighlights": [
+            "Cartoon-style animated monomer assembly showing glucose rings, glycerol + fatty acids, amino acids, and nucleotides.",
+            "Color-coded chemical formulas identifying elements present: Carbs (CHO 1:2:1), Lipids (CHO), Proteins (CHON), Nucleic Acids (CHONP).",
+            "Clear visual comparison between condensation (water removed to link monomers) and hydrolysis (water added to break bonds)."
+        ],
+        "auditoryHighlights": [
+            "Catchy, memorable audio mnemonics: 'CHO, CHO, CHON, CHONP' recited rhythmically.",
+            "Phonetic pronunciation and spoken breakdowns of alpha vs beta glucose ring orientations.",
+            "Relatable real-world analogies connecting food groups to cellular functions (pasta for quick carb energy, olive oil for unsaturated lipid storage)."
+        ],
+        "takeaways": [
+            "Carbohydrates: Monosaccharide monomers linked by glycosidic bonds (energy storage and plant cellulose structure).",
+            "Lipids: Hydrophobic triglycerides and phospholipids linked by ester bonds (long-term energy, membrane bilayers).",
+            "Proteins: Amino acids linked by peptide bonds; function determined entirely by 3D conformation.",
+            "Nucleic Acids: Nucleotides linked by phosphodiester bonds (genetic code and protein synthesis)."
+        ]
+    },
+    {
+        "id": "bio_enzymes",
+        "subject": "bio",
+        "category": "Enzymes",
+        "title": "Enzymes: Biological Catalysts, Induced Fit & Denaturation",
+        "creator": "Amoeba Sisters",
+        "duration": "9 min",
+        "youtubeId": "qgVFkRn8f10",
+        "summary": "Comprehensive animation of enzymatic catalysis, illustrating the active site, substrate-specific induced fit model, lowering activation energy (EA), and temperature/pH denaturation.",
+        "visualHighlights": [
+            "Reaction coordinate energy graphs showing the towering activation energy hill (EA) without an enzyme vs the lower hill with an enzyme.",
+            "Dynamic shape changes showing the enzyme's active site molding precisely around the substrate (Induced Fit).",
+            "Side-by-side diagrams of normal folded 3D enzyme versus thermally denatured unraveled protein chain."
+        ],
+        "auditoryHighlights": [
+            "Upbeat vocal explanation of why enzymes are reusable ('enzymes are like Pac-Man: they do their job, release the products, and are ready for more!').",
+            "Clear auditory distinction between optimum temperature and denaturation thresholds.",
+            "Step-by-step narration explaining that enzymes speed up reactions without being consumed or changing reaction ΔG."
+        ],
+        "takeaways": [
+            "Enzymes are globular protein catalysts that lower activation energy (EA) without altering overall ΔG.",
+            "Induced Fit Model: Substrate binding causes conformational adjustment of the active site to strain bonds.",
+            "Extreme heat or pH deviations disrupt secondary/tertiary hydrogen and ionic bonds, denaturing the active site."
+        ]
+    },
+    {
+        "id": "bio_inhibition",
+        "subject": "bio",
+        "category": "Inhibition & Kinetics",
+        "title": "Enzyme Inhibitors, Cofactors/Coenzymes & Allosteric Regulation",
+        "creator": "Amoeba Sisters",
+        "duration": "8 min",
+        "youtubeId": "6EDBlowVST0",
+        "summary": "Deep dive into competitive vs non-competitive allosteric inhibition, inorganic cofactors (metal ions), organic coenzymes (vitamins), and negative feedback loops.",
+        "visualHighlights": [
+            "Split-screen animation: Competitive inhibitor physically occupying the active site vs Non-competitive inhibitor binding an allosteric site.",
+            "Visual kinetics curves showing Vmax restored at high [S] for competitive inhibition, but permanently depressed Vmax for allosteric inhibition.",
+            "Diagram of non-protein helpers: metal cofactors (Fe²⁺, Mg²⁺) and vitamin coenzymes (NAD⁺, FAD) docking into enzymes."
+        ],
+        "auditoryHighlights": [
+            "Vocal emphasis on the competition mechanism: 'Flood the system with substrate, and the substrate wins the active site!'",
+            "Clear verbal differentiation between inorganic cofactors (minerals) and organic coenzymes (vitamins).",
+            "Story-driven explanation of feedback inhibition acting as a biochemical thermostat shutting down initial pathway enzymes."
+        ],
+        "takeaways": [
+            "Competitive inhibitors mimic substrate shape and bind directly to the active site; overcome by increasing substrate concentration [S].",
+            "Non-competitive (allosteric) inhibitors bind distant regulatory sites and alter 3D shape; CANNOT be overcome by adding substrate.",
+            "Feedback inhibition prevents wasteful overproduction of cellular end-products."
+        ]
+    },
+    {
+        "id": "bio_cells",
+        "subject": "bio",
+        "category": "Cell Organelles",
+        "title": "The Grand Cell Tour: Eukaryotic Organelles & Endomembrane Route",
+        "creator": "Amoeba Sisters",
+        "duration": "14 min",
+        "youtubeId": "8IlzKri08kk",
+        "summary": "Tour inside animal and plant eukaryotic cells, exploring nucleus transcription, rough ER ribosome translation, Golgi vesicle packaging, lysosome hydrolytic digestion, and endosymbiosis.",
+        "visualHighlights": [
+            "Vibrant 3D cell cross-section tracking protein synthesis flow: Nucleus → Rough ER → Transport Vesicle → Golgi Apparatus → Secretory Vesicle → Plasma Membrane.",
+            "Visual evidence for Endosymbiotic Theory showing mitochondria and chloroplasts with own circular DNA and double envelopes.",
+            "Side-by-side microscopic comparison of smooth ER (lipid synthesis/detox) vs rough ER (ribosome-studded protein modification)."
+        ],
+        "auditoryHighlights": [
+            "Personified auditory descriptions of organelle duties: 'Golgi is the cell's post office: sorting, tagging, and shipping proteins.'",
+            "Phonetic pronunciation of difficult terminology (centrifugation, lysosomes, plasmodesmata, connexons).",
+            "Memorable spoken recap of organelle pellet order during differential centrifugation (Nuclei pellet first, Ribosomes last)."
+        ],
+        "takeaways": [
+            "Endomembrane System (EMS): Nuclear envelope, ER, Golgi, lysosomes, and vesicles coordinate protein packaging and transport.",
+            "Endosymbiotic Theory: Mitochondria and chloroplasts originated as engulfed ancestral prokaryotes (double membranes, circular DNA, 70S ribosomes).",
+            "Cytoskeleton: Microtubules (25 nm, tubulin), Intermediate Filaments (8-12 nm, keratin), Microfilaments (7 nm, actin)."
+        ]
+    },
+    {
+        "id": "bio_membrane",
+        "subject": "bio",
+        "category": "Fluid Mosaic",
+        "title": "Inside the Cell Membrane: Phospholipids, Cholesterol & Proteins",
+        "creator": "Amoeba Sisters",
+        "duration": "9 min",
+        "youtubeId": "qBCVVszQQNs",
+        "summary": "Detailed exploration of the Singer-Nicolson Fluid Mosaic Model, amphipathic phospholipid bilayer mechanics, cholesterol temperature buffering, and membrane protein functions.",
+        "visualHighlights": [
+            "3D fluid motion graphics showing phospholipids drifting laterally like floating buoys on an ocean.",
+            "Visual structure of amphipathic phospholipids: polar hydrophilic phosphate head facing aqueous fluids, nonpolar hydrophobic fatty acid tails sequestered inside.",
+            "Close-up of cholesterol acting as a spacer preventing membrane gelling at low temperatures and restraining fluidity at high temperatures."
+        ],
+        "auditoryHighlights": [
+            "Clear spoken breakdown of the 6 membrane protein functions (Transport, Enzymes, Signal Transduction, Cell Recognition, Intercellular Joining, Cytoskeleton Attachment).",
+            "Auditory description of the 'fluid' and 'mosaic' metaphors explaining membrane consistency resembling olive oil.",
+            "Vocal analysis of how saturated vs unsaturated fatty acid kinks alter membrane flexibility in cold-adapted organisms."
+        ],
+        "takeaways": [
+            "Fluid Mosaic Model: Bilayer is fluid with lateral phospholipid mobility and studded with mosaic integral/peripheral proteins.",
+            "Amphipathic nature creates a hydrophobic interior barrier that blocks polar/charged molecules.",
+            "Cholesterol functions as a bidirectional temperature buffer in animal cells (maintains fluidity in cold, stabilizes at 37°C)."
+        ]
+    },
+    {
+        "id": "bio_transport",
+        "subject": "bio",
+        "category": "Cell Transport",
+        "title": "Cell Transport: Simple & Facilitated Diffusion, Osmosis & Pumps",
+        "creator": "Amoeba Sisters",
+        "duration": "11 min",
+        "youtubeId": "Ptmlvtei8hw",
+        "summary": "Masterclass on passive versus active membrane transport, exploring concentration gradients, tonicity (hypertonic, hypotonic, isotonic), aquaporin osmosis, CFTR chloride channels, and Na+/K+ ATP pumps.",
+        "visualHighlights": [
+            "Particle animations contrasting passive downhill movement (no ATP required) with active uphill pumping against the gradient (ATP required).",
+            "Tonicity animations showing red blood cells crenating in hypertonic saline, lysing in hypotonic pure water, and remaining stable in isotonic solution.",
+            "Animated mechanism of the Sodium-Potassium Pump moving 3 Na⁺ ions OUT and 2 K⁺ ions IN per ATP hydrolyzed."
+        ],
+        "auditoryHighlights": [
+            "High-energy verbal analogy: 'Passive transport is rolling downhill on a bike; active transport is pedaling uphill requiring ATP energy!'",
+            "Clear spoken recap of the Dialysis Tubing demo: iodine diffuses IN turning starch black; large starch cannot diffuse OUT.",
+            "Clinical audio walkthrough of Cystic Fibrosis: mutant CFTR channel blocks Cl⁻ transport, trapping water inside cells and causing dehydrated thick mucus."
+        ],
+        "takeaways": [
+            "Passive Transport (Diffusion, Osmosis, Facilitated): Down concentration gradient; requires zero cellular ATP.",
+            "Active Transport: Moves solutes UP their concentration gradient; requires direct ATP hydrolysis (e.g. 3 Na⁺ out / 2 K⁺ in).",
+            "Bulk Transport: Endocytosis (phagocytosis, pinocytosis, receptor-mediated) and exocytosis transport macromolecules in vesicles."
+        ]
+    }
+];
+
+    let activeVideoId = 'chem_vsepr';
+    let activeVideoCategory = 'all';
+
+    function renderVideos() {
+      const isChem = currentSubject === 'chem';
+      const videoList = isChem ? chemVideos : bioVideos;
+      if (!videoList || videoList.length === 0) return;
+
+      // Ensure activeVideoId is valid for current subject
+      if (!videoList.some(v => v.id === activeVideoId)) {
+        activeVideoId = videoList[0].id;
+      }
+
+      // 1. Render Video Filter Pills
+      const categories = ['all', ...new Set(videoList.map(v => v.category))];
+      const pillsBox = document.getElementById('video-filter-pills');
+      if (pillsBox) {
+        pillsBox.innerHTML = categories.map(cat => {
+          const isAct = cat === activeVideoCategory;
+          const label = cat === 'all' ? `All (${videoList.length})` : cat;
+          return `<button onclick="filterVideoCategory('${cat}')" class="pill-choice ${isAct ? 'active' : ''} px-3.5 py-1.5 text-xs sm:text-sm font-semibold cursor-pointer">${label}</button>`;
+        }).join('');
+      }
+
+      // 2. Render Hero Player
+      const hero = videoList.find(v => v.id === activeVideoId) || videoList[0];
+      const heroBox = document.getElementById('video-hero-player');
+      if (heroBox && hero) {
+        heroBox.innerHTML = `
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Left: Video Embed (16:9) -->
+            <div class="lg:col-span-7 space-y-4">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-[var(--mac-border)] shadow-lg bg-black">
+                <iframe 
+                  src="https://www.youtube-nocookie.com/embed/${hero.youtubeId}?rel=0" 
+                  title="${hero.title}"
+                  class="absolute top-0 left-0 w-full h-full border-0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen
+                  loading="lazy">
+                </iframe>
+              </div>
+              <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-mono font-bold px-3 py-1 rounded-full text-white" style="background: var(--mac-accent);">${hero.category}</span>
+                  <span class="text-xs font-semibold px-2.5 py-1 rounded-full mac-subtle" style="color: var(--mac-muted);">⏱️ ${hero.duration}</span>
+                  <span class="text-xs font-semibold px-2.5 py-1 rounded-full mac-subtle" style="color: var(--mac-muted);">👨‍🏫 ${hero.creator}</span>
+                </div>
+                <a href="https://www.youtube.com/watch?v=${hero.youtubeId}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold hover:underline flex items-center gap-1" style="color: var(--mac-accent);">
+                  <span>Open in YouTube</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Visual & Auditory Learner Breakdown -->
+            <div class="lg:col-span-5 space-y-4">
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold tracking-tight">${hero.title}</h3>
+                <p class="text-sm mt-1 leading-relaxed" style="color: var(--mac-muted);">${hero.summary}</p>
+              </div>
+
+              <!-- Visual Learner Callout Box -->
+              <div class="p-4 rounded-xl border border-sky-500/25 bg-sky-500/5 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-xs uppercase tracking-wider text-sky-600 dark:text-sky-400">
+                  <span>👁️</span> <span>Why Visual Learners Love This Video</span>
+                </div>
+                <ul class="text-xs space-y-1.5 leading-relaxed text-neutral-700 dark:text-neutral-300">
+                  ${hero.visualHighlights.map(h => `<li class="flex items-start gap-1.5"><span class="text-sky-500 font-bold shrink-0">✓</span><span>${h}</span></li>`).join('')}
+                </ul>
+              </div>
+
+              <!-- Auditory Learner Callout Box -->
+              <div class="p-4 rounded-xl border border-purple-500/25 bg-purple-500/5 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-xs uppercase tracking-wider text-purple-600 dark:text-purple-400">
+                  <span>🎧</span> <span>Why Auditory Learners Love This Video</span>
+                </div>
+                <ul class="text-xs space-y-1.5 leading-relaxed text-neutral-700 dark:text-neutral-300">
+                  ${hero.auditoryHighlights.map(h => `<li class="flex items-start gap-1.5"><span class="text-purple-500 font-bold shrink-0">✓</span><span>${h}</span></li>`).join('')}
+                </ul>
+              </div>
+
+              <!-- Key Takeaways Pill Box -->
+              <div class="p-4 rounded-xl mac-subtle space-y-2">
+                <div class="text-xs font-bold uppercase tracking-wider" style="color: var(--mac-muted);">
+                  💡 High-Yield Exam Takeaways
+                </div>
+                <ul class="text-xs space-y-1 leading-relaxed" style="color: var(--mac-muted);">
+                  ${hero.takeaways.map(t => `<li class="flex items-start gap-1.5"><span class="text-amber-500 font-bold shrink-0">•</span><span>${t}</span></li>`).join('')}
+                </ul>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // 3. Render Video Directory Grid
+      const filteredVideos = activeVideoCategory === 'all' 
+        ? videoList 
+        : videoList.filter(v => v.category === activeVideoCategory);
+
+      const libCount = document.getElementById('video-library-count');
+      if (libCount) libCount.textContent = `${filteredVideos.length} Lesson${filteredVideos.length === 1 ? '' : 's'}`;
+
+      const gridBox = document.getElementById('video-grid');
+      if (gridBox) {
+        gridBox.innerHTML = filteredVideos.map(v => {
+          const isCurrent = v.id === activeVideoId;
+          return `
+            <div class="mac-card overflow-hidden flex flex-col justify-between transition-all hover:scale-[1.01] ${isCurrent ? 'ring-2 ring-[var(--mac-accent)]' : ''}">
+              <div>
+                <!-- Video Thumbnail with Play Button Overlay -->
+                <div onclick="selectVideo('${v.id}')" class="relative w-full aspect-video bg-neutral-900 cursor-pointer group overflow-hidden">
+                  <img 
+                    src="https://img.youtube.com/vi/${v.youtubeId}/hqdefault.jpg" 
+                    alt="${v.title}"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" 
+                    loading="lazy" 
+                  />
+                  <div class="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/15 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-white/90 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <span class="text-lg ml-0.5">▶</span>
+                    </div>
+                  </div>
+                  <span class="absolute bottom-2.5 right-2.5 text-[11px] font-mono font-bold bg-black/80 text-white px-2 py-0.5 rounded">
+                    ${v.duration}
+                  </span>
+                </div>
+
+                <div class="p-5 space-y-3">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="text-xs font-mono font-bold uppercase px-2.5 py-0.5 rounded-full" style="background: var(--mac-accent-soft); color: var(--mac-accent);">${v.category}</span>
+                    <span class="text-xs font-semibold" style="color: var(--mac-muted);">${v.creator}</span>
+                  </div>
+                  <h4 class="font-bold text-base line-clamp-2 leading-snug">${v.title}</h4>
+                  <p class="text-xs line-clamp-2 leading-relaxed" style="color: var(--mac-muted);">${v.summary}</p>
+
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-sky-500/10 text-sky-700 dark:text-sky-300">👁️ 3D Models</span>
+                    <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-purple-500/10 text-purple-700 dark:text-purple-300">🎧 Spoken Mnemonics</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-5 pt-0 border-t border-[var(--mac-border)] mt-2">
+                <button onclick="selectVideo('${v.id}')" class="w-full py-2.5 px-4 text-xs font-semibold rounded-xl cursor-pointer transition-all ${isCurrent ? 'bg-emerald-600 text-white' : 'mac-subtle hover:opacity-85'}" style="${isCurrent ? '' : 'color: var(--mac-text);'}">
+                  ${isCurrent ? '✓ Currently Watching Above' : '▶ Watch Lesson in Player'}
+                </button>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+    }
+
+    function selectVideo(id) {
+      activeVideoId = id;
+      renderVideos();
+      const hero = document.getElementById('video-hero-player');
+      if (hero && typeof hero.scrollIntoView === 'function') {
+        hero.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+    window.selectVideo = selectVideo;
+
+    function filterVideoCategory(cat) {
+      activeVideoCategory = cat;
+      renderVideos();
+    }
+    window.filterVideoCategory = filterVideoCategory;
+    window.renderVideos = renderVideos;
+    
 
     // Show Topic override
     showTopic = function(t) {
@@ -2763,6 +3286,7 @@
     renderVseprButtons();
     renderFlashcard();
     renderQuiz();
+    renderVideos();
   </script>
 </body>
 </html>
