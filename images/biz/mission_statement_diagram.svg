@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="420" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="388" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="50" text-anchor="middle" font-size="20" font-weight="800" fill="#1e293b">8. WHAT IS A MISSION STATEMENT?</text>
+  <text x="400" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#64748b">A formal statement of an organization's fundamental, unique purpose that sets it apart from competing firms</text>
+
+  <!-- 3 Key Components -->
+  <g transform="translate(45, 96)">
+    <rect x="0" y="0" width="224" height="125" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="112" y="34" text-anchor="middle" font-size="16" font-weight="800" fill="#1d4ed8">1. WHAT YOU DO</text>
+    <text x="112" y="66" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">Product or Service</text>
+    <text x="112" y="92" text-anchor="middle" font-size="11.5" font-weight="500" fill="#64748b">Core offering delivered</text>
+    <text x="112" y="108" text-anchor="middle" font-size="11.5" font-weight="500" fill="#64748b">to customers</text>
+
+    <rect x="243" y="0" width="224" height="125" rx="12" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="2"/>
+    <text x="355" y="34" text-anchor="middle" font-size="16" font-weight="800" fill="#047857">2. HOW YOU DO IT</text>
+    <text x="355" y="66" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">Method or Operational</text>
+    <text x="355" y="84" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">Strategy</text>
+    <text x="355" y="108" text-anchor="middle" font-size="11.5" font-weight="500" fill="#64748b">How value is created</text>
+
+    <rect x="486" y="0" width="224" height="125" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="2"/>
+    <text x="598" y="34" text-anchor="middle" font-size="16" font-weight="800" fill="#b45309">3. WHY YOU DO IT</text>
+    <text x="598" y="66" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">Core Purpose or Vision</text>
+    <text x="598" y="92" text-anchor="middle" font-size="11.5" font-weight="500" fill="#64748b">Fundamental reason</text>
+    <text x="598" y="108" text-anchor="middle" font-size="11.5" font-weight="500" fill="#64748b">for existing</text>
+  </g>
+
+  <!-- Real-World Examples -->
+  <rect x="45" y="242" width="710" height="62" rx="10" fill="#fef9c3" stroke="#fde047" stroke-width="1.5"/>
+  <text x="65" y="266" font-size="13.5" font-weight="800" fill="#854d0e">🍔 McDonald's Real-World Example:</text>
+  <text x="65" y="288" font-size="13" font-weight="700" fill="#1e293b">"To make delicious feel good moments easy for everyone."</text>
+
+  <rect x="45" y="316" width="710" height="66" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="65" y="340" font-size="13.5" font-weight="800" fill="#334155">🍎 Apple Real-World Example:</text>
+  <text x="65" y="362" font-size="12.5" font-weight="700" fill="#1e293b">"To bring the best user experience to its customers through its innovative hardware, software, and services."</text>
+</svg>

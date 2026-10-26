@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="470" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="438" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="50" text-anchor="middle" font-size="20" font-weight="800" fill="#1e293b">2. TYPES OF PLANS BY MANAGEMENT LEVEL &amp; HORIZON</text>
+
+  <!-- Strategic Level -->
+  <rect x="50" y="75" width="700" height="82" rx="12" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="66" y="91" width="180" height="50" rx="8" fill="#1d4ed8"/>
+  <text x="156" y="114" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">STRATEGIC PLANS</text>
+  <text x="156" y="131" text-anchor="middle" font-size="11" font-weight="600" fill="#bfdbfe">Upper Management</text>
+  <text x="266" y="108" font-size="13" font-weight="700" fill="#1e3a8a">• Broad, extensive long-range plans providing overall direction</text>
+  <text x="266" y="130" font-size="13" font-weight="600" fill="#334155">• Example: Expanding into international markets (Long-Range: &gt; 1 year)</text>
+
+  <!-- Tactical Level -->
+  <rect x="50" y="172" width="700" height="82" rx="12" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
+  <rect x="66" y="188" width="180" height="50" rx="8" fill="#047857"/>
+  <text x="156" y="211" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">TACTICAL PLANS</text>
+  <text x="156" y="228" text-anchor="middle" font-size="11" font-weight="600" fill="#a7f3d0">Middle Management</text>
+  <text x="266" y="205" font-size="13" font-weight="700" fill="#065f46">• Focuses on how to implement and take action on strategic goals</text>
+  <text x="266" y="227" font-size="13" font-weight="600" fill="#334155">• Example: Executing a local marketing campaign</text>
+
+  <!-- Operational Level -->
+  <rect x="50" y="269" width="700" height="82" rx="12" fill="#fef3c7" stroke="#fbbf24" stroke-width="2"/>
+  <rect x="66" y="285" width="180" height="50" rx="8" fill="#b45309"/>
+  <text x="156" y="308" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">OPERATIONAL PLANS</text>
+  <text x="156" y="325" text-anchor="middle" font-size="11" font-weight="600" fill="#fde68a">Lower Management</text>
+  <text x="266" y="302" font-size="13" font-weight="700" fill="#92400e">• Deals with short-term, day-to-day tasks supporting tactical goals</text>
+  <text x="266" y="324" font-size="13" font-weight="600" fill="#334155">• Example: Weekly shift scheduling, hiring local staff (Short-Range: &lt; 1 year)</text>
+
+  <!-- Single-Use vs Standing-Use -->
+  <rect x="50" y="366" width="340" height="68" rx="12" fill="#ffe4e6" stroke="#fda4af" stroke-width="1.5"/>
+  <text x="220" y="390" text-anchor="middle" font-size="14" font-weight="800" fill="#9f1239">SINGLE-USE PLANS</text>
+  <text x="220" y="408" text-anchor="middle" font-size="11" font-weight="600" fill="#881337">Unique, one-time situations; discarded after completion</text>
+  <text x="220" y="424" text-anchor="middle" font-size="11" font-weight="700" fill="#be123c">Ex: Special anniversary event or one-time project</text>
+
+  <rect x="410" y="366" width="340" height="68" rx="12" fill="#f3e8ff" stroke="#d8b4fe" stroke-width="1.5"/>
+  <text x="580" y="390" text-anchor="middle" font-size="14" font-weight="800" fill="#6b21a8">STANDING-USE PLANS</text>
+  <text x="580" y="408" text-anchor="middle" font-size="11" font-weight="600" fill="#581c87">Used repeatedly for recurring situations</text>
+  <text x="580" y="424" text-anchor="middle" font-size="11" font-weight="700" fill="#7e22ce">Ex: Company policies, rules &amp; standard operating procedures</text>
+</svg>

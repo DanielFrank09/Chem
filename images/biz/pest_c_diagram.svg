@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="430" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="398" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="50" text-anchor="middle" font-size="20" font-weight="800" fill="#1e293b">9. PEST + C MACRO-ENVIRONMENTAL ANALYSIS</text>
+  <text x="400" y="72" text-anchor="middle" font-size="13" font-weight="600" fill="#64748b">Analyzes macro-environmental external forces</text>
+
+  <g transform="translate(45, 92)">
+    <!-- P -->
+    <rect x="0" y="0" width="710" height="52" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="10" y="8" width="135" height="36" rx="8" fill="#2563eb"/>
+    <text x="77" y="31" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">P - Politics</text>
+    <text x="160" y="31" font-size="13" font-weight="600" fill="#1e293b">Tax policies, employment laws, municipal bylaws, government regulations.</text>
+
+    <!-- E -->
+    <rect x="0" y="62" width="710" height="52" rx="10" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+    <rect x="10" y="70" width="135" height="36" rx="8" fill="#059669"/>
+    <text x="77" y="93" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">E - Economics</text>
+    <text x="160" y="93" font-size="13" font-weight="600" fill="#1e293b">Inflation, interest rates, exchange rates, business cycle (recessions), unemployment.</text>
+
+    <!-- S -->
+    <rect x="0" y="124" width="710" height="52" rx="10" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+    <rect x="10" y="132" width="135" height="36" rx="8" fill="#d97706"/>
+    <text x="77" y="155" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">S - Social</text>
+    <text x="160" y="155" font-size="13" font-weight="600" fill="#1e293b">Changing demographics, lifestyle preferences, customer habits, social values.</text>
+
+    <!-- T -->
+    <rect x="0" y="186" width="710" height="52" rx="10" fill="#f3e8ff" stroke="#d8b4fe" stroke-width="1.5"/>
+    <rect x="10" y="194" width="135" height="36" rx="8" fill="#7c3aed"/>
+    <text x="77" y="217" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">T - Technology</text>
+    <text x="160" y="217" font-size="13" font-weight="600" fill="#1e293b">Automation, online platforms, software, new digital tools.</text>
+
+    <!-- + C -->
+    <rect x="0" y="248" width="710" height="52" rx="10" fill="#ffe4e6" stroke="#fda4af" stroke-width="1.5"/>
+    <rect x="10" y="256" width="135" height="36" rx="8" fill="#e11d48"/>
+    <text x="77" y="279" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">+ C - Competition</text>
+    <text x="160" y="279" font-size="13" font-weight="600" fill="#1e293b">Actions of competitor firms, rival offerings, wage competition, market dynamics.</text>
+  </g>
+</svg>

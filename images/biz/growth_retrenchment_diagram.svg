@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="470" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="438" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#1e293b">7. STRATEGIC PLANNING: GROWTH VS RETRENCHMENT</text>
+
+  <!-- Growth Strategies Left Column -->
+  <rect x="42" y="68" width="440" height="366" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="262" y="94" text-anchor="middle" font-size="15" font-weight="800" fill="#1d4ed8">7 GROWTH STRATEGIES (EXPANSION)</text>
+
+  <g font-size="11.5" fill="#1e293b" transform="translate(58, 108)">
+    <rect x="0" y="0" width="408" height="38" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="12" y="16" font-weight="800" fill="#1e40af">1. Market Development:</text>
+    <text x="12" y="31" font-weight="600">Selling existing products in new market segments or geographic areas.</text>
+
+    <rect x="0" y="44" width="408" height="38" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="12" y="60" font-weight="800" fill="#1e40af">2. Product Development:</text>
+    <text x="12" y="75" font-weight="600">New/modified products for current customers (Nike shoes; Spicy Habanero McChicken).</text>
+
+    <rect x="0" y="88" width="408" height="38" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="12" y="104" font-weight="800" fill="#1e40af">3. Horizontal Integration:</text>
+    <text x="12" y="119" font-weight="600">Purchasing/merging with competitors in same industry (Disney acquiring Pixar).</text>
+
+    <rect x="0" y="132" width="408" height="38" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="12" y="148" font-weight="800" fill="#1e40af">4. Vertical Integration:</text>
+    <text x="12" y="163" font-weight="600">Buying suppliers (backward) or distributors (forward) (Tesla supply chain).</text>
+
+    <rect x="0" y="176" width="408" height="38" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="12" y="192" font-weight="800" fill="#1e40af">5. Conglomerate Integration:</text>
+    <text x="12" y="207" font-weight="600">Buying companies in unrelated industries (Rogers owning Toronto Blue Jays).</text>
+
+    <rect x="0" y="220" width="408" height="38" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="12" y="236" font-weight="800" fill="#1e40af">6. Strategic Alliances:</text>
+    <text x="12" y="251" font-weight="600">Partnering to expand internationally or share tech (Molson Coors alliance).</text>
+
+    <rect x="0" y="264" width="408" height="38" rx="7" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="12" y="280" font-weight="800" fill="#1e40af">7. E-Business:</text>
+    <text x="12" y="295" font-weight="600">Utilizing digital platforms and the Internet to reach global markets.</text>
+  </g>
+
+  <!-- Retrenchment Right Column -->
+  <rect x="500" y="68" width="258" height="366" rx="14" fill="#fff1f2" stroke="#fda4af" stroke-width="2"/>
+  <text x="629" y="94" text-anchor="middle" font-size="14" font-weight="800" fill="#be123c">3 RETRENCHMENT</text>
+  <text x="629" y="112" text-anchor="middle" font-size="11" font-weight="600" fill="#9f1239">Reduce costs or exit</text>
+  <text x="629" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#9f1239">underperforming areas</text>
+
+  <g font-size="11.5" fill="#1e293b" transform="translate(514, 142)">
+    <rect x="0" y="0" width="230" height="82" rx="8" fill="#ffffff" stroke="#fecdd3"/>
+    <text x="12" y="22" font-weight="800" fill="#be123c">1. Restructuring</text>
+    <text x="12" y="42" font-weight="600">Changing internal operations</text>
+    <text x="12" y="58" font-weight="600">and workflows to improve</text>
+    <text x="12" y="74" font-weight="600">efficiency and performance.</text>
+
+    <rect x="0" y="94" width="230" height="82" rx="8" fill="#ffffff" stroke="#fecdd3"/>
+    <text x="12" y="116" font-weight="800" fill="#be123c">2. Downsizing</text>
+    <text x="12" y="136" font-weight="600">Reducing company size by</text>
+    <text x="12" y="152" font-weight="600">laying off workers or cutting</text>
+    <text x="12" y="168" font-weight="600">workforce costs.</text>
+
+    <rect x="0" y="188" width="230" height="90" rx="8" fill="#ffffff" stroke="#fecdd3"/>
+    <text x="12" y="210" font-weight="800" fill="#be123c">3. Divestiture</text>
+    <text x="12" y="230" font-weight="600">Selling off a specific division,</text>
+    <text x="12" y="246" font-weight="600">business unit, or subsidiary</text>
+    <text x="12" y="264" font-weight="700" fill="#9f1239">(Ex: eBay selling PayPal).</text>
+  </g>
+</svg>

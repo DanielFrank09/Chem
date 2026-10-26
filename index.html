@@ -227,6 +227,9 @@
           <button onclick="setSubject('bio')" id="sub-bio" class="seg-btn px-3.5 sm:px-4 py-1 text-xs sm:text-sm font-bold flex items-center gap-1.5 cursor-pointer">
             <span>🧬</span> <span>Biology</span> <span class="text-[11px] opacity-75 font-mono hidden sm:inline">SBI4U</span>
           </button>
+          <button onclick="setSubject('biz')" id="sub-biz" class="seg-btn px-3.5 sm:px-4 py-1 text-xs sm:text-sm font-bold flex items-center gap-1.5 cursor-pointer">
+            <span>💼</span> <span>Business</span> <span class="text-[11px] opacity-75 font-mono hidden sm:inline">BOH4M</span>
+          </button>
         </div>
         <div class="hidden xl:flex items-center gap-3">
           <span id="course-title" class="text-base font-bold tracking-tight">SCH4U Chemistry</span>
@@ -335,6 +338,39 @@
             </button>
           </div>
 
+          <!-- Business Leadership (BOH4M) Topics Navigation -->
+          <div id="nav-biz-group" class="space-y-2 hidden">
+            <button onclick="showTopic('biz_foundations')" id="nav-biz_foundations" class="nav-item active w-full text-left px-4 py-3.5 text-base flex items-center justify-between gap-2 cursor-pointer">
+              <span>1. Planning &amp; Plan Types</span>
+              <span class="opacity-75 font-mono text-xs shrink-0">Sec 1–2</span>
+            </button>
+
+            <button onclick="showTopic('biz_execution')" id="nav-biz_execution" class="nav-item w-full text-left px-4 py-3.5 text-base flex items-center justify-between gap-2 cursor-pointer">
+              <span>2. Plan Work &amp; SMART</span>
+              <span class="opacity-75 font-mono text-xs shrink-0">Sec 3–4</span>
+            </button>
+
+            <button onclick="showTopic('biz_approaches')" id="nav-biz_approaches" class="nav-item w-full text-left px-4 py-3.5 text-base flex items-center justify-between gap-2 cursor-pointer">
+              <span>3. Approaches &amp; Time</span>
+              <span class="opacity-75 font-mono text-xs shrink-0">Sec 5–6</span>
+            </button>
+
+            <button onclick="showTopic('biz_strategic')" id="nav-biz_strategic" class="nav-item w-full text-left px-4 py-3.5 text-base flex items-center justify-between gap-2 cursor-pointer">
+              <span>4. Growth &amp; Retrench</span>
+              <span class="opacity-75 font-mono text-xs shrink-0">Sec 7</span>
+            </button>
+
+            <button onclick="showTopic('biz_mission')" id="nav-biz_mission" class="nav-item w-full text-left px-4 py-3.5 text-base flex items-center justify-between gap-2 cursor-pointer">
+              <span>5. Mission Statements</span>
+              <span class="opacity-75 font-mono text-xs shrink-0">Sec 8</span>
+            </button>
+
+            <button onclick="showTopic('biz_tools')" id="nav-biz_tools" class="nav-item w-full text-left px-4 py-3.5 text-base flex items-center justify-between gap-2 cursor-pointer">
+              <span>6. SWOT, BCG &amp; PEST+C</span>
+              <span class="opacity-75 font-mono text-xs shrink-0">Sec 9</span>
+            </button>
+          </div>
+
         </div>
 
         <div id="trap-chem" class="mac-card p-5 text-sm space-y-2 mt-6">
@@ -351,6 +387,17 @@
           </p>
           <p class="leading-relaxed text-xs pt-1 border-t border-[var(--mac-border)]" style="color: var(--mac-muted);">
             <strong>CFTR Defect:</strong> Lack of Cl⁻ and Na⁺ exit means <span class="hl-amber">water stays trapped in cells</span> $\to$ thick dehydrated mucus clogs lungs &amp; pancreatic ducts!
+          </p>
+        </div>
+
+        <div id="trap-biz" class="mac-card p-5 text-sm space-y-2 mt-6 hidden">
+          <div class="font-bold text-base text-amber-600 dark:text-amber-400">💡 BOH4M Planning Test Format</div>
+          <p class="leading-relaxed" style="color: var(--mac-muted);">
+            <strong>Part A (K/U):</strong> Multiple choice / true-false questions.<br/>
+            <strong>Part B (Thinking):</strong> <span class="hl-amber">Four to five</span> short answer questions.
+          </p>
+          <p class="leading-relaxed text-xs pt-1 border-t border-[var(--mac-border)]" style="color: var(--mac-muted);">
+            <strong>Part C (Application):</strong> Scenario(s) or mini-case(s) responded to by applying <span class="hl-blue">SWOT</span> or <span class="hl-green">PEST + C</span>!
           </p>
         </div>
 
@@ -1200,6 +1247,177 @@
         </div>
     
 
+
+        <!-- ==========================================
+             BUSINESS LEADERSHIP (BOH4M) - PLANNING UNIT REVIEW
+             ========================================== -->
+        <div id="notes-biz" class="max-w-[1400px] mx-auto space-y-10 hidden">
+
+          <!-- ==========================================
+               CHAPTER 1: WHAT IS PLANNING? & TYPES OF PLANS (PDF #1, #2 & TEST FORMAT)
+               ========================================== -->
+          <section id="topic-biz_foundations" class="space-y-8">
+            <div class="border-b border-[var(--mac-border)] pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div>
+                <span class="text-sm font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">BOH4M · Review - Planning Unit · Sections 1 &amp; 2</span>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">1. What Is Planning? &amp; Types of Plans</h1>
+                <p class="text-lg mt-2" style="color: var(--mac-muted);">Test format breakdown (Parts A, B, C), definition &amp; strategic impact of planning, the 6 key planning questions, and all 7 types of plans.</p>
+              </div>
+              <span class="text-sm px-4 py-2 rounded-xl bg-blue-500/12 text-blue-700 dark:text-blue-300 font-semibold shrink-0">
+                Sections 1 &amp; 2 · PDF p. 1–2
+              </span>
+            </div>
+
+            <div class="mac-card p-6 sm:p-8 space-y-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--mac-border)] pb-4">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Select Topic to Inspect:</span>
+                  <h2 class="text-xl font-bold mt-1">Planning Foundations &amp; Plan Types Explorer</h2>
+                </div>
+                <div class="flex flex-wrap gap-2" id="biz-foundations-pills"></div>
+              </div>
+              <div class="mac-subtle p-6 sm:p-8 rounded-2xl border border-[var(--mac-border)] space-y-5" id="biz-foundations-stage"></div>
+            </div>
+          </section>
+
+          <!-- ==========================================
+               CHAPTER 2: HOW TO MAKE YOUR PLAN WORK & SMART GOALS (PDF #3 & #4)
+               ========================================== -->
+          <section id="topic-biz_execution" class="space-y-8 hidden">
+            <div class="border-b border-[var(--mac-border)] pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div>
+                <span class="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">BOH4M · Review - Planning Unit · Sections 3 &amp; 4</span>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">2. Making Plans Work &amp; SMART Goal Setting</h1>
+                <p class="text-lg mt-2" style="color: var(--mac-muted);">Participatory planning, benchmarking, contingency planning, setting timelines, forecasting, and the SMART goal framework with effective vs. ineffective examples.</p>
+              </div>
+              <span class="text-sm px-4 py-2 rounded-xl bg-emerald-500/12 text-emerald-700 dark:text-emerald-300 font-semibold shrink-0">
+                Sections 3 &amp; 4 · PDF p. 3
+              </span>
+            </div>
+
+            <div class="mac-card p-6 sm:p-8 space-y-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--mac-border)] pb-4">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Select Topic to Inspect:</span>
+                  <h2 class="text-xl font-bold mt-1">Plan Execution &amp; SMART Goals Explorer</h2>
+                </div>
+                <div class="flex flex-wrap gap-2" id="biz-execution-pills"></div>
+              </div>
+              <div class="mac-subtle p-6 sm:p-8 rounded-2xl border border-[var(--mac-border)] space-y-5" id="biz-execution-stage"></div>
+            </div>
+          </section>
+
+          <!-- ==========================================
+               CHAPTER 3: APPROACHES TO PLANNING & TIME MANAGEMENT (PDF #5 & #6)
+               ========================================== -->
+          <section id="topic-biz_approaches" class="space-y-8 hidden">
+            <div class="border-b border-[var(--mac-border)] pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div>
+                <span class="text-sm font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">BOH4M · Review - Planning Unit · Sections 5 &amp; 6</span>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">3. Approaches to Planning &amp; Time Management</h1>
+                <p class="text-lg mt-2" style="color: var(--mac-muted);">Inside-Out vs. Outside-In, Top-Down vs. Bottom-Up, Contingency planning, and Time Management benefits &amp; core skills.</p>
+              </div>
+              <span class="text-sm px-4 py-2 rounded-xl bg-amber-500/12 text-amber-700 dark:text-amber-300 font-semibold shrink-0">
+                Sections 5 &amp; 6 · PDF p. 3–4
+              </span>
+            </div>
+
+            <div class="mac-card p-6 sm:p-8 space-y-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--mac-border)] pb-4">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Select Topic to Inspect:</span>
+                  <h2 class="text-xl font-bold mt-1">Planning Approaches &amp; Time Management Explorer</h2>
+                </div>
+                <div class="flex flex-wrap gap-2" id="biz-approaches-pills"></div>
+              </div>
+              <div class="mac-subtle p-6 sm:p-8 rounded-2xl border border-[var(--mac-border)] space-y-5" id="biz-approaches-stage"></div>
+            </div>
+          </section>
+
+          <!-- ==========================================
+               CHAPTER 4: STRATEGIC PLANNING: GROWTH & RETRENCHMENT (PDF #7)
+               ========================================== -->
+          <section id="topic-biz_strategic" class="space-y-8 hidden">
+            <div class="border-b border-[var(--mac-border)] pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div>
+                <span class="text-sm font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">BOH4M · Review - Planning Unit · Section 7</span>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">4. What Is Strategic Planning? (Growth &amp; Retrenchment)</h1>
+                <p class="text-lg mt-2" style="color: var(--mac-muted);">Market &amp; Product Development, Horizontal, Vertical &amp; Conglomerate Integration, Strategic Alliances, E-Business, and Retrenchment strategies (Restructuring, Downsizing, Divestiture).</p>
+              </div>
+              <span class="text-sm px-4 py-2 rounded-xl bg-purple-500/12 text-purple-700 dark:text-purple-300 font-semibold shrink-0">
+                Section 7 · PDF p. 4–5
+              </span>
+            </div>
+
+            <div class="mac-card p-6 sm:p-8 space-y-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--mac-border)] pb-4">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">Select Strategy to Inspect:</span>
+                  <h2 class="text-xl font-bold mt-1">Growth &amp; Retrenchment Strategies Explorer</h2>
+                </div>
+                <div class="flex flex-wrap gap-2" id="biz-strategic-pills"></div>
+              </div>
+              <div class="mac-subtle p-6 sm:p-8 rounded-2xl border border-[var(--mac-border)] space-y-5" id="biz-strategic-stage"></div>
+            </div>
+          </section>
+
+          <!-- ==========================================
+               CHAPTER 5: WHAT IS A MISSION STATEMENT? (PDF #8)
+               ========================================== -->
+          <section id="topic-biz_mission" class="space-y-8 hidden">
+            <div class="border-b border-[var(--mac-border)] pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div>
+                <span class="text-sm font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">BOH4M · Review - Planning Unit · Section 8</span>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">5. What Is a Mission Statement?</h1>
+                <p class="text-lg mt-2" style="color: var(--mac-muted);">Formal definition, the 3 key components (What you do, How you do it, Why you do it), and real-world examples from McDonald's and Apple.</p>
+              </div>
+              <span class="text-sm px-4 py-2 rounded-xl bg-rose-500/12 text-rose-700 dark:text-rose-300 font-semibold shrink-0">
+                Section 8 · PDF p. 5
+              </span>
+            </div>
+
+            <div class="mac-card p-6 sm:p-8 space-y-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--mac-border)] pb-4">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Select Section to Inspect:</span>
+                  <h2 class="text-xl font-bold mt-1">Mission Statement Components &amp; Examples Explorer</h2>
+                </div>
+                <div class="flex flex-wrap gap-2" id="biz-mission-pills"></div>
+              </div>
+              <div class="mac-subtle p-6 sm:p-8 rounded-2xl border border-[var(--mac-border)] space-y-5" id="biz-mission-stage"></div>
+            </div>
+          </section>
+
+          <!-- ==========================================
+               CHAPTER 6: STRATEGIC PLANNING TOOLS: SWOT, BCG MATRIX & PEST + C (PDF #9)
+               ========================================== -->
+          <section id="topic-biz_tools" class="space-y-8 hidden">
+            <div class="border-b border-[var(--mac-border)] pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div>
+                <span class="text-sm font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">BOH4M · Review - Planning Unit · Section 9 &amp; Part C Application</span>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-1">6. Strategic Planning Tools: SWOT, BCG &amp; PEST + C</h1>
+                <p class="text-lg mt-2" style="color: var(--mac-muted);">SWOT Matrix (Internal vs. External), Boston Consulting Matrix (Stars, Cash Cows, Question Marks, Dogs), and PEST + C macro-environmental forces.</p>
+              </div>
+              <span class="text-sm px-4 py-2 rounded-xl bg-sky-500/12 text-sky-700 dark:text-sky-300 font-semibold shrink-0">
+                Section 9 &amp; Part C · PDF p. 5–7
+              </span>
+            </div>
+
+            <div class="mac-card p-6 sm:p-8 space-y-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--mac-border)] pb-4">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Select Tool to Inspect:</span>
+                  <h2 class="text-xl font-bold mt-1">Strategic Planning Tools &amp; Matrix Explorer</h2>
+                </div>
+                <div class="flex flex-wrap gap-2" id="biz-tools-pills"></div>
+              </div>
+              <div class="mac-subtle p-6 sm:p-8 rounded-2xl border border-[var(--mac-border)] space-y-5" id="biz-tools-stage"></div>
+            </div>
+          </section>
+
+        </div> <!-- End #notes-biz -->
+    
+
         </div> <!-- End #view-notes -->
 
         <!-- ==========================================
@@ -1278,6 +1496,8 @@
   </div>
 
   <script>
+
+
 
 
 
@@ -1624,14 +1844,17 @@
 
 
     // ==========================================
-    // BIOLOGY DATASETS & CONTROLLERS (SBI4U)
+    // BIOLOGY (SBI4U) & BUSINESS LEADERSHIP (BOH4M) DATASETS & CONTROLLERS
     // ==========================================
 
-    // Global state variables for Biology & Subject switching
+    // Global state variables for Subject switching
     let currentSubject = 'chem';
     let currentBioTopic = 'biomol';
+    let currentBizTopic = 'biz_foundations';
     const bioTopics = ['biomol', 'enzymes', 'cells', 'mosaic', 'cftr', 'passive', 'active'];
+    const bizTopics = ['biz_foundations', 'biz_execution', 'biz_approaches', 'biz_strategic', 'biz_mission', 'biz_tools'];
     const bioPicked = {};
+    const bizPicked = {};
 
     const bioFlashcards = [
     {
@@ -1729,6 +1952,120 @@
     {
         "q": "How does the Sodium-Potassium (Na+/K+) pump operate in primary active transport?",
         "a": "Driven by direct ATP hydrolysis, the pump moves 3 Na+ OUT of the cell and 2 K+ IN per ATP cycle, maintaining resting membrane potential and cellular electrochemical gradients."
+    }
+];
+    const bizFlashcards = [
+    {
+        "q": "What is the Test Format for the BOH4M Planning Unit Test?",
+        "a": "Part A (Knowledge & Understanding): Multiple choice/true-false questions. Part B (Thinking): 4 to 5 short answer questions. Part C (Application): Scenario(s) or mini-case(s) responded to by applying SWOT or PEST + C."
+    },
+    {
+        "q": "1. What is the definition of Planning?",
+        "a": "The management function involving the process of setting objectives and determining in advance how to best accomplish them."
+    },
+    {
+        "q": "1. What is the Strategic Impact of Planning?",
+        "a": "Proper planning sets the stage for the other three management functions: Organizing, Leading, and Controlling."
+    },
+    {
+        "q": "1. What are the 6 Key Questions Addressed by Planning?",
+        "a": "1. Who will do it? 2. What must be done? 3. When must it be done? 4. Where will it be done? 5. Why must it be done? 6. How will it be done?"
+    },
+    {
+        "q": "2. Distinguish between Long-Range and Short-Range plans (with examples).",
+        "a": "Long-Range: Time horizon greater than 1 year (e.g., Developing a new global product line). Short-Range: Time horizon less than 1 year (e.g., Hiring new department staff for the quarter)."
+    },
+    {
+        "q": "2. What is a Strategic Plan, and which level of management creates it?",
+        "a": "Broad, extensive long-range plans providing overall direction. Created by Upper Management (e.g., Expanding into international markets)."
+    },
+    {
+        "q": "2. What is a Tactical Plan, and which level of management creates it?",
+        "a": "Focuses on how to implement and take action on strategic goals. Created by Middle Management (e.g., Executing a local marketing campaign)."
+    },
+    {
+        "q": "2. What is an Operational Plan, and which level of management creates it?",
+        "a": "Deals with short-term, day-to-day tasks supporting tactical goals. Created by Lower Management (e.g., Weekly shift scheduling, hiring local staff)."
+    },
+    {
+        "q": "2. Distinguish between Single-Use and Standing-Use plans (with examples).",
+        "a": "Single-Use: Created for unique, one-time situations and discarded after completion (e.g., Special anniversary event or one-time project). Standing-Use: Used repeatedly for recurring situations (e.g., Company policies, rules, and standard operating procedures)."
+    },
+    {
+        "q": "3. What is Participatory Planning and why is it used?",
+        "a": "Involving team members/employees who are affected by the plan in its creation to increase buy-in and input."
+    },
+    {
+        "q": "3. What are Benchmarking and Forecasting in planning?",
+        "a": "Benchmarking: Comparing performance and planning standards against industry leaders or best practices. Forecasting: Anticipating future economic, market, or environmental conditions before making strategic choices."
+    },
+    {
+        "q": "3. What are Contingency Planning and Setting Timelines?",
+        "a": "Contingency Planning: Developing alternative backup plans (Plan B, Plan C) in case initial conditions or assumptions change. Setting Timelines: Assigning firm start dates, milestones, and deadlines to maintain accountability."
+    },
+    {
+        "q": "4. What does each letter in SMART goals stand for?",
+        "a": "S - Specific (clear, well-defined, unambiguous); M - Measurable (criteria to track progress); A - Attainable (challenging yet realistically achievable); R - Realistic (within reach, aligns with resources/commitment); T - Time-bound (clear start date and target completion deadline)."
+    },
+    {
+        "q": "4. Give the Ineffective vs. Effective SMART goal examples from the review sheet.",
+        "a": "Ineffective: 'I want to make a lot of money.' (Vague, unmeasurable, no deadline). Effective: 'I want to make $1,000,000 within 10 years by launching a life-coaching consulting business and hosting live seminars.'"
+    },
+    {
+        "q": "5. Contrast Inside-Out vs. Outside-In approaches to planning (with examples).",
+        "a": "Inside-Out: Focuses on doing what the organization already does best, maximizing internal capabilities (e.g., Wild Wing focusing on specialized chicken wings). Outside-In: Analyzes the external environment first to identify opportunities, then adjusts internal operations to exploit them (e.g., McDonald's adding healthy salads in response to consumer trends)."
+    },
+    {
+        "q": "5. Contrast Top-Down vs. Bottom-Up approaches to planning.",
+        "a": "Top-Down: Upper management sets broad objectives and parameters, then lower levels plan within those constraints. Bottom-Up: Plans originate at lower operational levels without strict top-level constraints and are passed upward for approval."
+    },
+    {
+        "q": "6. Define Time Management and list its 4 Key Benefits.",
+        "a": "Definition: Using time purposefully to increase efficiency, effectiveness, and productivity. Benefits: 1) Reduces emotional and academic stress, 2) Improves problem-solving capabilities and academic performance, 3) Highly valued skill by employers, 4) Gives you control over what you achieve."
+    },
+    {
+        "q": "6. What are the 4 Core Skills of Time Management?",
+        "a": "1) Goal Setting (knowing what to accomplish before spending energy), 2) Prioritizing (generating a task list and ranking by importance), 3) Planning & Scheduling (breaking large projects into actionable daily tasks considering peak productivity windows and rest), 4) Distraction Control (silencing notifications, removing devices, keeping focus)."
+    },
+    {
+        "q": "7. Contrast Market Development vs. Product Development (with examples).",
+        "a": "Market Development: Selling existing products in new market segments or geographic areas. Product Development: Creating new products or modifying existing ones for current customers (e.g., Nike launching new shoe models; McDonald's introducing the Spicy Habanero McChicken)."
+    },
+    {
+        "q": "7. Contrast Horizontal, Vertical, and Conglomerate Integration (with examples).",
+        "a": "Horizontal: Purchasing/merging with competitors in the same industry (e.g., Disney acquiring Pixar). Vertical: Buying suppliers (backward) or distributors/retailers (forward) to control the supply chain (e.g., Tesla manufacturing its own components and selling directly). Conglomerate: Buying companies in entirely unrelated industries (e.g., Rogers owning the Toronto Blue Jays)."
+    },
+    {
+        "q": "7. Define Strategic Alliances and E-Business in growth planning.",
+        "a": "Strategic Alliances: Partnering with foreign or domestic companies to expand operations internationally or share technology (e.g., Molson Coors alliance). E-Business: Utilizing digital platforms and the Internet to reach global markets and conduct business operations."
+    },
+    {
+        "q": "7. When are Retrenchment Strategies used, and what are the 3 types?",
+        "a": "Used when a business needs to reduce costs or exit underperforming areas. 1) Restructuring (changing internal operations/workflows to improve efficiency), 2) Downsizing (reducing company size by laying off workers/cutting workforce costs), 3) Divestiture (selling off a specific division/subsidiary, e.g., eBay spinning off/selling PayPal)."
+    },
+    {
+        "q": "8. Define Mission Statement and list its 3 Key Components.",
+        "a": "Definition: A formal statement of an organization's fundamental, unique purpose that sets it apart from competing firms. 3 Components: 1) What you do (Product or service), 2) How you do it (Method or operational strategy), 3) Why you do it (Core purpose or vision)."
+    },
+    {
+        "q": "8. State the real-world Mission Statement examples for McDonald's and Apple.",
+        "a": "McDonald's: 'To make delicious feel good moments easy for everyone.' Apple: 'To bring the best user experience to its customers through its innovative hardware, software, and services.'"
+    },
+    {
+        "q": "9. How does a SWOT Matrix classify Strengths, Weaknesses, Opportunities, and Threats?",
+        "a": "Internal Factors: Strengths (Helpful: core competencies, skilled staff, strong finances, good reputation) & Weaknesses (Harmful: poor management, outdated tech, bad location, poor planning). External Factors: Opportunities (Helpful: emerging markets, weak competitors, tech advances) & Threats (Harmful: new competitors, changing bylaws/laws, poor economic climate)."
+    },
+    {
+        "q": "9. What axes does the BCG Matrix use, and what are Stars and Cash Cows?",
+        "a": "Axes: Market Share (horizontal) and Market Growth Rate (vertical). Stars (High Share / High Growth): Leading products in rapidly growing markets producing high revenue but requiring ongoing capital investment (e.g., Gatorade / PepsiCo). Cash Cows (High Share / Low Growth): Mature, dominant products in slow-growing markets requiring minimal investment and generating strong cash flow (e.g., Coca-Cola Classic)."
+    },
+    {
+        "q": "9. In the BCG Matrix, what are Question Marks and Dogs?",
+        "a": "Question Marks (Low Share / High Growth): Products in fast-growing markets with low share requiring strategic decisions to invest heavily to turn into Stars or divest (e.g., Apple TV streaming). Dogs (Low Share / Low Growth): Products in stagnant markets with poor share that consume resources without adequate returns; prime targets for divestiture/discontinuation (e.g., standalone iPods)."
+    },
+    {
+        "q": "9. What does PEST + C stand for and what does each component analyze?",
+        "a": "Analyzes macro-environmental external forces: P - Politics (tax policies, employment laws, municipal bylaws, government regulations); E - Economics (inflation, interest rates, exchange rates, business cycle/recessions, unemployment); S - Social (changing demographics, lifestyle preferences, customer habits, social values); T - Technology (automation, online platforms, software, new digital tools); + C - Competition (actions of competitor firms, rival offerings, wage competition, market dynamics)."
     }
 ];
 
@@ -1924,6 +2261,248 @@
         ],
         "ans": 2,
         "exp": "Receptor-mediated endocytosis uses specific surface membrane receptors that bind target ligands, concentrate in clathrin-coated pits, and pinch off into coated vesicles."
+    }
+];
+    const bizQuizData = [
+    {
+        "id": 1,
+        "q": "1. According to Section 1, proper planning sets the stage for which other three management functions?",
+        "opts": [
+            "A) Budgeting, Marketing, and Staffing",
+            "B) Organizing, Leading, and Controlling",
+            "C) Forecasting, Benchmarking, and Scheduling",
+            "D) Directing, Auditing, and Recruiting"
+        ],
+        "ans": 1,
+        "exp": "Section 1 (What is planning?): Proper planning sets the stage for the other three management functions: Organizing, Leading, and Controlling."
+    },
+    {
+        "id": 2,
+        "q": "2. Which type of plan focuses on how to implement and take action on strategic goals, and is carried out by Middle Management?",
+        "opts": [
+            "A) Strategic Plan",
+            "B) Operational Plan",
+            "C) Tactical Plan",
+            "D) Single-Use Plan"
+        ],
+        "ans": 2,
+        "exp": "Section 2 (Types of plans): Tactical plans focus on how to implement and take action on strategic goals and are the responsibility of Middle Management (e.g., Executing a local marketing campaign)."
+    },
+    {
+        "id": 3,
+        "q": "3. Weekly shift scheduling and hiring local staff are examples of which type of plan and management level?",
+        "opts": [
+            "A) Strategic Plan — Upper Management",
+            "B) Tactical Plan — Middle Management",
+            "C) Operational Plan — Lower Management",
+            "D) Long-Range Plan — Upper Management"
+        ],
+        "ans": 2,
+        "exp": "Section 2 (Types of plans): Operational plans deal with short-term, day-to-day tasks supporting tactical goals and are handled by Lower Management (e.g., Weekly shift scheduling, hiring local staff)."
+    },
+    {
+        "id": 4,
+        "q": "4. Company policies, rules, and standard operating procedures designed to be used repeatedly for recurring situations are classified as:",
+        "opts": [
+            "A) Single-Use Plans",
+            "B) Standing-Use Plans",
+            "C) Contingency Plans",
+            "D) Tactical Plans"
+        ],
+        "ans": 1,
+        "exp": "Section 2 (Types of plans): Standing-Use plans are designed to be used repeatedly for recurring situations (e.g., Company policies, rules, and standard operating procedures)."
+    },
+    {
+        "id": 5,
+        "q": "5. Involving team members/employees who are affected by the plan in its creation to increase buy-in and input is called:",
+        "opts": [
+            "A) Benchmarking",
+            "B) Forecasting",
+            "C) Participatory Planning",
+            "D) Top-Down Planning"
+        ],
+        "ans": 2,
+        "exp": "Section 3 (How to make your plan work): Participatory Planning involves team members/employees who are affected by the plan in its creation to increase buy-in and input."
+    },
+    {
+        "id": 6,
+        "q": "6. Comparing performance and planning standards against industry leaders or best practices is defined as:",
+        "opts": [
+            "A) Forecasting",
+            "B) Benchmarking",
+            "C) Restructuring",
+            "D) Prioritizing"
+        ],
+        "ans": 1,
+        "exp": "Section 3 (How to make your plan work): Benchmarking is comparing performance and planning standards against industry leaders or best practices."
+    },
+    {
+        "id": 7,
+        "q": "7. Why is 'I want to make a lot of money' considered an ineffective goal under the SMART framework?",
+        "opts": [
+            "A) It focuses on financial metrics rather than employee morale",
+            "B) It is vague, unmeasurable, and has no deadline",
+            "C) It is an outside-in approach rather than inside-out",
+            "D) It is a standing-use plan instead of a single-use plan"
+        ],
+        "ans": 1,
+        "exp": "Section 4 (SMART goal setting): 'I want to make a lot of money' is ineffective because it is vague, unmeasurable, and has no deadline."
+    },
+    {
+        "id": 8,
+        "q": "8. McDonald's adding healthy salads in response to consumer trends is an example of which approach to planning?",
+        "opts": [
+            "A) Inside-Out Planning",
+            "B) Outside-In Planning",
+            "C) Bottom-Up Planning",
+            "D) Retrenchment Planning"
+        ],
+        "ans": 1,
+        "exp": "Section 5 (Approaches to planning): Outside-In analyzes the external environment first to identify opportunities, then adjusts internal operations to exploit them (e.g., McDonald's adding healthy salads in response to consumer trends)."
+    },
+    {
+        "id": 9,
+        "q": "9. Wild Wing focusing on specialized chicken wings (doing what the organization already does best and maximizing internal capabilities) illustrates:",
+        "opts": [
+            "A) Inside-Out Planning",
+            "B) Outside-In Planning",
+            "C) Conglomerate Integration",
+            "D) Divestiture"
+        ],
+        "ans": 0,
+        "exp": "Section 5 (Approaches to planning): Inside-Out focuses on doing what the organization already does best, maximizing internal capabilities (e.g., Wild Wing focusing on specialized chicken wings)."
+    },
+    {
+        "id": 10,
+        "q": "10. In Time Management (Section 6), breaking down large projects into actionable daily tasks while considering peak productivity windows and rest is called:",
+        "opts": [
+            "A) Goal Setting",
+            "B) Prioritizing",
+            "C) Planning & Scheduling",
+            "D) Distraction Control"
+        ],
+        "ans": 2,
+        "exp": "Section 6 (Time management - Core Skills): Planning & Scheduling is breaking down large projects into actionable daily tasks while considering peak productivity windows and rest."
+    },
+    {
+        "id": 11,
+        "q": "11. Nike launching new shoe models and McDonald's introducing the Spicy Habanero McChicken for current customers are examples of:",
+        "opts": [
+            "A) Market Development",
+            "B) Product Development",
+            "C) Horizontal Integration",
+            "D) Backward Vertical Integration"
+        ],
+        "ans": 1,
+        "exp": "Section 7 (Growth strategies): Product Development is creating new products or modifying existing ones for current customers (e.g., Nike launching new shoe models; McDonald's introducing the Spicy Habanero McChicken)."
+    },
+    {
+        "id": 12,
+        "q": "12. Disney acquiring Pixar (purchasing or merging with a competitor company within the same industry) is an example of:",
+        "opts": [
+            "A) Horizontal Integration",
+            "B) Vertical Integration",
+            "C) Conglomerate Integration",
+            "D) Divestiture"
+        ],
+        "ans": 0,
+        "exp": "Section 7 (Growth strategies): Horizontal Integration is expanding by purchasing or merging with competitor companies within the same industry (e.g., Disney acquiring Pixar)."
+    },
+    {
+        "id": 13,
+        "q": "13. Tesla manufacturing its own components (backward) and selling directly to consumers (forward) to control the supply chain is an example of:",
+        "opts": [
+            "A) Horizontal Integration",
+            "B) Vertical Integration",
+            "C) Conglomerate Integration",
+            "D) Strategic Alliance"
+        ],
+        "ans": 1,
+        "exp": "Section 7 (Growth strategies): Vertical Integration is buying suppliers (backward) or distributors/retailers (forward) to control the supply chain (e.g., Tesla manufacturing its own components and selling directly)."
+    },
+    {
+        "id": 14,
+        "q": "14. Rogers owning the Toronto Blue Jays (buying a company in an entirely unrelated industry) is an example of:",
+        "opts": [
+            "A) Market Development",
+            "B) Horizontal Integration",
+            "C) Vertical Integration",
+            "D) Conglomerate Integration"
+        ],
+        "ans": 3,
+        "exp": "Section 7 (Growth strategies): Conglomerate Integration is expanding by buying companies in entirely unrelated industries (e.g., Rogers owning the Toronto Blue Jays)."
+    },
+    {
+        "id": 15,
+        "q": "15. eBay spinning off/selling PayPal (selling off a specific division, business unit, or subsidiary) is an example of which retrenchment strategy?",
+        "opts": [
+            "A) Restructuring",
+            "B) Downsizing",
+            "C) Divestiture",
+            "D) Benchmarking"
+        ],
+        "ans": 2,
+        "exp": "Section 7 (Retrenchment strategies): Divestiture is selling off a specific division, business unit, or subsidiary (e.g., eBay spinning off/selling PayPal)."
+    },
+    {
+        "id": 16,
+        "q": "16. What are the 3 Key Components of a Mission Statement (Section 8)?",
+        "opts": [
+            "A) Strengths, Weaknesses, and Opportunities",
+            "B) Upper, Middle, and Lower Management",
+            "C) 1. What you do (Product/service), 2. How you do it (Method/operational strategy), 3. Why you do it (Core purpose/vision)",
+            "D) Specific, Measurable, and Time-bound"
+        ],
+        "ans": 2,
+        "exp": "Section 8 (What is a mission statement?): The 3 Key Components are: 1. What you do (Product or service), 2. How you do it (Method or operational strategy), 3. Why you do it (Core purpose or vision)."
+    },
+    {
+        "id": 17,
+        "q": "17. [Part C Application - SWOT] A local business has skilled staff and strong finances, but suffers from outdated tech and a bad location. In a SWOT analysis, how are these classified?",
+        "opts": [
+            "A) Skilled staff & strong finances = Opportunities; Outdated tech & bad location = Threats",
+            "B) Skilled staff & strong finances = Internal Strengths (Helpful); Outdated tech & bad location = Internal Weaknesses (Harmful)",
+            "C) All four are External Macro-Environmental factors",
+            "D) Skilled staff = Star; Bad location = Dog"
+        ],
+        "ans": 1,
+        "exp": "Section 9 (SWOT): Internal Factors include Strengths (Helpful: core competencies, skilled staff, strong finances, good reputation) and Weaknesses (Harmful: poor management, outdated tech, bad location, poor planning)."
+    },
+    {
+        "id": 18,
+        "q": "18. [BCG Matrix] Which quadrant describes mature, dominant products in slow-growing markets that require minimal new investment and generate strong profit/cash flow to fund other areas (e.g., Coca-Cola Classic)?",
+        "opts": [
+            "A) Stars (High Share / High Growth)",
+            "B) Cash Cows (High Share / Low Growth)",
+            "C) Question Marks (Low Share / High Growth)",
+            "D) Dogs (Low Share / Low Growth)"
+        ],
+        "ans": 1,
+        "exp": "Section 9 (BCG Matrix): Cash Cows (High Share / Low Growth) are mature, dominant products in slow-growing markets requiring minimal new investment and generating strong profit/cash flow (e.g., Coca-Cola Classic)."
+    },
+    {
+        "id": 19,
+        "q": "19. [BCG Matrix] How are Apple TV streaming and standalone iPods classified in the BCG Growth Share Matrix?",
+        "opts": [
+            "A) Apple TV streaming = Star; standalone iPods = Cash Cow",
+            "B) Apple TV streaming = Question Mark (Low Share / High Growth); standalone iPods = Dog (Low Share / Low Growth)",
+            "C) Apple TV streaming = Cash Cow; standalone iPods = Question Mark",
+            "D) Both are Stars requiring ongoing capital investment"
+        ],
+        "ans": 1,
+        "exp": "Section 9 (BCG Matrix): Question Marks (Low Share / High Growth) include Apple TV streaming (invest heavily to turn into Stars or divest). Dogs (Low Share / Low Growth) include standalone iPods (prime targets for divestiture or discontinuation)."
+    },
+    {
+        "id": 20,
+        "q": "20. [Part C Application - PEST + C] Rising inflation, higher interest rates, exchange rate shifts, and a recession fall under which component of PEST + C?",
+        "opts": [
+            "A) P - Politics",
+            "B) E - Economics",
+            "C) S - Social",
+            "D) + C - Competition"
+        ],
+        "ans": 1,
+        "exp": "Section 9 (PEST + C): E - Economics covers inflation, interest rates, exchange rates, business cycle (recessions), and unemployment."
     }
 ];
 
@@ -2463,6 +3042,395 @@
     }
 ];
 
+    const bizFoundationsItems = [
+    {
+        "id": "test_format",
+        "label": "Test Format (Parts A, B, C)",
+        "badge": "BOH4M Planning Unit · PDF p. 1",
+        "title": "BOH4M Review - Planning Unit: Official Test Format",
+        "desc": "You should be able to know, understand, think about, communicate, and apply the following across three test sections:",
+        "img": "images/biz/planning_4_functions.svg",
+        "caption": "BOH4M Planning Unit Overview: Management Functions & 6 Key Questions",
+        "bullets": [
+            "&bull; <span class='hl-blue font-semibold'>Part A: Knowledge and Understanding:</span> Multiple choice / true-false questions.",
+            "&bull; <span class='hl-amber font-semibold'>Part B: Thinking:</span> There will be <span class='hl-amber font-semibold'>four to five</span> short answer questions.",
+            "&bull; <span class='hl-green font-semibold'>Part C: Application:</span> You will be presented with a scenario(s) or mini-case(s) that managers may encounter and respond to by applying the appropriate strategic planning tool (<span class='hl-green font-semibold'>SWOT, Pest + C</span>)."
+        ]
+    },
+    {
+        "id": "what_is_planning",
+        "label": "1. What Is Planning? & 6 Questions",
+        "badge": "Section 1 · PDF p. 2",
+        "title": "1. What Is Planning? Definition, Impact & 6 Key Questions",
+        "desc": "Planning is the foundational management function that sets the stage for the entire organization.",
+        "img": "images/biz/planning_4_functions.svg",
+        "caption": "Section 1 (PDF p. 2): Planning sets the stage for Organizing, Leading, and Controlling",
+        "bullets": [
+            "&bull; <strong>Definition of Planning:</strong> The management function involving the process of <span class='hl-blue font-semibold'>setting objectives and determining in advance how to best accomplish them</span>.",
+            "&bull; <strong>The Strategic Impact of Planning:</strong> Proper planning sets the stage for the other three management functions: <span class='hl-green font-semibold'>Organizing, Leading, and Controlling</span>.",
+            "&bull; <strong>6 Key Questions Addressed by Planning:</strong>",
+            "  1. <span class='hl-amber font-semibold'>Who</span> will do it?",
+            "  2. <span class='hl-amber font-semibold'>What</span> must be done?",
+            "  3. <span class='hl-amber font-semibold'>When</span> must it be done?",
+            "  4. <span class='hl-amber font-semibold'>Where</span> will it be done?",
+            "  5. <span class='hl-amber font-semibold'>Why</span> must it be done?",
+            "  6. <span class='hl-amber font-semibold'>How</span> will it be done?"
+        ]
+    },
+    {
+        "id": "horizon_plans",
+        "label": "2. Long-Range vs Short-Range",
+        "badge": "Section 2 · Time Horizon · PDF p. 2",
+        "title": "Long-Range vs. Short-Range Plans",
+        "desc": "Plans classified by their time horizon (greater than 1 year vs. less than 1 year).",
+        "img": "images/biz/management_hierarchy_plans.svg",
+        "caption": "Section 2 (PDF p. 2): Time Horizon & Management Level Plans",
+        "bullets": [
+            "&bull; <span class='hl-blue font-semibold'>Long-Range Plan:</span>",
+            "  - <strong>Time Horizon / Description:</strong> Time horizon <span class='hl-blue font-semibold'>greater than 1 year</span>.",
+            "  - <strong>Example:</strong> Developing a new global product line.",
+            "&bull; <span class='hl-green font-semibold'>Short-Range Plan:</span>",
+            "  - <strong>Time Horizon / Description:</strong> Time horizon <span class='hl-green font-semibold'>less than 1 year</span>.",
+            "  - <strong>Example:</strong> Hiring new department staff for the quarter."
+        ]
+    },
+    {
+        "id": "hierarchy_plans",
+        "label": "2. Strategic, Tactical & Operational",
+        "badge": "Section 2 · Management Levels · PDF p. 2",
+        "title": "Strategic, Tactical & Operational Plans by Management Level",
+        "desc": "Each level of management (Upper, Middle, Lower) is responsible for a specific type of plan.",
+        "img": "images/biz/management_hierarchy_plans.svg",
+        "caption": "Section 2 (PDF p. 2): Upper (Strategic), Middle (Tactical), and Lower (Operational) Management",
+        "bullets": [
+            "&bull; <span class='hl-blue font-semibold'>Strategic Plans (Upper Management):</span>",
+            "  - <strong>Description:</strong> Broad, extensive long-range plans providing overall direction.",
+            "  - <strong>Level / Example:</strong> <strong>Upper Management</strong> (e.g., Expanding into international markets).",
+            "&bull; <span class='hl-green font-semibold'>Tactical Plans (Middle Management):</span>",
+            "  - <strong>Description:</strong> Focuses on how to implement and take action on strategic goals.",
+            "  - <strong>Level / Example:</strong> <strong>Middle Management</strong> (e.g., Executing a local marketing campaign).",
+            "&bull; <span class='hl-amber font-semibold'>Operational Plans (Lower Management):</span>",
+            "  - <strong>Description:</strong> Deals with short-term, day-to-day tasks supporting tactical goals.",
+            "  - <strong>Level / Example:</strong> <strong>Lower Management</strong> (e.g., Weekly shift scheduling, hiring local staff)."
+        ]
+    },
+    {
+        "id": "frequency_plans",
+        "label": "2. Single-Use vs Standing-Use",
+        "badge": "Section 2 · Usage Frequency · PDF p. 2",
+        "title": "Single-Use vs. Standing-Use Plans",
+        "desc": "Plans distinguished by whether they are created for a unique one-time situation or used repeatedly for recurring situations.",
+        "img": "images/biz/management_hierarchy_plans.svg",
+        "caption": "Section 2 (PDF p. 2): Single-Use vs. Standing-Use Plans",
+        "bullets": [
+            "&bull; <span class='hl-rose font-semibold'>Single-Use Plan:</span>",
+            "  - <strong>Description:</strong> Created for <span class='hl-rose font-semibold'>unique, one-time situations; discarded after completion</span>.",
+            "  - <strong>Example:</strong> A special anniversary event or one-time project.",
+            "&bull; <span class='hl-purple font-semibold'>Standing-Use Plan:</span>",
+            "  - <strong>Description:</strong> Designed to be <span class='hl-purple font-semibold'>used repeatedly for recurring situations</span>.",
+            "  - <strong>Example:</strong> Company policies, rules, and standard operating procedures."
+        ]
+    },
+    {
+        "id": "plans_table",
+        "label": "2. Complete Plans Table (PDF p. 2)",
+        "badge": "Section 2 · Complete Reference Table",
+        "title": "2. Types of Plans — Complete PDF Summary Table",
+        "desc": "Exact table of all 7 Plan Types, their Time Horizon / Description, and Level of Management / Example from Page 2 of the review package.",
+        "img": null,
+        "caption": null,
+        "htmlContent": "\n          <div class=\"overflow-x-auto\">\n            <table class=\"w-full text-sm text-left border-collapse\">\n              <thead>\n                <tr class=\"border-b border-[var(--mac-border-strong)]\" style=\"color: var(--mac-muted);\">\n                  <th class=\"py-3 px-3 font-bold\">Plan Type</th>\n                  <th class=\"py-3 px-3 font-bold\">Time Horizon / Description</th>\n                  <th class=\"py-3 px-3 font-bold\">Level of Management / Example</th>\n                </tr>\n              </thead>\n              <tbody class=\"divide-y divide-[var(--mac-border)] text-sm\">\n                <tr>\n                  <td class=\"py-3 px-3 font-bold text-blue-600 dark:text-blue-400\">Long-Range</td>\n                  <td class=\"py-3 px-3\">Time horizon <span class=\"hl-blue font-semibold\">greater than 1 year</span></td>\n                  <td class=\"py-3 px-3\">Developing a new global product line</td>\n                </tr>\n                <tr>\n                  <td class=\"py-3 px-3 font-bold text-emerald-600 dark:text-emerald-400\">Short-Range</td>\n                  <td class=\"py-3 px-3\">Time horizon <span class=\"hl-green font-semibold\">less than 1 year</span></td>\n                  <td class=\"py-3 px-3\">Hiring new department staff for the quarter</td>\n                </tr>\n                <tr>\n                  <td class=\"py-3 px-3 font-bold text-indigo-600 dark:text-indigo-400\">Strategic</td>\n                  <td class=\"py-3 px-3\"><span class=\"hl-blue font-semibold\">Broad, extensive long-range</span> plans providing overall direction</td>\n                  <td class=\"py-3 px-3\"><strong>Upper Management</strong> (e.g., Expanding into international markets)</td>\n                </tr>\n                <tr>\n                  <td class=\"py-3 px-3 font-bold text-teal-600 dark:text-teal-400\">Tactical</td>\n                  <td class=\"py-3 px-3\">Focuses on how to <span class=\"hl-green font-semibold\">implement and take action on</span> strategic goals</td>\n                  <td class=\"py-3 px-3\"><strong>Middle Management</strong> (e.g., Executing a local marketing campaign)</td>\n                </tr>\n                <tr>\n                  <td class=\"py-3 px-3 font-bold text-amber-600 dark:text-amber-400\">Operational</td>\n                  <td class=\"py-3 px-3\">Deals with <span class=\"hl-amber font-semibold\">short-term, day-to-day tasks</span> supporting tactical goals</td>\n                  <td class=\"py-3 px-3\"><strong>Lower Management</strong> (e.g., Weekly shift scheduling, hiring local staff)</td>\n                </tr>\n                <tr>\n                  <td class=\"py-3 px-3 font-bold text-rose-600 dark:text-rose-400\">Single-Use</td>\n                  <td class=\"py-3 px-3\">Created for <span class=\"hl-rose font-semibold\">unique, one-time situations</span>; discarded after completion</td>\n                  <td class=\"py-3 px-3\">A special anniversary event or one-time project</td>\n                </tr>\n                <tr>\n                  <td class=\"py-3 px-3 font-bold text-purple-600 dark:text-purple-400\">Standing-Use</td>\n                  <td class=\"py-3 px-3\">Designed to be <span class=\"hl-purple font-semibold\">used repeatedly for recurring situations</span></td>\n                  <td class=\"py-3 px-3\">Company policies, rules, and standard operating procedures</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        ",
+        "bullets": []
+    }
+];
+    const bizExecutionItems = [
+    {
+        "id": "make_plan_work_1",
+        "label": "3. Participatory & Benchmarking",
+        "badge": "Section 3 · PDF p. 3",
+        "title": "3. How to Make Your Plan Work: Participatory Planning & Benchmarking",
+        "desc": "Involving affected employees and comparing standards against industry leaders.",
+        "img": "images/biz/smart_goals_diagram.svg",
+        "caption": "Sections 3 & 4 (PDF p. 3): Making Plans Work & Setting SMART Goals",
+        "bullets": [
+            "&bull; <span class='hl-blue font-semibold'>Participatory Planning:</span> Involving team members/employees who are affected by the plan in its creation to <span class='hl-blue font-semibold'>increase buy-in and input</span>.",
+            "&bull; <span class='hl-green font-semibold'>Benchmarking:</span> Comparing performance and planning standards against <span class='hl-green font-semibold'>industry leaders or best practices</span>."
+        ]
+    },
+    {
+        "id": "make_plan_work_2",
+        "label": "3. Contingency, Timelines & Forecasting",
+        "badge": "Section 3 · PDF p. 3",
+        "title": "3. How to Make Your Plan Work: Contingency, Timelines & Forecasting",
+        "desc": "Preparing backup plans, maintaining accountability with deadlines, and anticipating future conditions.",
+        "img": "images/biz/smart_goals_diagram.svg",
+        "caption": "Section 3 (PDF p. 3): Contingency Planning, Setting Timelines, and Forecasting",
+        "bullets": [
+            "&bull; <span class='hl-rose font-semibold'>Contingency Planning:</span> Developing <span class='hl-rose font-semibold'>alternative backup plans (Plan B, Plan C)</span> in case initial conditions or assumptions change.",
+            "&bull; <span class='hl-amber font-semibold'>Setting Timelines:</span> Assigning <span class='hl-amber font-semibold'>firm start dates, milestones, and deadlines</span> to maintain accountability.",
+            "&bull; <span class='hl-purple font-semibold'>Forecasting:</span> Anticipating <span class='hl-purple font-semibold'>future economic, market, or environmental conditions</span> before making strategic choices."
+        ]
+    },
+    {
+        "id": "smart_criteria",
+        "label": "4. What Is SMART? (S-M-A-R-T)",
+        "badge": "Section 4 · PDF p. 3",
+        "title": "4. SMART Goal Setting: The 5 Criteria",
+        "desc": "Every effective goal must satisfy all five SMART dimensions.",
+        "img": "images/biz/smart_goals_diagram.svg",
+        "caption": "Section 4 (PDF p. 3): S-Specific, M-Measurable, A-Attainable, R-Realistic, T-Time-bound",
+        "bullets": [
+            "&bull; <span class='hl-blue font-semibold'>S - Specific:</span> Goals must be <span class='hl-blue font-semibold'>clear, well-defined, and unambiguous</span>.",
+            "&bull; <span class='hl-green font-semibold'>M - Measurable:</span> Criteria must be established to <span class='hl-green font-semibold'>track progress and know when the goal is achieved</span>.",
+            "&bull; <span class='hl-amber font-semibold'>A - Attainable:</span> Goal should be <span class='hl-amber font-semibold'>challenging yet realistically achievable</span>.",
+            "&bull; <span class='hl-purple font-semibold'>R - Realistic:</span> Goal is <span class='hl-purple font-semibold'>within reach and aligns with available resources and commitment</span>.",
+            "&bull; <span class='hl-rose font-semibold'>T - Time-bound:</span> Goal includes a <span class='hl-rose font-semibold'>clear start date and target completion deadline</span>."
+        ]
+    },
+    {
+        "id": "smart_examples",
+        "label": "4. Effective vs Ineffective Examples",
+        "badge": "Section 4 · Exam Comparison · PDF p. 3",
+        "title": "What Makes an Effective SMART Goal? (Ineffective vs. Effective)",
+        "desc": "Compare the exact ineffective and effective examples from your BOH4M Planning Review sheet.",
+        "img": "images/biz/smart_goals_diagram.svg",
+        "caption": "Section 4 (PDF p. 3): Transforming a vague wish into an actionable SMART goal",
+        "bullets": [
+            "&bull; <span class='hl-rose font-semibold'>Ineffective Example:</span> <em>\"I want to make a lot of money.\"</em>",
+            "  - <strong>Why it fails:</strong> <span class='hl-rose font-semibold'>(Vague, unmeasurable, no deadline)</span>.",
+            "&bull; <span class='hl-green font-semibold'>Effective Example:</span> <em>\"I want to make $1,000,000 within 10 years by launching a life-coaching consulting business and hosting live seminars.\"</em>",
+            "  - <strong>Why it works:</strong> Specifies exact dollar target ($1,000,000 = Measurable), exact method (life-coaching consulting business &amp; live seminars = Specific/Realistic/Attainable), and exact timeframe (within 10 years = Time-bound)."
+        ]
+    }
+];
+    const bizApproachesItems = [
+    {
+        "id": "inside_outside",
+        "label": "5. Inside-Out vs Outside-In",
+        "badge": "Section 5 · PDF p. 3",
+        "title": "5. Approaches to Planning: Inside-Out vs. Outside-In",
+        "desc": "Comparing internal capability maximization against external market adaptation.",
+        "img": "images/biz/planning_approaches_diagram.svg",
+        "caption": "Section 5 (PDF p. 3): Inside-Out (Wild Wing) vs. Outside-In (McDonald's healthy salads)",
+        "bullets": [
+            "&bull; <span class='hl-blue font-semibold'>Inside-Out:</span> Focuses on doing what the organization already does best, <span class='hl-blue font-semibold'>maximizing internal capabilities</span> (e.g., <strong>Wild Wing</strong> focusing on specialized chicken wings).",
+            "&bull; <span class='hl-green font-semibold'>Outside-In:</span> Analyzes the <span class='hl-green font-semibold'>external environment first to identify opportunities</span>, then adjusts internal operations to exploit them (e.g., <strong>McDonald's</strong> adding healthy salads in response to consumer trends)."
+        ]
+    },
+    {
+        "id": "topdown_bottomup",
+        "label": "5. Top-Down, Bottom-Up & Contingency",
+        "badge": "Section 5 · PDF p. 4",
+        "title": "5. Approaches to Planning: Top-Down, Bottom-Up & Contingency",
+        "desc": "How planning authority flows across management levels and how organizations prepare backup plans.",
+        "img": "images/biz/planning_approaches_diagram.svg",
+        "caption": "Section 5 (PDF p. 4): Top-Down, Bottom-Up, and Contingency Approaches",
+        "bullets": [
+            "&bull; <span class='hl-amber font-semibold'>Top-Down:</span> <span class='hl-amber font-semibold'>Upper management sets broad objectives and parameters</span>, then lower levels plan within those constraints.",
+            "&bull; <span class='hl-purple font-semibold'>Bottom-Up:</span> Plans <span class='hl-purple font-semibold'>originate at lower operational levels</span> without strict top-level constraints and are passed upward for approval.",
+            "&bull; <span class='hl-rose font-semibold'>Contingency:</span> Formulating <span class='hl-rose font-semibold'>alternative courses of action to execute if primary plans fail</span> or unexpected events occur. (A back up plan)"
+        ]
+    },
+    {
+        "id": "time_mgmt_benefits",
+        "label": "6. Time Management & Key Benefits",
+        "badge": "Section 6 · PDF p. 4",
+        "title": "6. Time Management: Definition & 4 Key Benefits",
+        "desc": "Using time purposefully to drive personal and organizational effectiveness.",
+        "img": "images/biz/planning_approaches_diagram.svg",
+        "caption": "Section 6 (PDF p. 4): Time Management Definition & Benefits",
+        "bullets": [
+            "&bull; <strong>Definition:</strong> Using time purposefully to <span class='hl-blue font-semibold'>increase efficiency, effectiveness, and productivity</span>.",
+            "&bull; <strong>Key Benefits (4):</strong>",
+            "  1. <span class='hl-green font-semibold'>Reduces emotional and academic stress.</span>",
+            "  2. <span class='hl-blue font-semibold'>Improves problem-solving capabilities and academic performance.</span>",
+            "  3. <span class='hl-amber font-semibold'>Highly valued skill by employers.</span>",
+            "  4. <span class='hl-purple font-semibold'>Gives you control over what you achieve.</span>"
+        ]
+    },
+    {
+        "id": "time_mgmt_skills",
+        "label": "6. Core Skills of Time Management",
+        "badge": "Section 6 · 4 Core Skills · PDF p. 4",
+        "title": "6. Time Management: The 4 Core Skills",
+        "desc": "Four practical skills required for effective time management.",
+        "img": "images/biz/planning_approaches_diagram.svg",
+        "caption": "Section 6 (PDF p. 4): Goal Setting, Prioritizing, Planning & Scheduling, and Distraction Control",
+        "bullets": [
+            "&bull; <span class='hl-blue font-semibold'>1. Goal Setting:</span> Knowing what you want to accomplish before spending energy.",
+            "&bull; <span class='hl-green font-semibold'>2. Prioritizing:</span> Generating a task list and <span class='hl-green font-semibold'>ranking by importance</span>.",
+            "&bull; <span class='hl-amber font-semibold'>3. Planning &amp; Scheduling:</span> Breaking down large projects into <span class='hl-amber font-semibold'>actionable daily tasks</span> while considering peak productivity windows and rest.",
+            "&bull; <span class='hl-rose font-semibold'>4. Distraction Control:</span> Silencing notifications, removing devices, and keeping focus."
+        ]
+    }
+];
+    const bizStrategicItems = [
+    {
+        "id": "market_product_dev",
+        "label": "7. Market vs Product Development",
+        "badge": "Section 7 · Growth Strategies · PDF p. 4",
+        "title": "7. Growth Strategies: Market Development vs. Product Development",
+        "desc": "Expanding via new markets/geographic areas versus creating new or modified products for current customers.",
+        "img": "images/biz/growth_retrenchment_diagram.svg",
+        "caption": "Section 7 (PDF p. 4–5): Growth Strategies vs. Retrenchment Strategies",
+        "bullets": [
+            "&bull; <span class='hl-blue font-semibold'>Market Development:</span> Selling <span class='hl-blue font-semibold'>existing products in new market segments or geographic areas</span>.",
+            "&bull; <span class='hl-green font-semibold'>Product Development:</span> Creating <span class='hl-green font-semibold'>new products or modifying existing ones for current customers</span> (e.g., <strong>Nike</strong> launching new shoe models; <strong>McDonald's</strong> introducing the Spicy Habanero McChicken)."
+        ]
+    },
+    {
+        "id": "integrations",
+        "label": "7. Horizontal, Vertical & Conglomerate",
+        "badge": "Section 7 · Integration Strategies · PDF p. 4–5",
+        "title": "7. Growth by Integration: Horizontal, Vertical & Conglomerate",
+        "desc": "How corporations expand by acquiring competitors, supply chain partners, or unrelated businesses.",
+        "img": "images/biz/growth_retrenchment_diagram.svg",
+        "caption": "Section 7 (PDF p. 4–5): Disney/Pixar (Horizontal), Tesla (Vertical), Rogers/Blue Jays (Conglomerate)",
+        "bullets": [
+            "&bull; <span class='hl-blue font-semibold'>Horizontal Integration:</span> Expanding by <span class='hl-blue font-semibold'>purchasing or merging with competitor companies within the same industry</span> (e.g., <strong>Disney acquiring Pixar</strong>).",
+            "&bull; <span class='hl-green font-semibold'>Vertical Integration:</span> Buying <span class='hl-green font-semibold'>suppliers (backward) or distributors/retailers (forward)</span> to control the supply chain (e.g., <strong>Tesla</strong> manufacturing its own components and selling directly).",
+            "&bull; <span class='hl-amber font-semibold'>Conglomerate Integration:</span> Expanding by <span class='hl-amber font-semibold'>buying companies in entirely unrelated industries</span> (e.g., <strong>Rogers owning the Toronto Blue Jays</strong>)."
+        ]
+    },
+    {
+        "id": "alliances_ebiz",
+        "label": "7. Strategic Alliances & E-Business",
+        "badge": "Section 7 · Partnerships & Digital · PDF p. 5",
+        "title": "7. Growth Strategies: Strategic Alliances & E-Business",
+        "desc": "Partnering across companies and leveraging the Internet to reach global markets.",
+        "img": "images/biz/growth_retrenchment_diagram.svg",
+        "caption": "Section 7 (PDF p. 5): Molson Coors Strategic Alliance & E-Business Operations",
+        "bullets": [
+            "&bull; <span class='hl-purple font-semibold'>Strategic Alliances:</span> Partnering with <span class='hl-purple font-semibold'>foreign or domestic companies to expand operations internationally or share technology</span> (e.g., <strong>Molson Coors alliance</strong>).",
+            "&bull; <span class='hl-blue font-semibold'>E-Business:</span> Utilizing <span class='hl-blue font-semibold'>digital platforms and the Internet</span> to reach global markets and conduct business operations."
+        ]
+    },
+    {
+        "id": "retrenchment",
+        "label": "7. Retrenchment (Restructure, Downsize, Divest)",
+        "badge": "Section 7 · Retrenchment Strategies · PDF p. 5",
+        "title": "7. Retrenchment Strategies: Restructuring, Downsizing & Divestiture",
+        "desc": "Used when a business needs to reduce costs or exit underperforming areas.",
+        "img": "images/biz/growth_retrenchment_diagram.svg",
+        "caption": "Section 7 (PDF p. 5): Restructuring, Downsizing, and Divestiture (eBay spinning off PayPal)",
+        "bullets": [
+            "&bull; <strong>When Used:</strong> <em>Used when a business needs to <span class='hl-rose font-semibold'>reduce costs or exit underperforming areas</span>.</em>",
+            "&bull; <span class='hl-amber font-semibold'>1. Restructuring:</span> Changing <span class='hl-amber font-semibold'>internal operations and workflows</span> to improve efficiency and performance.",
+            "&bull; <span class='hl-rose font-semibold'>2. Downsizing:</span> Reducing company size by <span class='hl-rose font-semibold'>laying off workers or cutting workforce costs</span>.",
+            "&bull; <span class='hl-purple font-semibold'>3. Divestiture:</span> <span class='hl-purple font-semibold'>Selling off a specific division, business unit, or subsidiary</span> (e.g., <strong>eBay spinning off/selling PayPal</strong>)."
+        ]
+    }
+];
+    const bizMissionItems = [
+    {
+        "id": "mission_def_components",
+        "label": "8. Definition & 3 Key Components",
+        "badge": "Section 8 · PDF p. 5",
+        "title": "8. What Is a Mission Statement? Definition & 3 Key Components",
+        "desc": "How an organization defines its fundamental, unique purpose.",
+        "img": "images/biz/mission_statement_diagram.svg",
+        "caption": "Section 8 (PDF p. 5): What you do, How you do it, and Why you do it",
+        "bullets": [
+            "&bull; <strong>Definition:</strong> <span class='hl-green font-semibold'>A formal statement of an organization's fundamental, unique purpose that sets it apart from competing firms.</span>",
+            "&bull; <strong>3 Key Components:</strong>",
+            "  1. <span class='hl-blue font-semibold'>What you do</span> (Product or service).",
+            "  2. <span class='hl-green font-semibold'>How you do it</span> (Method or operational strategy).",
+            "  3. <span class='hl-amber font-semibold'>Why you do it</span> (Core purpose or vision)."
+        ]
+    },
+    {
+        "id": "mission_examples",
+        "label": "8. Real-World Examples (McDonald's & Apple)",
+        "badge": "Section 8 · Real-World Examples · PDF p. 5",
+        "title": "8. Real-World Mission Statement Examples: McDonald's & Apple",
+        "desc": "Memorize these two real-world mission statements from your BOH4M review guide.",
+        "img": "images/biz/mission_statement_diagram.svg",
+        "caption": "Section 8 (PDF p. 5): McDonald's & Apple Mission Statements",
+        "bullets": [
+            "&bull; <span class='hl-amber font-semibold'>McDonald's:</span> <em>\"To make delicious feel good moments easy for everyone.\"</em>",
+            "&bull; <span class='hl-blue font-semibold'>Apple:</span> <em>\"To bring the best user experience to its customers through its innovative hardware, software, and services.\"</em>"
+        ]
+    }
+];
+    const bizToolsItems = [
+    {
+        "id": "swot_matrix",
+        "label": "9. SWOT Analysis Matrix",
+        "badge": "Section 9 · Part C Tool · PDF p. 5–6",
+        "title": "9. SWOT Analysis: Internal vs. External Factors",
+        "desc": "SWOT evaluates internal and external factors affecting organizational success.",
+        "img": "images/biz/swot_matrix_diagram.svg",
+        "caption": "Section 9 (PDF p. 5–6): SWOT 2x2 Matrix — Helpful vs. Harmful & Internal vs. External",
+        "htmlContent": "\n          <div class=\"overflow-x-auto\">\n            <table class=\"w-full text-sm text-left border-collapse\">\n              <thead>\n                <tr class=\"border-b border-[var(--mac-border-strong)]\" style=\"color: var(--mac-muted);\">\n                  <th class=\"py-3 px-3 font-bold\">Matrix Dimension</th>\n                  <th class=\"py-3 px-3 font-bold text-emerald-600 dark:text-emerald-400\">Helpful (To Goal)</th>\n                  <th class=\"py-3 px-3 font-bold text-rose-600 dark:text-rose-400\">Harmful (To Goal)</th>\n                </tr>\n              </thead>\n              <tbody class=\"divide-y divide-[var(--mac-border)] text-sm\">\n                <tr>\n                  <td class=\"py-3 px-3 font-bold text-blue-600 dark:text-blue-400\">Internal Factors</td>\n                  <td class=\"py-3 px-3\"><span class=\"hl-green font-semibold\">Strengths (S):</span> Core competencies, skilled staff, strong finances, good reputation.</td>\n                  <td class=\"py-3 px-3\"><span class=\"hl-rose font-semibold\">Weaknesses (W):</span> Poor management, outdated tech, bad location, poor planning.</td>\n                </tr>\n                <tr>\n                  <td class=\"py-3 px-3 font-bold text-amber-600 dark:text-amber-400\">External Factors</td>\n                  <td class=\"py-3 px-3\"><span class=\"hl-blue font-semibold\">Opportunities (O):</span> Emerging markets, weak competitors, technological advances.</td>\n                  <td class=\"py-3 px-3\"><span class=\"hl-purple font-semibold\">Threats (T):</span> New competitors, changing bylaws/laws, poor economic climate.</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        ",
+        "bullets": []
+    },
+    {
+        "id": "bcg_overview",
+        "label": "9. BCG Matrix Diagram (Page 6!)",
+        "badge": "Section 9 · PDF p. 6 Diagram",
+        "title": "9. Boston Consulting Matrix (BCG Growth Share Matrix)",
+        "desc": "Analyzes products or strategic business units based on Market Share (horizontal) and Market Growth Rate (vertical).",
+        "img": "images/biz/bcg_matrix.png",
+        "caption": "Exact Diagram from BOH4M Review PDF Page 6: BCG Growth Share Matrix",
+        "bullets": [
+            "&bull; <strong>Horizontal Axis:</strong> <span class='hl-blue font-semibold'>Market Share</span> (LOW to HIGH).",
+            "&bull; <strong>Vertical Axis:</strong> <span class='hl-green font-semibold'>Market Growth Rate</span> (LOW to HIGH).",
+            "&bull; <span class='hl-amber font-semibold'>Stars:</span> HIGH Market Share / HIGH Market Growth.",
+            "&bull; <span class='hl-green font-semibold'>Cash Cows:</span> HIGH Market Share / LOW Market Growth.",
+            "&bull; <span class='hl-purple font-semibold'>Question Marks:</span> LOW Market Share / HIGH Market Growth.",
+            "&bull; <span class='hl-rose font-semibold'>Dogs:</span> LOW Market Share / LOW Market Growth."
+        ]
+    },
+    {
+        "id": "bcg_quadrants",
+        "label": "9. BCG Quadrants & Examples",
+        "badge": "Section 9 · PDF p. 6–7",
+        "title": "9. BCG Matrix: Detailed Breakdown of All 4 Quadrants & Examples",
+        "desc": "Memorize the characteristics, strategic decisions, and exact product examples for Stars, Cash Cows, Question Marks, and Dogs.",
+        "img": "images/biz/bcg_matrix.png",
+        "caption": "PDF p. 6–7: Gatorade/PepsiCo (Stars), Coca-Cola Classic (Cash Cows), Apple TV (Question Marks), standalone iPods (Dogs)",
+        "bullets": [
+            "&bull; <span class='hl-amber font-semibold'>Stars (High Share / High Growth):</span> Leading products in rapidly growing markets. Produce high revenue but <span class='hl-amber font-semibold'>require ongoing capital investment to maintain leadership</span> (e.g., <strong>Gatorade / PepsiCo</strong>).",
+            "&bull; <span class='hl-green font-semibold'>Cash Cows (High Share / Low Growth):</span> Mature, dominant products in slow-growing markets. <span class='hl-green font-semibold'>Require minimal new investment and generate strong profit/cash flow to fund other areas</span> (e.g., <strong>Coca-Cola Classic</strong>).",
+            "&bull; <span class='hl-blue font-semibold'>Question Marks (Low Share / High Growth):</span> Products in fast-growing markets that currently hold low share. Require strategic decisions: <span class='hl-blue font-semibold'>invest heavily to turn into Stars or divest</span> (e.g., <strong>Apple TV streaming</strong>).",
+            "&bull; <span class='hl-rose font-semibold'>Dogs (Low Share / Low Growth):</span> Products in stagnant markets with poor share. Often consume resources without providing adequate returns; <span class='hl-rose font-semibold'>prime targets for divestiture or discontinuation</span> (e.g., <strong>standalone iPods</strong>)."
+        ]
+    },
+    {
+        "id": "pest_c",
+        "label": "9. PEST + C Analysis",
+        "badge": "Section 9 · Part C Tool · PDF p. 7",
+        "title": "9. PEST + C: Macro-Environmental External Forces",
+        "desc": "Analyzes macro-environmental external forces impacting an organization.",
+        "img": "images/biz/pest_c_diagram.svg",
+        "caption": "Section 9 (PDF p. 7): Politics, Economics, Social, Technology, + Competition",
+        "bullets": [
+            "&bull; <span class='hl-blue font-semibold'>P - Politics:</span> Tax policies, employment laws, municipal bylaws, government regulations.",
+            "&bull; <span class='hl-green font-semibold'>E - Economics:</span> Inflation, interest rates, exchange rates, business cycle (recessions), unemployment.",
+            "&bull; <span class='hl-amber font-semibold'>S - Social:</span> Changing demographics, lifestyle preferences, customer habits, social values.",
+            "&bull; <span class='hl-purple font-semibold'>T - Technology:</span> Automation, online platforms, software, new digital tools.",
+            "&bull; <span class='hl-rose font-semibold'>+ C - Competition:</span> Actions of competitor firms, rival offerings, wage competition, market dynamics."
+        ]
+    },
+    {
+        "id": "part_c_guide",
+        "label": "Part C: Scenario Tool Guide",
+        "badge": "Part C Application · PDF p. 1, 5–7",
+        "title": "Part C Application: Responding to Mini-Cases with SWOT & PEST + C",
+        "desc": "In Part C, you will be presented with a scenario(s) or mini-case(s) that managers may encounter and respond to by applying the appropriate strategic planning tool (SWOT, Pest + C).",
+        "img": "images/biz/swot_matrix_diagram.svg",
+        "caption": "Part C Application Checklist: Classifying Internal vs. External & Macro-Environmental Forces",
+        "bullets": [
+            "&bull; <strong>When to Apply SWOT:</strong> When evaluating <span class='hl-blue font-semibold'>both internal and external factors</span> affecting organizational success:",
+            "  - <strong>Internal Helpful (Strengths):</strong> Core competencies, skilled staff, strong finances, good reputation.",
+            "  - <strong>Internal Harmful (Weaknesses):</strong> Poor management, outdated tech, bad location, poor planning.",
+            "  - <strong>External Helpful (Opportunities):</strong> Emerging markets, weak competitors, technological advances.",
+            "  - <strong>External Harmful (Threats):</strong> New competitors, changing bylaws/laws, poor economic climate.",
+            "&bull; <strong>When to Apply PEST + C:</strong> When analyzing <span class='hl-green font-semibold'>macro-environmental external forces</span> across <strong>Politics</strong> (taxes, laws, bylaws), <strong>Economics</strong> (inflation, interest/exchange rates, recessions, unemployment), <strong>Social</strong> (demographics, lifestyle, habits, values), <strong>Technology</strong> (automation, online platforms, software), and <strong>+ Competition</strong> (rival offerings, wage competition, market dynamics)."
+        ]
+    }
+];
+
     // --- CONTROLLER FUNCTIONS FOR PILL DECKS ---
 
     function pickBiomol(id) { renderStageContent('bio-biomol-stage', 'bio-biomol-pills', bioBiomolItems, id); }
@@ -2473,6 +3441,13 @@
     function pickPassive(id) { renderStageContent('bio-passive-stage', 'bio-passive-pills', bioPassiveItems, id); }
     function pickActive(id) { renderStageContent('bio-active-stage', 'bio-active-pills', bioActiveItems, id); }
 
+    function pickBizFoundations(id) { renderStageContent('biz-foundations-stage', 'biz-foundations-pills', bizFoundationsItems, id); }
+    function pickBizExecution(id) { renderStageContent('biz-execution-stage', 'biz-execution-pills', bizExecutionItems, id); }
+    function pickBizApproaches(id) { renderStageContent('biz-approaches-stage', 'biz-approaches-pills', bizApproachesItems, id); }
+    function pickBizStrategic(id) { renderStageContent('biz-strategic-stage', 'biz-strategic-pills', bizStrategicItems, id); }
+    function pickBizMission(id) { renderStageContent('biz-mission-stage', 'biz-mission-pills', bizMissionItems, id); }
+    function pickBizTools(id) { renderStageContent('biz-tools-stage', 'biz-tools-pills', bizToolsItems, id); }
+
     const bioPickMap = {
       'pickBiomol': pickBiomol,
       'pickEnzyme': pickEnzyme,
@@ -2481,6 +3456,12 @@
       'pickCftr': pickCftr,
       'pickPassive': pickPassive,
       'pickActive': pickActive,
+      'pickBizFoundations': pickBizFoundations,
+      'pickBizExecution': pickBizExecution,
+      'pickBizApproaches': pickBizApproaches,
+      'pickBizStrategic': pickBizStrategic,
+      'pickBizMission': pickBizMission,
+      'pickBizTools': pickBizTools,
     };
 
     window.pickBiomol = pickBiomol;
@@ -2490,6 +3471,12 @@
     window.pickCftr = pickCftr;
     window.pickPassive = pickPassive;
     window.pickActive = pickActive;
+    window.pickBizFoundations = pickBizFoundations;
+    window.pickBizExecution = pickBizExecution;
+    window.pickBizApproaches = pickBizApproaches;
+    window.pickBizStrategic = pickBizStrategic;
+    window.pickBizMission = pickBizMission;
+    window.pickBizTools = pickBizTools;
 
     function setupPillDeck(containerId, items, pickFnName, defaultId) {
       const box = document.getElementById(containerId);
@@ -2551,7 +3538,13 @@
       { container: 'bio-mosaic-pills', stage: 'bio-mosaic-stage', items: bioMosaicItems, pickFn: 'pickMosaic', defaultId: 'bilayer_handout' },
       { container: 'bio-cftr-pills', stage: 'bio-cftr-stage', items: bioCftrItems, pickFn: 'pickCftr', defaultId: 'functions_6' },
       { container: 'bio-passive-pills', stage: 'bio-passive-stage', items: bioPassiveItems, pickFn: 'pickPassive', defaultId: 'permeability' },
-      { container: 'bio-active-pills', stage: 'bio-active-stage', items: bioActiveItems, pickFn: 'pickActive', defaultId: 'primary_pump' }
+      { container: 'bio-active-pills', stage: 'bio-active-stage', items: bioActiveItems, pickFn: 'pickActive', defaultId: 'primary_pump' },
+      { container: 'biz-foundations-pills', stage: 'biz-foundations-stage', items: bizFoundationsItems, pickFn: 'pickBizFoundations', defaultId: 'test_format' },
+      { container: 'biz-execution-pills', stage: 'biz-execution-stage', items: bizExecutionItems, pickFn: 'pickBizExecution', defaultId: 'make_plan_work_1' },
+      { container: 'biz-approaches-pills', stage: 'biz-approaches-stage', items: bizApproachesItems, pickFn: 'pickBizApproaches', defaultId: 'inside_outside' },
+      { container: 'biz-strategic-pills', stage: 'biz-strategic-stage', items: bizStrategicItems, pickFn: 'pickBizStrategic', defaultId: 'market_product_dev' },
+      { container: 'biz-mission-pills', stage: 'biz-mission-stage', items: bizMissionItems, pickFn: 'pickBizMission', defaultId: 'mission_def_components' },
+      { container: 'biz-tools-pills', stage: 'biz-tools-stage', items: bizToolsItems, pickFn: 'pickBizTools', defaultId: 'swot_matrix' }
     ];
 
     function initBioPillDecks(force = false) {
@@ -2587,6 +3580,9 @@
         if (currentSubject === 'bio') {
           initBioPillDecks();
           showTopic(currentBioTopic || 'biomol');
+        } else if (currentSubject === 'biz') {
+          initBioPillDecks();
+          showTopic(currentBizTopic || 'biz_foundations');
         } else {
           showTopic('econfig');
         }
@@ -2609,71 +3605,92 @@
     function switchSubject(subj) {
       currentSubject = subj;
       const isChem = subj === 'chem';
+      const isBio = subj === 'bio';
+      const isBiz = subj === 'biz';
 
       // 1. Update subject buttons in Header
       const btnChem = document.getElementById('sub-chem') || document.getElementById('subj-btn-chem');
       const btnBio = document.getElementById('sub-bio') || document.getElementById('subj-btn-bio');
-      if (btnChem && btnBio) {
-        btnChem.classList.toggle('active', isChem);
-        btnBio.classList.toggle('active', !isChem);
-      }
+      const btnBiz = document.getElementById('sub-biz') || document.getElementById('subj-btn-biz');
+      if (btnChem) btnChem.classList.toggle('active', isChem);
+      if (btnBio) btnBio.classList.toggle('active', isBio);
+      if (btnBiz) btnBiz.classList.toggle('active', isBiz);
 
       // 2. Update Header Title & Badge
       const courseTitle = document.getElementById('course-title');
       const courseBadge = document.getElementById('course-badge');
       if (courseTitle && courseBadge) {
-        courseTitle.textContent = isChem ? 'SCH4U Chemistry' : 'SBI4U Biology';
-        courseBadge.textContent = isChem ? 'YRDSB Grade 12 · Structure & Properties' : 'YRDSB Grade 12 · Unit 1 Biochemistry & Transport';
+        courseTitle.textContent = isChem ? 'SCH4U Chemistry' : (isBio ? 'SBI4U Biology' : 'BOH4M Business Leadership');
+        courseBadge.textContent = isChem
+          ? 'YRDSB Grade 12 · Structure & Properties'
+          : (isBio ? 'YRDSB Grade 12 · Unit 1 Biochemistry & Transport' : 'YRDSB Grade 12 · Review - Planning Unit');
       }
 
       // 3. Update Sidebar Navigation Groups
       const sbTitle = document.getElementById('sidebar-unit-title');
       if (sbTitle) {
-        sbTitle.textContent = isChem ? 'Chemistry Chapters' : 'Biology Chapters';
+        sbTitle.textContent = isChem ? 'Chemistry Chapters' : (isBio ? 'Biology Chapters' : 'Business Planning Unit');
       }
       const navChem = document.getElementById('nav-chem-group');
       if (navChem) navChem.classList.toggle('hidden', !isChem);
       const navBio = document.getElementById('nav-bio-group');
-      if (navBio) navBio.classList.toggle('hidden', isChem);
+      if (navBio) navBio.classList.toggle('hidden', !isBio);
+      const navBiz = document.getElementById('nav-biz-group');
+      if (navBiz) navBiz.classList.toggle('hidden', !isBiz);
 
       // 4. Update Exam Traps (explicit display styles to override any Tailwind desktop media query specificity)
       const trapChem = document.getElementById('trap-chem');
       const trapBio = document.getElementById('trap-bio');
+      const trapBiz = document.getElementById('trap-biz');
       if (trapChem) {
         trapChem.classList.toggle('hidden', !isChem);
         trapChem.style.display = isChem ? 'block' : 'none';
       }
       if (trapBio) {
-        trapBio.classList.toggle('hidden', isChem);
-        trapBio.style.display = isChem ? 'none' : 'block';
+        trapBio.classList.toggle('hidden', !isBio);
+        trapBio.style.display = isBio ? 'block' : 'none';
+      }
+      if (trapBiz) {
+        trapBiz.classList.toggle('hidden', !isBiz);
+        trapBiz.style.display = isBiz ? 'block' : 'none';
       }
 
       // 5. Update Notes Containers
       const notesChem = document.getElementById('notes-chem');
       if (notesChem) notesChem.classList.toggle('hidden', !isChem);
       const notesBio = document.getElementById('notes-bio');
-      if (notesBio) notesBio.classList.toggle('hidden', isChem);
+      if (notesBio) notesBio.classList.toggle('hidden', !isBio);
+      const notesBiz = document.getElementById('notes-biz');
+      if (notesBiz) notesBiz.classList.toggle('hidden', !isBiz);
 
       // 6. Update Flashcard Header Titles
       const fcTitle = document.getElementById('fc-title');
       const fcSub = document.getElementById('fc-subtitle');
       if (fcTitle) {
-        fcTitle.textContent = isChem ? 'Ch. 3 & Ch. 4 Study Flashcards' : 'Unit 1 Biochemistry & Cells Flashcards';
+        fcTitle.textContent = isChem
+          ? 'Ch. 3 & Ch. 4 Study Flashcards'
+          : (isBio ? 'Unit 1 Biochemistry & Cells Flashcards' : 'BOH4M Planning Unit Flashcards');
       }
       if (fcSub) {
         fcSub.textContent = isChem 
           ? 'Active Recall (16 Cards) · Click the card to flip between Question and Answer.' 
-          : 'Active Recall (24 Cards) · Click the card to flip between Question and Answer.';
+          : (isBio
+              ? 'Active Recall (24 Cards) · Click the card to flip between Question and Answer.'
+              : 'Active Recall (28 Cards) · Click the card to flip between Question and Answer.');
       }
 
       // 7. Update Quiz Header Titles
       const quizBadge = document.getElementById('quiz-badge');
       const quizTitle = document.getElementById('quiz-title');
       if (quizBadge) {
-        quizBadge.textContent = isChem ? 'YRDSB Slide Questions (Ch. 3 & Ch. 4)' : 'YRDSB Exam Questions (SBI4U Unit 1)';
+        quizBadge.textContent = isChem
+          ? 'YRDSB Slide Questions (Ch. 3 & Ch. 4)'
+          : (isBio ? 'YRDSB Exam Questions (SBI4U Unit 1)' : 'YRDSB BOH4M Review - Planning Unit');
       }
       if (quizTitle) {
-        quizTitle.textContent = isChem ? 'Practice Test (10 Questions)' : 'Practice Test (16 Questions)';
+        quizTitle.textContent = isChem
+          ? 'Practice Test (10 Questions)'
+          : (isBio ? 'Practice Test (16 Questions)' : 'Practice Test (20 Questions)');
       }
 
       // 8. Update Video Header Titles
@@ -2683,23 +3700,25 @@
       if (vBadge) {
         vBadge.textContent = isChem 
           ? 'SCH4U Chemistry · Visual & Auditory Masterclass' 
-          : 'SBI4U Biology · Visual & Auditory Masterclass';
+          : (isBio ? 'SBI4U Biology · Visual & Auditory Masterclass' : 'BOH4M Business Leadership · Visual & Auditory Review');
       }
       if (vTitle) {
         vTitle.textContent = isChem 
           ? 'Curated High-Yield Chemistry Video Lessons' 
-          : 'Curated High-Yield Biology Video Lessons';
+          : (isBio ? 'Curated High-Yield Biology Video Lessons' : 'BOH4M Planning Unit Video Lessons');
       }
       if (vDesc) {
         vDesc.textContent = isChem
           ? 'Hand-picked video tutorials optimized for visual learners (3D spatial models, orbital diagrams) and auditory learners (vocal mnemonics, step-by-step spoken pacing).'
-          : 'Hand-picked video tutorials optimized for visual learners (3D animations, cellular transport models) and auditory learners (vocal analogies, step-by-step spoken pacing).';
+          : (isBio
+              ? 'Hand-picked video tutorials optimized for visual learners (3D animations, cellular transport models) and auditory learners (vocal analogies, step-by-step spoken pacing).'
+              : 'Video lessons aligned to the BOH4M Planning Unit review: Planning Foundations, SMART Goals, Growth vs. Retrenchment, SWOT, BCG Matrix, and PEST + C.');
       }
 
       // 9. Update Counter Badges in Header Mode Switcher
-      const activeDeck = isChem ? flashcards : bioFlashcards;
-      const activeQuiz = isChem ? quizData : bioQuizData;
-      const activeVideos = isChem ? chemVideos : bioVideos;
+      const activeDeck = isChem ? flashcards : (isBio ? bioFlashcards : bizFlashcards);
+      const activeQuiz = isChem ? quizData : (isBio ? bioQuizData : bizQuizData);
+      const activeVideos = isChem ? chemVideos : (isBio ? bioVideos : bizVideos);
       const fcPill = document.getElementById('fc-count-pill');
       if (fcPill) fcPill.textContent = activeDeck.length;
       const qPill = document.getElementById('quiz-count-pill');
@@ -2707,10 +3726,21 @@
       const vPill = document.getElementById('video-count-pill');
       if (vPill) vPill.textContent = activeVideos.length;
 
+      // Update score pill for active subject
+      const activePicked = isChem ? picked : (isBio ? bioPicked : bizPicked);
+      const rightCount = Object.keys(activePicked).filter(k => {
+        const item = activeQuiz.find(x => x.id === Number(k));
+        return item && activePicked[k] === item.ans;
+      }).length;
+      const scoreEl = document.getElementById('score-pill');
+      if (scoreEl) {
+        scoreEl.textContent = `Quiz Score: ${rightCount} / ${activeQuiz.length}`;
+      }
+
       fcIndex = 0;
       fcFlipped = false;
 
-      // Unconditionally ensure Biology pills are ready
+      // Unconditionally ensure Biology & Business pills are ready
       if (!isChem) {
         initBioPillDecks();
       }
@@ -2725,8 +3755,10 @@
       } else {
         if (isChem) {
           showTopic('econfig');
-        } else {
+        } else if (isBio) {
           showTopic(currentBioTopic || 'biomol');
+        } else {
+          showTopic(currentBizTopic || 'biz_foundations');
         }
       }
     }
@@ -3017,18 +4049,124 @@
         ]
     }
 ];
+    const bizVideos = [
+    {
+        "id": "biz_swot_pest",
+        "subject": "biz",
+        "category": "Strategic Tools (Part C)",
+        "title": "SWOT Analysis & PEST + C Macro-Environmental Framework",
+        "creator": "BOH4M Visual & Audio Review",
+        "duration": "9 min",
+        "youtubeId": "JXXHqM6RzZQ",
+        "summary": "Covers Section 9 & Part C Application from your BOH4M Planning Unit review: evaluating Internal Factors (Strengths & Weaknesses) vs External Factors (Opportunities & Threats) in SWOT, plus Politics, Economics, Social, Technology, and + Competition in PEST + C.",
+        "visualHighlights": [
+            "2x2 SWOT Matrix grid mapping Helpful vs. Harmful across Internal Factors (Strengths, Weaknesses) and External Factors (Opportunities, Threats).",
+            "Side-by-side breakdown of Internal Weaknesses (poor management, outdated tech, bad location, poor planning) vs. External Threats (new competitors, changing bylaws/laws, poor economic climate).",
+            "5-pillar PEST + C visual chart covering Politics, Economics, Social, Technology, and + Competition."
+        ],
+        "auditoryHighlights": [
+            "Spoken walkthrough of how to answer Part C mini-cases by distinguishing internal company traits from external market forces.",
+            "Verbal memory cues for E - Economics: inflation, interest rates, exchange rates, business cycle (recessions), and unemployment.",
+            "Clear comparison of S - Social (demographics, lifestyle preferences, customer habits, social values) vs. + C - Competition (rival offerings, wage competition)."
+        ],
+        "takeaways": [
+            "SWOT Internal Factors: Strengths (core competencies, skilled staff, strong finances, good reputation) & Weaknesses (poor management, outdated tech, bad location, poor planning).",
+            "SWOT External Factors: Opportunities (emerging markets, weak competitors, tech advances) & Threats (new competitors, changing bylaws/laws, poor economic climate).",
+            "PEST + C analyzes macro-environmental external forces: Politics, Economics, Social, Technology, and + Competition."
+        ]
+    },
+    {
+        "id": "biz_bcg_matrix",
+        "subject": "biz",
+        "category": "BCG Matrix",
+        "title": "Boston Consulting Matrix (BCG): Stars, Cash Cows, Question Marks & Dogs",
+        "creator": "BOH4M Visual & Audio Review",
+        "duration": "7 min",
+        "youtubeId": "3bc0_3T8_kM",
+        "summary": "Covers Section 9 (Boston Consulting Matrix) from your BOH4M review sheet: analyzing products or strategic business units by Market Share (horizontal) and Market Growth Rate (vertical).",
+        "visualHighlights": [
+            "2x2 BCG Growth Share Matrix plotting Market Share (Low to High) on the horizontal axis and Market Growth Rate (Low to High) on the vertical axis.",
+            "Visual quadrant icons for Stars (High/High), Cash Cows (High Share/Low Growth), Question Marks (Low Share/High Growth), and Dogs (Low/Low).",
+            "Real-world product mapping from the review sheet: Gatorade/PepsiCo, Coca-Cola Classic, Apple TV streaming, and standalone iPods."
+        ],
+        "auditoryHighlights": [
+            "Spoken explanation of why Cash Cows (Coca-Cola Classic) require minimal new investment and generate strong cash flow to fund other areas.",
+            "Strategic decision breakdown for Question Marks (Apple TV streaming): invest heavily to turn into Stars or divest.",
+            "Clear explanation of why Dogs (standalone iPods) are prime targets for divestiture or discontinuation."
+        ],
+        "takeaways": [
+            "Stars (High Share / High Growth): Leading products in rapidly growing markets requiring ongoing capital investment (e.g., Gatorade / PepsiCo).",
+            "Cash Cows (High Share / Low Growth): Mature, dominant products in slow-growing markets generating strong profit/cash flow (e.g., Coca-Cola Classic).",
+            "Question Marks (Low Share / High Growth, e.g., Apple TV streaming) vs. Dogs (Low Share / Low Growth, e.g., standalone iPods)."
+        ]
+    },
+    {
+        "id": "biz_smart_planning",
+        "subject": "biz",
+        "category": "Planning & SMART Goals",
+        "title": "Planning Foundations, Types of Plans & SMART Goal Setting",
+        "creator": "BOH4M Visual & Audio Review",
+        "duration": "8 min",
+        "youtubeId": "I0f8k25f6P0",
+        "summary": "Covers Sections 1, 2, 3, 4, 5 & 6 of the BOH4M Planning Unit review: definition of planning, 6 key questions, 7 plan types, participatory planning, benchmarking, contingency, SMART goals, and time management.",
+        "visualHighlights": [
+            "Management level hierarchy showing Strategic (Upper), Tactical (Middle), and Operational (Lower) plans alongside Long-Range (>1 yr) and Short-Range (<1 yr).",
+            "Visual comparison of Single-Use plans (unique one-time events) vs. Standing-Use plans (policies, rules, SOPs).",
+            "S-M-A-R-T goal breakdown comparing the ineffective money wish against the $1,000,000 10-year life-coaching consulting example."
+        ],
+        "auditoryHighlights": [
+            "Spoken recap of how planning sets the stage for Organizing, Leading, and Controlling.",
+            "Clear verbal contrast between Inside-Out (Wild Wing chicken wings) and Outside-In (McDonald's healthy salads), plus Top-Down vs. Bottom-Up.",
+            "Step-by-step review of the 4 Core Time Management Skills: Goal Setting, Prioritizing, Planning & Scheduling, and Distraction Control."
+        ],
+        "takeaways": [
+            "Planning sets objectives and determines in advance how to best accomplish them, setting the stage for Organizing, Leading, and Controlling.",
+            "Make plans work via Participatory Planning, Benchmarking, Contingency Planning, Setting Timelines, and Forecasting.",
+            "SMART: Specific, Measurable, Attainable, Realistic, Time-bound."
+        ]
+    },
+    {
+        "id": "biz_growth_retrenchment",
+        "subject": "biz",
+        "category": "Growth & Retrenchment",
+        "title": "Strategic Planning: Growth Strategies, Retrenchment & Mission Statements",
+        "creator": "BOH4M Visual & Audio Review",
+        "duration": "10 min",
+        "youtubeId": "vN8p1R6n1t0",
+        "summary": "Covers Sections 7 & 8 of the BOH4M review sheet: Market & Product Development, Horizontal/Vertical/Conglomerate Integration, Strategic Alliances, E-Business, Retrenchment (Restructuring, Downsizing, Divestiture), and Mission Statements.",
+        "visualHighlights": [
+            "Integration diagram contrasting Horizontal (Disney + Pixar), Vertical backward/forward (Tesla), and Conglomerate (Rogers + Toronto Blue Jays).",
+            "Comparison chart of Retrenchment strategies: Restructuring (workflows), Downsizing (laying off workers), and Divestiture (eBay selling PayPal).",
+            "3-part Mission Statement visual (What you do, How you do it, Why you do it) with McDonald's and Apple examples."
+        ],
+        "auditoryHighlights": [
+            "Spoken distinction between Market Development (existing products in new markets) and Product Development (Nike shoes; Spicy Habanero McChicken).",
+            "Clear verbal explanation of when businesses use Retrenchment strategies (to reduce costs or exit underperforming areas).",
+            "Word-for-word recitation of the McDonald's and Apple mission statements from Section 8."
+        ],
+        "takeaways": [
+            "Growth Strategies: Market Development, Product Development, Horizontal Integration, Vertical Integration, Conglomerate Integration, Strategic Alliances, E-Business.",
+            "Retrenchment Strategies: Restructuring, Downsizing, Divestiture (e.g., eBay spinning off/selling PayPal).",
+            "Mission Statement Components: 1. What you do, 2. How you do it, 3. Why you do it."
+        ]
+    }
+];
 
     let activeVideoId = 'chem_vsepr';
     let activeVideoCategory = 'all';
 
     function renderVideos() {
-      const isChem = currentSubject === 'chem';
-      const videoList = isChem ? chemVideos : bioVideos;
+      const videoList = currentSubject === 'chem' ? chemVideos : (currentSubject === 'bio' ? bioVideos : bizVideos);
       if (!videoList || videoList.length === 0) return;
 
       // Ensure activeVideoId is valid for current subject
       if (!videoList.some(v => v.id === activeVideoId)) {
         activeVideoId = videoList[0].id;
+      }
+      // Ensure activeVideoCategory is valid for current subject
+      const validCats = ['all', ...new Set(videoList.map(v => v.category))];
+      if (!validCats.includes(activeVideoCategory)) {
+        activeVideoCategory = 'all';
       }
 
       // 1. Render Video Filter Pills
@@ -3202,10 +4340,19 @@
           const navBtn = document.getElementById('nav-' + item);
           if (navBtn) navBtn.classList.toggle('active', item === t);
         });
-      } else {
+      } else if (currentSubject === 'bio') {
         currentBioTopic = t;
         initBioPillDecks();
         bioTopics.forEach(item => {
+          const el = document.getElementById('topic-' + item);
+          if (el) el.classList.toggle('hidden', item !== t);
+          const navBtn = document.getElementById('nav-' + item);
+          if (navBtn) navBtn.classList.toggle('active', item === t);
+        });
+      } else {
+        currentBizTopic = t;
+        initBioPillDecks();
+        bizTopics.forEach(item => {
           const el = document.getElementById('topic-' + item);
           if (el) el.classList.toggle('hidden', item !== t);
           const navBtn = document.getElementById('nav-' + item);
@@ -3217,12 +4364,12 @@
 
     // Flashcard renderers
     renderFlashcard = function() {
-      const deck = currentSubject === 'chem' ? flashcards : bioFlashcards;
+      const deck = currentSubject === 'chem' ? flashcards : (currentSubject === 'bio' ? bioFlashcards : bizFlashcards);
       if (!deck || deck.length === 0) return;
       if (fcIndex >= deck.length) fcIndex = 0;
       if (fcIndex < 0) fcIndex = deck.length - 1;
       const card = deck[fcIndex];
-      const subjTag = currentSubject === 'chem' ? 'CHEM' : 'BIO';
+      const subjTag = currentSubject === 'chem' ? 'CHEM' : (currentSubject === 'bio' ? 'BIO' : 'BOH4M');
       const badgeEl = document.getElementById('fc-badge');
       const textEl = document.getElementById('fc-text');
       const counterEl = document.getElementById('fc-counter');
@@ -3247,7 +4394,7 @@
     window.flipCard = flipCard;
 
     nextCard = function() {
-      const deck = currentSubject === 'chem' ? flashcards : bioFlashcards;
+      const deck = currentSubject === 'chem' ? flashcards : (currentSubject === 'bio' ? bioFlashcards : bizFlashcards);
       if (!deck || deck.length === 0) return;
       fcIndex = (fcIndex + 1) % deck.length;
       fcFlipped = false;
@@ -3256,7 +4403,7 @@
     window.nextCard = nextCard;
 
     prevCard = function() {
-      const deck = currentSubject === 'chem' ? flashcards : bioFlashcards;
+      const deck = currentSubject === 'chem' ? flashcards : (currentSubject === 'bio' ? bioFlashcards : bizFlashcards);
       if (!deck || deck.length === 0) return;
       fcIndex = (fcIndex - 1 + deck.length) % deck.length;
       fcFlipped = false;
@@ -3266,8 +4413,8 @@
 
     // Quiz renderers
     renderQuiz = function() {
-      const qList = currentSubject === 'chem' ? quizData : bioQuizData;
-      const userAnswers = currentSubject === 'chem' ? picked : bioPicked;
+      const qList = currentSubject === 'chem' ? quizData : (currentSubject === 'bio' ? bioQuizData : bizQuizData);
+      const userAnswers = currentSubject === 'chem' ? picked : (currentSubject === 'bio' ? bioPicked : bizPicked);
 
       const quizListEl = document.getElementById('quiz-list');
       if (!quizListEl || !qList) return;
@@ -3309,14 +4456,14 @@
     window.renderQuiz = renderQuiz;
 
     answerQ = function(id, idx) {
-      const userAnswers = currentSubject === 'chem' ? picked : bioPicked;
+      const userAnswers = currentSubject === 'chem' ? picked : (currentSubject === 'bio' ? bioPicked : bizPicked);
       userAnswers[id] = idx;
       renderQuiz();
     };
     window.answerQ = answerQ;
 
     resetQuiz = function() {
-      const userAnswers = currentSubject === 'chem' ? picked : bioPicked;
+      const userAnswers = currentSubject === 'chem' ? picked : (currentSubject === 'bio' ? bioPicked : bizPicked);
       Object.keys(userAnswers).forEach(k => delete userAnswers[k]);
       renderQuiz();
     };

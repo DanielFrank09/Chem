@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="450" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="418" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#1e293b">5. APPROACHES TO PLANNING &amp; 6. TIME MANAGEMENT</text>
+
+  <!-- Inside-Out vs Outside-In -->
+  <rect x="45" y="68" width="345" height="92" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="65" y="92" font-size="14" font-weight="800" fill="#1d4ed8">INSIDE-OUT PLANNING</text>
+  <text x="65" y="114" font-size="11.5" font-weight="600" fill="#334155">Focuses on doing what the organization already</text>
+  <text x="65" y="130" font-size="11.5" font-weight="600" fill="#334155">does best, maximizing internal capabilities.</text>
+  <text x="65" y="148" font-size="11.5" font-weight="700" fill="#1e40af">Ex: Wild Wing focusing on specialized chicken wings</text>
+
+  <rect x="410" y="68" width="345" height="92" rx="12" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="2"/>
+  <text x="430" y="92" font-size="14" font-weight="800" fill="#047857">OUTSIDE-IN PLANNING</text>
+  <text x="430" y="114" font-size="11.5" font-weight="600" fill="#334155">Analyzes external environment first for opportunities,</text>
+  <text x="430" y="130" font-size="11.5" font-weight="600" fill="#334155">then adjusts internal operations to exploit them.</text>
+  <text x="430" y="148" font-size="11.5" font-weight="700" fill="#065f46">Ex: McDonald's adding healthy salads for consumer trends</text>
+
+  <!-- Top-Down vs Bottom-Up vs Contingency -->
+  <rect x="45" y="172" width="224" height="92" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="2"/>
+  <text x="60" y="196" font-size="13.5" font-weight="800" fill="#92400e">TOP-DOWN</text>
+  <text x="60" y="216" font-size="11" font-weight="600" fill="#334155">Upper management sets broad</text>
+  <text x="60" y="232" font-size="11" font-weight="600" fill="#334155">objectives &amp; parameters; lower</text>
+  <text x="60" y="248" font-size="11" font-weight="600" fill="#334155">levels plan within constraints.</text>
+
+  <rect x="288" y="172" width="224" height="92" rx="12" fill="#f3e8ff" stroke="#d8b4fe" stroke-width="2"/>
+  <text x="303" y="196" font-size="13.5" font-weight="800" fill="#6b21a8">BOTTOM-UP</text>
+  <text x="303" y="216" font-size="11" font-weight="600" fill="#334155">Plans originate at lower operational</text>
+  <text x="303" y="232" font-size="11" font-weight="600" fill="#334155">levels without strict top-level</text>
+  <text x="303" y="248" font-size="11" font-weight="600" fill="#334155">constraints &amp; pass upward.</text>
+
+  <rect x="531" y="172" width="224" height="92" rx="12" fill="#ffe4e6" stroke="#fda4af" stroke-width="2"/>
+  <text x="546" y="196" font-size="13.5" font-weight="800" fill="#9f1239">CONTINGENCY</text>
+  <text x="546" y="216" font-size="11" font-weight="600" fill="#334155">Formulating alternative courses</text>
+  <text x="546" y="232" font-size="11" font-weight="600" fill="#334155">of action if primary plans fail or</text>
+  <text x="546" y="248" font-size="11" font-weight="700" fill="#be123c">unexpected events occur (Backup).</text>
+
+  <!-- 6. Time Management Core Skills -->
+  <rect x="45" y="278" width="710" height="136" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="400" y="302" text-anchor="middle" font-size="14" font-weight="800" fill="#1e293b">6. TIME MANAGEMENT: 4 CORE SKILLS (Efficiency, Effectiveness &amp; Productivity)</text>
+
+  <rect x="62" y="316" width="160" height="82" rx="8" fill="#e0e7ff"/>
+  <text x="142" y="338" text-anchor="middle" font-size="12" font-weight="800" fill="#3730a3">1. Goal Setting</text>
+  <text x="142" y="356" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">Knowing what you want</text>
+  <text x="142" y="371" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">to accomplish before</text>
+  <text x="142" y="386" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">spending energy.</text>
+
+  <rect x="234" y="316" width="160" height="82" rx="8" fill="#dcfce7"/>
+  <text x="314" y="338" text-anchor="middle" font-size="12" font-weight="800" fill="#166534">2. Prioritizing</text>
+  <text x="314" y="356" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">Generating a task list</text>
+  <text x="314" y="371" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">and ranking by</text>
+  <text x="314" y="386" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">importance.</text>
+
+  <rect x="406" y="316" width="160" height="82" rx="8" fill="#fef9c3"/>
+  <text x="486" y="338" text-anchor="middle" font-size="12" font-weight="800" fill="#854d0e">3. Planning &amp; Sched.</text>
+  <text x="486" y="356" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">Breaking large projects</text>
+  <text x="486" y="371" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">into daily tasks + peak</text>
+  <text x="486" y="386" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">windows &amp; rest.</text>
+
+  <rect x="578" y="316" width="160" height="82" rx="8" fill="#ffe4e6"/>
+  <text x="658" y="338" text-anchor="middle" font-size="12" font-weight="800" fill="#9f1239">4. Distraction Control</text>
+  <text x="658" y="356" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">Silencing notifications,</text>
+  <text x="658" y="371" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">removing devices, and</text>
+  <text x="658" y="386" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1e293b">keeping focus.</text>
+</svg>

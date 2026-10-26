@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="460" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="428" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+  
+  <text x="400" y="52" text-anchor="middle" font-size="20" font-weight="800" fill="#1e293b">1. THE STRATEGIC IMPACT OF PLANNING (BOH4M)</text>
+  <text x="400" y="76" text-anchor="middle" font-size="13" font-weight="600" fill="#64748b">Setting objectives &amp; determining in advance how to best accomplish them</text>
+
+  <!-- Primary Box: Planning -->
+  <rect x="230" y="96" width="340" height="82" rx="14" fill="#2563eb" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="400" y="128" text-anchor="middle" font-size="18" font-weight="800" fill="#ffffff">1. PLANNING</text>
+  <text x="400" y="150" text-anchor="middle" font-size="12" font-weight="500" fill="#dbeafe">Sets the stage for the other three</text>
+  <text x="400" y="166" text-anchor="middle" font-size="12" font-weight="500" fill="#dbeafe">management functions:</text>
+
+  <!-- Connectors -->
+  <path d="M400 178 L400 215 M400 196 L160 196 L160 215 M400 196 L640 196 L640 215" stroke="#2563eb" stroke-width="3" fill="none"/>
+
+  <!-- 3 Functions -->
+  <rect x="55" y="215" width="210" height="64" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="160" y="244" text-anchor="middle" font-size="16" font-weight="800" fill="#1e40af">2. ORGANIZING</text>
+  <text x="160" y="264" text-anchor="middle" font-size="11" font-weight="600" fill="#3b82f6">Supported by Planning</text>
+
+  <rect x="295" y="215" width="210" height="64" rx="12" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="2"/>
+  <text x="400" y="244" text-anchor="middle" font-size="16" font-weight="800" fill="#065f46">3. LEADING</text>
+  <text x="400" y="264" text-anchor="middle" font-size="11" font-weight="600" fill="#059669">Supported by Planning</text>
+
+  <rect x="535" y="215" width="210" height="64" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="2"/>
+  <text x="640" y="244" text-anchor="middle" font-size="16" font-weight="800" fill="#92400e">4. CONTROLLING</text>
+  <text x="640" y="264" text-anchor="middle" font-size="11" font-weight="600" fill="#d97706">Supported by Planning</text>
+
+  <!-- 6 Key Questions -->
+  <rect x="45" y="302" width="710" height="122" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="400" y="328" text-anchor="middle" font-size="14" font-weight="800" fill="#334155">6 KEY QUESTIONS ADDRESSED BY PLANNING</text>
+
+  <g font-size="12" font-weight="700" fill="#1e293b">
+    <rect x="65" y="342" width="210" height="30" rx="8" fill="#e0e7ff"/>
+    <text x="170" y="362" text-anchor="middle" fill="#3730a3">1. Who will do it?</text>
+
+    <rect x="295" y="342" width="210" height="30" rx="8" fill="#dcfce7"/>
+    <text x="400" y="362" text-anchor="middle" fill="#166534">2. What must be done?</text>
+
+    <rect x="525" y="342" width="210" height="30" rx="8" fill="#fef9c3"/>
+    <text x="630" y="362" text-anchor="middle" fill="#854d0e">3. When must it be done?</text>
+
+    <rect x="65" y="382" width="210" height="30" rx="8" fill="#ffe4e6"/>
+    <text x="170" y="402" text-anchor="middle" fill="#9f1239">4. Where will it be done?</text>
+
+    <rect x="295" y="382" width="210" height="30" rx="8" fill="#f3e8ff"/>
+    <text x="400" y="402" text-anchor="middle" fill="#6b21a8">5. Why must it be done?</text>
+
+    <rect x="525" y="382" width="210" height="30" rx="8" fill="#e0f2fe"/>
+    <text x="630" y="402" text-anchor="middle" fill="#075985">6. How will it be done?</text>
+  </g>
+</svg>

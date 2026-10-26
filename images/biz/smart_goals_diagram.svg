@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="450" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="418" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="50" text-anchor="middle" font-size="20" font-weight="800" fill="#1e293b">4. SMART GOAL SETTING FRAMEWORK</text>
+
+  <!-- 5 Pillars -->
+  <g transform="translate(45, 72)">
+    <rect x="0" y="0" width="132" height="190" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <circle cx="66" cy="38" r="22" fill="#2563eb"/>
+    <text x="66" y="46" text-anchor="middle" font-size="22" font-weight="900" fill="#ffffff">S</text>
+    <text x="66" y="84" text-anchor="middle" font-size="14" font-weight="800" fill="#1e3a8a">Specific</text>
+    <text x="66" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Goals must be</text>
+    <text x="66" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">clear, well-defined,</text>
+    <text x="66" y="142" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">and unambiguous.</text>
+
+    <rect x="144" y="0" width="132" height="190" rx="12" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="2"/>
+    <circle cx="210" cy="38" r="22" fill="#059669"/>
+    <text x="210" y="46" text-anchor="middle" font-size="22" font-weight="900" fill="#ffffff">M</text>
+    <text x="210" y="84" text-anchor="middle" font-size="14" font-weight="800" fill="#065f46">Measurable</text>
+    <text x="210" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Criteria established</text>
+    <text x="210" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">to track progress &amp;</text>
+    <text x="210" y="142" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">know when achieved.</text>
+
+    <rect x="288" y="0" width="132" height="190" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="2"/>
+    <circle cx="354" cy="38" r="22" fill="#d97706"/>
+    <text x="354" y="46" text-anchor="middle" font-size="22" font-weight="900" fill="#ffffff">A</text>
+    <text x="354" y="84" text-anchor="middle" font-size="14" font-weight="800" fill="#92400e">Attainable</text>
+    <text x="354" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Challenging yet</text>
+    <text x="354" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">realistically</text>
+    <text x="354" y="142" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">achievable.</text>
+
+    <rect x="432" y="0" width="132" height="190" rx="12" fill="#f3e8ff" stroke="#d8b4fe" stroke-width="2"/>
+    <circle cx="498" cy="38" r="22" fill="#7c3aed"/>
+    <text x="498" y="46" text-anchor="middle" font-size="22" font-weight="900" fill="#ffffff">R</text>
+    <text x="498" y="84" text-anchor="middle" font-size="14" font-weight="800" fill="#5b21b6">Realistic</text>
+    <text x="498" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Within reach &amp;</text>
+    <text x="498" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">aligns with resources</text>
+    <text x="498" y="142" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">and commitment.</text>
+
+    <rect x="576" y="0" width="132" height="190" rx="12" fill="#ffe4e6" stroke="#fda4af" stroke-width="2"/>
+    <circle cx="642" cy="38" r="22" fill="#e11d48"/>
+    <text x="642" y="46" text-anchor="middle" font-size="22" font-weight="900" fill="#ffffff">T</text>
+    <text x="642" y="84" text-anchor="middle" font-size="14" font-weight="800" fill="#9f1239">Time-bound</text>
+    <text x="642" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Includes a clear</text>
+    <text x="642" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">start date &amp; target</text>
+    <text x="642" y="142" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">completion deadline.</text>
+  </g>
+
+  <!-- Examples Comparison -->
+  <rect x="45" y="280" width="708" height="60" rx="10" fill="#fff1f2" stroke="#fecdd3" stroke-width="1.5"/>
+  <text x="65" y="304" font-size="13" font-weight="800" fill="#be123c">✗ INEFFECTIVE EXAMPLE:</text>
+  <text x="65" y="325" font-size="13" font-weight="600" fill="#881337">"I want to make a lot of money." — (Vague, unmeasurable, no deadline).</text>
+
+  <rect x="45" y="352" width="708" height="64" rx="10" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.5"/>
+  <text x="65" y="376" font-size="13" font-weight="800" fill="#047857">✓ EFFECTIVE SMART EXAMPLE:</text>
+  <text x="65" y="397" font-size="12.5" font-weight="600" fill="#065f46">"I want to make $1,000,000 within 10 years by launching a life-coaching consulting business and hosting live seminars."</text>
+</svg>

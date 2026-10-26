@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="440" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="408" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#1e293b">9. SWOT ANALYSIS MATRIX (INTERNAL VS EXTERNAL)</text>
+  <text x="400" y="70" text-anchor="middle" font-size="13" font-weight="600" fill="#64748b">Evaluates internal and external factors affecting organizational success</text>
+
+  <!-- Column Headers -->
+  <rect x="200" y="86" width="270" height="36" rx="8" fill="#dcfce7"/>
+  <text x="335" y="109" text-anchor="middle" font-size="14" font-weight="800" fill="#166534">HELPFUL (To Goal)</text>
+
+  <rect x="485" y="86" width="270" height="36" rx="8" fill="#ffe4e6"/>
+  <text x="620" y="109" text-anchor="middle" font-size="14" font-weight="800" fill="#9f1239">HARMFUL (To Goal)</text>
+
+  <!-- Row 1: Internal Factors -->
+  <rect x="45" y="132" width="140" height="128" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="115" y="192" text-anchor="middle" font-size="14" font-weight="800" fill="#1e40af">INTERNAL</text>
+  <text x="115" y="210" text-anchor="middle" font-size="14" font-weight="800" fill="#1e40af">FACTORS</text>
+
+  <rect x="200" y="132" width="270" height="128" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  <text x="220" y="158" font-size="15" font-weight="800" fill="#15803d">Strengths (S)</text>
+  <text x="220" y="182" font-size="12.5" font-weight="600" fill="#334155">• Core competencies</text>
+  <text x="220" y="202" font-size="12.5" font-weight="600" fill="#334155">• Skilled staff</text>
+  <text x="220" y="222" font-size="12.5" font-weight="600" fill="#334155">• Strong finances</text>
+  <text x="220" y="242" font-size="12.5" font-weight="600" fill="#334155">• Good reputation</text>
+
+  <rect x="485" y="132" width="270" height="128" rx="10" fill="#fff1f2" stroke="#fda4af" stroke-width="2"/>
+  <text x="505" y="158" font-size="15" font-weight="800" fill="#be123c">Weaknesses (W)</text>
+  <text x="505" y="182" font-size="12.5" font-weight="600" fill="#334155">• Poor management</text>
+  <text x="505" y="202" font-size="12.5" font-weight="600" fill="#334155">• Outdated tech</text>
+  <text x="505" y="222" font-size="12.5" font-weight="600" fill="#334155">• Bad location</text>
+  <text x="505" y="242" font-size="12.5" font-weight="600" fill="#334155">• Poor planning</text>
+
+  <!-- Row 2: External Factors -->
+  <rect x="45" y="274" width="140" height="128" rx="10" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="115" y="334" text-anchor="middle" font-size="14" font-weight="800" fill="#92400e">EXTERNAL</text>
+  <text x="115" y="352" text-anchor="middle" font-size="14" font-weight="800" fill="#92400e">FACTORS</text>
+
+  <rect x="200" y="274" width="270" height="128" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="220" y="300" font-size="15" font-weight="800" fill="#1d4ed8">Opportunities (O)</text>
+  <text x="220" y="326" font-size="12.5" font-weight="600" fill="#334155">• Emerging markets</text>
+  <text x="220" y="348" font-size="12.5" font-weight="600" fill="#334155">• Weak competitors</text>
+  <text x="220" y="370" font-size="12.5" font-weight="600" fill="#334155">• Technological advances</text>
+
+  <rect x="485" y="274" width="270" height="128" rx="10" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+  <text x="505" y="300" font-size="15" font-weight="800" fill="#6b21a8">Threats (T)</text>
+  <text x="505" y="326" font-size="12.5" font-weight="600" fill="#334155">• New competitors</text>
+  <text x="505" y="348" font-size="12.5" font-weight="600" fill="#334155">• Changing bylaws/laws</text>
+  <text x="505" y="370" font-size="12.5" font-weight="600" fill="#334155">• Poor economic climate</text>
+</svg>
