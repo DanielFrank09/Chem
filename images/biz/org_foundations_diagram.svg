@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="470" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="438" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="48" text-anchor="middle" font-size="19" font-weight="800" fill="#1e293b">UNIT #3 ORGANIZING: 4 ELEMENTS &amp; FORMAL VS. INFORMAL</text>
+  <text x="400" y="70" text-anchor="middle" font-size="12.5" font-weight="600" fill="#64748b">Organizing: Arranging people, tasks, responsibilities, and resources to achieve goals efficiently</text>
+
+  <!-- 4 Elements of an Organization -->
+  <g transform="translate(42, 86)">
+    <rect x="0" y="0" width="170" height="92" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="85" y="26" text-anchor="middle" font-size="12.5" font-weight="800" fill="#1d4ed8">1. Collection of People</text>
+    <text x="85" y="48" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Two or more individuals</text>
+    <text x="85" y="64" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">combining efforts &amp;</text>
+    <text x="85" y="80" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">diverse skills together.</text>
+
+    <rect x="182" y="0" width="170" height="92" rx="12" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="2"/>
+    <text x="267" y="26" text-anchor="middle" font-size="12.5" font-weight="800" fill="#047857">2. Division of Labour</text>
+    <text x="267" y="48" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Assigning specialized</text>
+    <text x="267" y="64" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">tasks/duties to specific</text>
+    <text x="267" y="80" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">individuals or groups.</text>
+
+    <rect x="364" y="0" width="170" height="92" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="2"/>
+    <text x="449" y="26" text-anchor="middle" font-size="12.5" font-weight="800" fill="#b45309">3. Working Together</text>
+    <text x="449" y="48" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Coordination, team</text>
+    <text x="449" y="64" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">dynamics &amp; collaboration</text>
+    <text x="449" y="80" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">toward shared outputs.</text>
+
+    <rect x="546" y="0" width="170" height="92" rx="12" fill="#f3e8ff" stroke="#d8b4fe" stroke-width="2"/>
+    <text x="631" y="26" text-anchor="middle" font-size="12.5" font-weight="800" fill="#6b21a8">4. Common Purpose</text>
+    <text x="631" y="48" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Collective mission or</text>
+    <text x="631" y="64" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">shared strategic goals</text>
+    <text x="631" y="80" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">guiding activities.</text>
+  </g>
+
+  <!-- Formal vs Informal Organization -->
+  <rect x="42" y="192" width="348" height="134" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="216" y="216" text-anchor="middle" font-size="14" font-weight="800" fill="#1e3a8a">FORMAL ORGANIZATION (Org Chart)</text>
+  <text x="58" y="238" font-size="11.5" font-weight="600" fill="#334155">• Official structure with explicitly defined job roles,</text>
+  <text x="58" y="255" font-size="11.5" font-weight="600" fill="#334155">  management tiers &amp; visual reporting lines.</text>
+  <text x="58" y="276" font-size="11.5" font-weight="700" fill="#1d4ed8">• Shows WHO HOLDS POWER officially.</text>
+  <text x="58" y="296" font-size="11" font-weight="600" fill="#475569">5 Chart Elements: Division of Work, Supervisory</text>
+  <text x="58" y="312" font-size="11" font-weight="600" fill="#475569">Relationships, Comm. Channels, Subunits, Mgmt Levels.</text>
+
+  <rect x="410" y="192" width="348" height="134" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+  <text x="584" y="216" text-anchor="middle" font-size="14" font-weight="800" fill="#92400e">INFORMAL ORGANIZATION (Social Network)</text>
+  <text x="426" y="238" font-size="11.5" font-weight="600" fill="#334155">• Unofficial social interactions, personal relationships</text>
+  <text x="426" y="255" font-size="11.5" font-weight="600" fill="#334155">  &amp; informal networks among employees.</text>
+  <text x="426" y="276" font-size="11.5" font-weight="700" fill="#b45309">• Determines WHO ACTUALLY EXERCISES POWER.</text>
+  <text x="426" y="296" font-size="11" font-weight="700" fill="#15803d">+ Pros: Speeds comm./problem-solving, trust, peer learning.</text>
+  <text x="426" y="312" font-size="11" font-weight="700" fill="#be123c">- Cons: Unverified rumors, resists change, cliques/exclusion.</text>
+
+  <!-- Horizontal vs Vertical Dimensions -->
+  <rect x="42" y="340" width="348" height="94" rx="12" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="216" y="364" text-anchor="middle" font-size="13.5" font-weight="800" fill="#065f46">HORIZONTAL DIMENSION (Division of Labour)</text>
+  <text x="58" y="386" font-size="11.5" font-weight="600" fill="#334155">Grouping jobs into departments or divisions based</text>
+  <text x="58" y="404" font-size="11.5" font-weight="600" fill="#334155">on specialized functions or operational needs</text>
+  <text x="58" y="421" font-size="11.5" font-weight="700" fill="#047857">(Departmentalization).</text>
+
+  <rect x="410" y="340" width="348" height="94" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="584" y="364" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e40af">VERTICAL DIMENSION (Authority &amp; Coordination)</text>
+  <text x="426" y="386" font-size="11.5" font-weight="600" fill="#334155">Authority relationships and reporting chains</text>
+  <text x="426" y="404" font-size="11.5" font-weight="600" fill="#334155">established to ensure alignment and coordination</text>
+  <text x="426" y="421" font-size="11.5" font-weight="700" fill="#1d4ed8">toward common organizational goals.</text>
+</svg>

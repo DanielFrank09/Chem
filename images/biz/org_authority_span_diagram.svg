@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="470" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="438" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="48" text-anchor="middle" font-size="19" font-weight="800" fill="#1e293b">AUTHORITY, SPAN OF CONTROL &amp; THE 4 ELEMENTS OF DELEGATION</text>
+
+  <!-- Left: Centralized & Narrow Span (Tall Structure) -->
+  <rect x="42" y="66" width="345" height="196" rx="12" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+  <text x="214" y="90" text-anchor="middle" font-size="14" font-weight="800" fill="#1d4ed8">CENTRALIZED &amp; NARROW SPAN (TALL)</text>
+  <text x="58" y="112" font-size="11.5" font-weight="600" fill="#334155">• Authority concentrated at top management level.</text>
+  <text x="58" y="130" font-size="11.5" font-weight="600" fill="#334155">• Narrow Span of Control: Few direct reports per manager.</text>
+  <text x="58" y="148" font-size="11.5" font-weight="600" fill="#334155">• Close supervision, tighter control, measured pace.</text>
+  <text x="58" y="166" font-size="11.5" font-weight="700" fill="#1e40af">• Best in stable environments (Ex: Walmart, McDonald's).</text>
+  <!-- Tall Mini Pyramid -->
+  <rect x="184" y="178" width="60" height="16" rx="3" fill="#1d4ed8"/>
+  <rect x="154" y="200" width="52" height="14" rx="3" fill="#3b82f6"/>
+  <rect x="222" y="200" width="52" height="14" rx="3" fill="#3b82f6"/>
+  <rect x="134" y="220" width="36" height="14" rx="3" fill="#93c5fd"/>
+  <rect x="176" y="220" width="36" height="14" rx="3" fill="#93c5fd"/>
+  <rect x="218" y="220" width="36" height="14" rx="3" fill="#93c5fd"/>
+  <rect x="260" y="220" width="36" height="14" rx="3" fill="#93c5fd"/>
+  <text x="214" y="250" text-anchor="middle" font-size="10.5" font-weight="800" fill="#1e3a8a">Few Reports &rarr; Tall Structure &rarr; Centralized Control</text>
+
+  <!-- Right: Decentralized & Wide Span (Flat Structure) -->
+  <rect x="410" y="66" width="348" height="196" rx="12" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
+  <text x="584" y="90" text-anchor="middle" font-size="14" font-weight="800" fill="#047857">DECENTRALIZED &amp; WIDE SPAN (FLAT)</text>
+  <text x="426" y="112" font-size="11.5" font-weight="600" fill="#334155">• Authority dispersed across middle &amp; lower levels.</text>
+  <text x="426" y="130" font-size="11.5" font-weight="600" fill="#334155">• Wide Span of Control: Many direct reports per manager.</text>
+  <text x="426" y="148" font-size="11.5" font-weight="600" fill="#334155">• Greater employee autonomy, lower admin costs, agility.</text>
+  <text x="426" y="166" font-size="11.5" font-weight="700" fill="#065f46">• Best in dynamic, fast-paced industries (Ex: Tech firms).</text>
+  <!-- Flat Mini Pyramid -->
+  <rect x="544" y="182" width="80" height="18" rx="3" fill="#047857"/>
+  <rect x="434" y="212" width="44" height="16" rx="3" fill="#6ee7b7"/>
+  <rect x="486" y="212" width="44" height="16" rx="3" fill="#6ee7b7"/>
+  <rect x="538" y="212" width="44" height="16" rx="3" fill="#6ee7b7"/>
+  <rect x="590" y="212" width="44" height="16" rx="3" fill="#6ee7b7"/>
+  <rect x="642" y="212" width="44" height="16" rx="3" fill="#6ee7b7"/>
+  <rect x="694" y="212" width="44" height="16" rx="3" fill="#6ee7b7"/>
+  <text x="584" y="250" text-anchor="middle" font-size="10.5" font-weight="800" fill="#065f46">Many Reports &rarr; Flat Structure &rarr; Decentralized Delegation</text>
+
+  <!-- Bottom: Chain of Command & 4 Elements of Delegation -->
+  <rect x="42" y="276" width="716" height="158" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="400" y="300" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e293b">CHAIN OF COMMAND &amp; THE 4 ELEMENTS OF DELEGATION</text>
+  <text x="400" y="318" text-anchor="middle" font-size="11.5" font-weight="600" fill="#475569">Chain of Command: Vertical line of authority linking all individuals with successively higher management tiers</text>
+
+  <rect x="56" y="330" width="166" height="72" rx="8" fill="#e0e7ff"/>
+  <text x="139" y="350" text-anchor="middle" font-size="12" font-weight="800" fill="#3730a3">a. Delegation</text>
+  <text x="139" y="368" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">Assigning specific tasks</text>
+  <text x="139" y="384" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">or duties to subordinates.</text>
+
+  <rect x="230" y="330" width="166" height="72" rx="8" fill="#dcfce7"/>
+  <text x="313" y="350" text-anchor="middle" font-size="12" font-weight="800" fill="#166534">b. Responsibility</text>
+  <text x="313" y="368" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">Obligation of subordinate</text>
+  <text x="313" y="384" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">to perform assigned duties.</text>
+
+  <rect x="404" y="330" width="166" height="72" rx="8" fill="#fef3c7"/>
+  <text x="487" y="350" text-anchor="middle" font-size="12" font-weight="800" fill="#92400e">c. Authority</text>
+  <text x="487" y="368" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">Right &amp; power to act, allocate</text>
+  <text x="487" y="384" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">resources &amp; make decisions.</text>
+
+  <rect x="578" y="330" width="166" height="72" rx="8" fill="#ffe4e6"/>
+  <text x="661" y="350" text-anchor="middle" font-size="12" font-weight="800" fill="#9f1239">d. Accountability</text>
+  <text x="661" y="368" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">Answering to superiors for</text>
+  <text x="661" y="384" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">quality &amp; outcome of work.</text>
+
+  <text x="400" y="422" text-anchor="middle" font-size="11.5" font-weight="800" fill="#b45309">★ Key Requirement: Responsibility and Authority MUST BE BALANCED. Delegation leads directly to EMPOWERMENT!</text>
+</svg>

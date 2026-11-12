@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="470" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="438" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="48" text-anchor="middle" font-size="19" font-weight="800" fill="#1e293b">DEPARTMENTALIZATION: FUNCTIONAL VS. DIVISIONAL STRUCTURES</text>
+
+  <!-- Functional Structure Left Card -->
+  <rect x="42" y="66" width="345" height="225" rx="12" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+  <text x="214" y="92" text-anchor="middle" font-size="15" font-weight="800" fill="#1d4ed8">A. FUNCTIONAL STRUCTURE</text>
+  <text x="214" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Grouped by similar skills &amp; similar tasks</text>
+
+  <!-- Mini Org Chart Functional -->
+  <rect x="164" y="120" width="100" height="24" rx="5" fill="#1d4ed8"/>
+  <text x="214" y="136" text-anchor="middle" font-size="10.5" font-weight="800" fill="#ffffff">CEO / President</text>
+  <path d="M214 144 L214 154 M84 154 L344 154 M84 154 L84 162 M170 154 L170 162 M258 154 L258 162 M344 154 L344 162" stroke="#2563eb" stroke-width="1.5" fill="none"/>
+  <rect x="50" y="162" width="68" height="22" rx="4" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="84" y="177" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1e3a8a">Marketing</text>
+  <rect x="136" y="162" width="68" height="22" rx="4" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="170" y="177" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1e3a8a">Finance</text>
+  <rect x="224" y="162" width="68" height="22" rx="4" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="258" y="177" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1e3a8a">HR</text>
+  <rect x="310" y="162" width="68" height="22" rx="4" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="344" y="177" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1e3a8a">Production</text>
+
+  <text x="56" y="204" font-size="11" font-weight="800" fill="#15803d">✓ Advantages:</text>
+  <text x="56" y="220" font-size="10.5" font-weight="600" fill="#334155">• Economies of scale; expertise alignment; deep skill dev.</text>
+  <text x="56" y="240" font-size="11" font-weight="800" fill="#be123c">✗ Disadvantages:</text>
+  <text x="56" y="256" font-size="10.5" font-weight="600" fill="#334155">• Functional silos; diffused responsibility; slow response</text>
+  <text x="56" y="271" font-size="10.5" font-weight="600" fill="#334155">  to change across departmental boundaries.</text>
+
+  <!-- Divisional Structure Right Card -->
+  <rect x="410" y="66" width="348" height="225" rx="12" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
+  <text x="584" y="92" text-anchor="middle" font-size="15" font-weight="800" fill="#047857">B. DIVISIONAL STRUCTURE</text>
+  <text x="584" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Grouped by product, region, customer, or process</text>
+
+  <rect x="534" y="120" width="100" height="24" rx="5" fill="#047857"/>
+  <text x="584" y="136" text-anchor="middle" font-size="10.5" font-weight="800" fill="#ffffff">CEO / President</text>
+  <path d="M584 144 L584 154 M454 154 L714 154 M454 154 L454 162 M540 154 L540 162 M628 154 L628 162 M714 154 L714 162" stroke="#059669" stroke-width="1.5" fill="none"/>
+  <rect x="420" y="162" width="68" height="22" rx="4" fill="#d1fae5" stroke="#34d399"/>
+  <text x="454" y="177" text-anchor="middle" font-size="9.5" font-weight="700" fill="#065f46">Product</text>
+  <rect x="506" y="162" width="68" height="22" rx="4" fill="#d1fae5" stroke="#34d399"/>
+  <text x="540" y="177" text-anchor="middle" font-size="9.5" font-weight="700" fill="#065f46">Geographic</text>
+  <rect x="594" y="162" width="68" height="22" rx="4" fill="#d1fae5" stroke="#34d399"/>
+  <text x="628" y="177" text-anchor="middle" font-size="9.5" font-weight="700" fill="#065f46">Customer</text>
+  <rect x="680" y="162" width="68" height="22" rx="4" fill="#d1fae5" stroke="#34d399"/>
+  <text x="714" y="177" text-anchor="middle" font-size="9.5" font-weight="700" fill="#065f46">Process</text>
+
+  <text x="424" y="204" font-size="11" font-weight="800" fill="#15803d">✓ Advantages:</text>
+  <text x="424" y="220" font-size="10.5" font-weight="600" fill="#334155">• Flexibility to change; clear product/service responsibility;</text>
+  <text x="424" y="235" font-size="10.5" font-weight="600" fill="#334155">  improved cross-functional coordination.</text>
+  <text x="424" y="254" font-size="11" font-weight="800" fill="#be123c">✗ Disadvantages:</text>
+  <text x="424" y="270" font-size="10.5" font-weight="600" fill="#334155">• Duplication of resources/higher costs; unhealthy rivalries;</text>
+  <text x="424" y="284" font-size="10.5" font-weight="600" fill="#334155">  divisional goals prioritized over organizational goals.</text>
+
+  <!-- 4 Types of Divisional Structures with Real-World Examples -->
+  <rect x="42" y="305" width="716" height="130" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="400" y="328" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e293b">4 TYPES OF DIVISIONAL STRUCTURES &amp; EXAMPLES</text>
+
+  <rect x="56" y="340" width="166" height="82" rx="8" fill="#fef3c7"/>
+  <text x="139" y="360" text-anchor="middle" font-size="12" font-weight="800" fill="#92400e">1. Product Structure</text>
+  <text x="139" y="378" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">By product line/service.</text>
+  <text x="139" y="394" text-anchor="middle" font-size="10" font-weight="700" fill="#b45309">Ex: Heinz (Convenience</text>
+  <text x="139" y="408" text-anchor="middle" font-size="10" font-weight="700" fill="#b45309">Meals, Frozen, Pet Food)</text>
+
+  <rect x="230" y="340" width="166" height="82" rx="8" fill="#e0e7ff"/>
+  <text x="313" y="360" text-anchor="middle" font-size="12" font-weight="800" fill="#3730a3">2. Geographic Structure</text>
+  <text x="313" y="378" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">By location/region/market.</text>
+  <text x="313" y="394" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">Ex: 3M (Canada, Asia</text>
+  <text x="313" y="408" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">Pacific, Europe)</text>
+
+  <rect x="404" y="340" width="166" height="82" rx="8" fill="#dcfce7"/>
+  <text x="487" y="360" text-anchor="middle" font-size="12" font-weight="800" fill="#166534">3. Customer Structure</text>
+  <text x="487" y="378" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">By client type/segment.</text>
+  <text x="487" y="394" text-anchor="middle" font-size="10" font-weight="700" fill="#047857">Ex: Dell Canada (Individual,</text>
+  <text x="487" y="408" text-anchor="middle" font-size="10" font-weight="700" fill="#047857">Education, Government)</text>
+
+  <rect x="578" y="340" width="166" height="82" rx="8" fill="#ffe4e6"/>
+  <text x="661" y="360" text-anchor="middle" font-size="12" font-weight="800" fill="#9f1239">4. Process Structure</text>
+  <text x="661" y="378" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">By sequential workflow.</text>
+  <text x="661" y="394" text-anchor="middle" font-size="10" font-weight="700" fill="#be123c">Ex: Procurement &rarr;</text>
+  <text x="661" y="408" text-anchor="middle" font-size="10" font-weight="700" fill="#be123c">Manufacturing &rarr; Fulfillment</text>
+</svg>

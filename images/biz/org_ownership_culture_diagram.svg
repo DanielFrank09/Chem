@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="470" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="438" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="46" text-anchor="middle" font-size="19" font-weight="800" fill="#1e293b">5 FORMS OF BUSINESS OWNERSHIP &amp; 6 DRIVERS OF CORPORATE CULTURE</text>
+
+  <!-- 5 Ownership Cards -->
+  <g transform="translate(42, 64)">
+    <rect x="0" y="0" width="136" height="196" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="68" y="22" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1d4ed8">Sole Proprietorship</text>
+    <text x="68" y="40" text-anchor="middle" font-size="10" font-weight="700" fill="#334155">1 Owner (Unincorp.)</text>
+    <text x="10" y="62" font-size="9.5" font-weight="700" fill="#15803d">+ Easy/low cost setup</text>
+    <text x="10" y="77" font-size="9.5" font-weight="700" fill="#15803d">+ Keep all profits/control</text>
+    <text x="10" y="98" font-size="9.5" font-weight="700" fill="#be123c">- Unlimited liability</text>
+    <text x="10" y="113" font-size="9.5" font-weight="700" fill="#be123c">- Limited capital/hours</text>
+    <text x="10" y="138" font-size="9.5" font-weight="800" fill="#1e3a8a">Ex: Local bakery,</text>
+    <text x="10" y="152" font-size="9.5" font-weight="800" fill="#1e3a8a">personal services</text>
+
+    <rect x="145" y="0" width="136" height="196" rx="10" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+    <text x="213" y="22" text-anchor="middle" font-size="11.5" font-weight="800" fill="#047857">Partnership</text>
+    <text x="213" y="40" text-anchor="middle" font-size="10" font-weight="700" fill="#334155">2+ Owners Jointly</text>
+    <text x="155" y="62" font-size="9.5" font-weight="700" fill="#15803d">+ More capital pool</text>
+    <text x="155" y="77" font-size="9.5" font-weight="700" fill="#15803d">+ Shared duties/skills</text>
+    <text x="155" y="98" font-size="9.5" font-weight="700" fill="#be123c">- Unlimited liability</text>
+    <text x="155" y="113" font-size="9.5" font-weight="700" fill="#be123c">- Conflict / dissolution</text>
+    <text x="155" y="138" font-size="9.5" font-weight="800" fill="#065f46">Ex: Law firms, acct.,</text>
+    <text x="155" y="152" font-size="9.5" font-weight="800" fill="#065f46">VIBE studio</text>
+
+    <rect x="290" y="0" width="136" height="196" rx="10" fill="#f3e8ff" stroke="#d8b4fe" stroke-width="1.5"/>
+    <text x="358" y="22" text-anchor="middle" font-size="11.5" font-weight="800" fill="#6b21a8">Corporation</text>
+    <text x="358" y="40" text-anchor="middle" font-size="10" font-weight="700" fill="#334155">Legal Entity (Shares)</text>
+    <text x="300" y="62" font-size="9.5" font-weight="700" fill="#15803d">+ Limited liability</text>
+    <text x="300" y="77" font-size="9.5" font-weight="700" fill="#15803d">+ Raise funds (shares)</text>
+    <text x="300" y="98" font-size="9.5" font-weight="700" fill="#be123c">- High cost &amp; complex</text>
+    <text x="300" y="113" font-size="9.5" font-weight="700" fill="#be123c">- Increased taxation</text>
+    <text x="300" y="138" font-size="9.5" font-weight="800" fill="#581c87">Ex: Apple, Google,</text>
+    <text x="300" y="152" font-size="9.5" font-weight="800" fill="#581c87">Walmart</text>
+
+    <rect x="435" y="0" width="136" height="196" rx="10" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="503" y="22" text-anchor="middle" font-size="11.5" font-weight="800" fill="#b45309">Crown Corp.</text>
+    <text x="503" y="40" text-anchor="middle" font-size="10" font-weight="700" fill="#334155">Gov't Owned Public</text>
+    <text x="445" y="62" font-size="9.5" font-weight="700" fill="#15803d">+ Serves public interest</text>
+    <text x="445" y="77" font-size="9.5" font-weight="700" fill="#15803d">+ Gov't stability</text>
+    <text x="445" y="98" font-size="9.5" font-weight="700" fill="#be123c">- Political oversight</text>
+    <text x="445" y="113" font-size="9.5" font-weight="700" fill="#be123c">- Bureaucratic delays</text>
+    <text x="445" y="138" font-size="9.5" font-weight="800" fill="#92400e">Ex: Canada Post,</text>
+    <text x="445" y="152" font-size="9.5" font-weight="800" fill="#92400e">VIA Rail, Bank of Can.</text>
+
+    <rect x="580" y="0" width="136" height="196" rx="10" fill="#ffe4e6" stroke="#fda4af" stroke-width="1.5"/>
+    <text x="648" y="22" text-anchor="middle" font-size="11.5" font-weight="800" fill="#be123c">Franchise</text>
+    <text x="648" y="40" text-anchor="middle" font-size="10" font-weight="700" fill="#334155">Established Brand</text>
+    <text x="590" y="62" font-size="9.5" font-weight="700" fill="#15803d">+ Lower risk &amp; brand</text>
+    <text x="590" y="77" font-size="9.5" font-weight="700" fill="#15803d">+ Proven model/mktg</text>
+    <text x="590" y="98" font-size="9.5" font-weight="700" fill="#be123c">- Recurring royalties</text>
+    <text x="590" y="113" font-size="9.5" font-weight="700" fill="#be123c">- Rigid rules &amp; debts</text>
+    <text x="590" y="138" font-size="9.5" font-weight="800" fill="#9f1239">Ex: Tim Hortons,</text>
+    <text x="590" y="152" font-size="9.5" font-weight="800" fill="#9f1239">McDonald's, Subway</text>
+  </g>
+
+  <!-- Corporate Culture Bottom Section -->
+  <rect x="42" y="274" width="716" height="160" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="400" y="298" text-anchor="middle" font-size="14" font-weight="800" fill="#1e293b">CORPORATE CULTURE: "HOW WE DO THINGS AROUND HERE"</text>
+  <text x="400" y="316" text-anchor="middle" font-size="11.5" font-weight="600" fill="#475569">Collective behavior, vision, goals, shared values, beliefs, habits &amp; systems (Starts at top; varies by industry: Nike vs Hospital vs University)</text>
+
+  <g font-size="11" font-weight="700" fill="#1e293b">
+    <rect x="58" y="330" width="218" height="40" rx="8" fill="#e0e7ff"/>
+    <text x="167" y="348" text-anchor="middle" fill="#3730a3">1. Environment &amp; Atmosphere</text>
+    <text x="167" y="363" text-anchor="middle" font-size="9.5" font-weight="600" fill="#334155">Physical &amp; emotional workplace dynamic</text>
+
+    <rect x="291" y="330" width="218" height="40" rx="8" fill="#dcfce7"/>
+    <text x="400" y="348" text-anchor="middle" fill="#166534">2. Compensation</text>
+    <text x="400" y="363" text-anchor="middle" font-size="9.5" font-weight="600" fill="#334155">Rewarding performance, effort, longevity</text>
+
+    <rect x="524" y="330" width="218" height="40" rx="8" fill="#fef3c7"/>
+    <text x="633" y="348" text-anchor="middle" fill="#92400e">3. Standards &amp; Policies</text>
+    <text x="633" y="363" text-anchor="middle" font-size="9.5" font-weight="600" fill="#334155">Formal rules &amp; behavioral expectations</text>
+
+    <rect x="58" y="380" width="218" height="40" rx="8" fill="#ffe4e6"/>
+    <text x="167" y="398" text-anchor="middle" fill="#9f1239">4. People</text>
+    <text x="167" y="413" text-anchor="middle" font-size="9.5" font-weight="600" fill="#334155">Talent, backgrounds &amp; shared values</text>
+
+    <rect x="291" y="380" width="218" height="40" rx="8" fill="#f3e8ff"/>
+    <text x="400" y="398" text-anchor="middle" fill="#6b21a8">5. Leadership</text>
+    <text x="400" y="413" text-anchor="middle" font-size="9.5" font-weight="600" fill="#334155">Tone, comm. style &amp; executive vision</text>
+
+    <rect x="524" y="380" width="218" height="40" rx="8" fill="#e0f2fe"/>
+    <text x="633" y="398" text-anchor="middle" fill="#075985">6. Organization Structure</text>
+    <text x="633" y="413" text-anchor="middle" font-size="9.5" font-weight="600" fill="#334155">Distribution of authority &amp; decisions</text>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Inter, system-ui, sans-serif">
+  <rect width="800" height="470" rx="20" fill="#fbf8f3"/>
+  <rect x="16" y="16" width="768" height="438" rx="16" fill="#ffffff" stroke="#e2d9c8" stroke-width="2"/>
+
+  <text x="400" y="46" text-anchor="middle" font-size="19" font-weight="800" fill="#1e293b">PART B THINKING &amp; PART C APPLICATION (MINI-CASE GUIDE)</text>
+
+  <!-- 5-Step Organizing Process -->
+  <text x="400" y="72" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1d4ed8">PART B: THE 5-STEP ORGANIZING PROCESS</text>
+  <g transform="translate(42, 84)" font-size="10" font-weight="600" fill="#334155">
+    <rect x="0" y="0" width="134" height="84" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="67" y="20" text-anchor="middle" font-size="11" font-weight="800" fill="#1d4ed8">Step 1: Identify Work</text>
+    <text x="67" y="40" text-anchor="middle">Define tasks based on</text>
+    <text x="67" y="55" text-anchor="middle">strategic plans and</text>
+    <text x="67" y="70" text-anchor="middle">objectives.</text>
+
+    <rect x="145" y="0" width="134" height="84" rx="8" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+    <text x="212" y="20" text-anchor="middle" font-size="11" font-weight="800" fill="#047857">Step 2: Divide Work</text>
+    <text x="212" y="40" text-anchor="middle">Split workload logically</text>
+    <text x="212" y="55" text-anchor="middle">into individual jobs</text>
+    <text x="212" y="70" text-anchor="middle">among qualified staff.</text>
+
+    <rect x="290" y="0" width="134" height="84" rx="8" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="357" y="20" text-anchor="middle" font-size="11" font-weight="800" fill="#b45309">Step 3: Classify/Group</text>
+    <text x="357" y="40" text-anchor="middle">Establish formal</text>
+    <text x="357" y="55" text-anchor="middle">departmentalization</text>
+    <text x="357" y="70" text-anchor="middle">(e.g., HR, Finance).</text>
+
+    <rect x="435" y="0" width="134" height="84" rx="8" fill="#f3e8ff" stroke="#d8b4fe" stroke-width="1.5"/>
+    <text x="502" y="20" text-anchor="middle" font-size="11" font-weight="800" fill="#6b21a8">Step 4: Coordinate</text>
+    <text x="502" y="40" text-anchor="middle">Set up the chain of</text>
+    <text x="502" y="55" text-anchor="middle">command and span</text>
+    <text x="502" y="70" text-anchor="middle">of control.</text>
+
+    <rect x="580" y="0" width="136" height="84" rx="8" fill="#ffe4e6" stroke="#fda4af" stroke-width="1.5"/>
+    <text x="648" y="20" text-anchor="middle" font-size="11" font-weight="800" fill="#be123c">Step 5: Monitor/Adjust</text>
+    <text x="648" y="40" text-anchor="middle">Re-evaluate structure</text>
+    <text x="648" y="55" text-anchor="middle">regularly as organization</text>
+    <text x="648" y="70" text-anchor="middle">grows or changes.</text>
+  </g>
+
+  <!-- Evolution Stages 1 to 2 -->
+  <rect x="42" y="182" width="348" height="78" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="58" y="204" font-size="12.5" font-weight="800" fill="#15803d">Evolution Stage 1 (Early-Stage):</text>
+  <text x="58" y="224" font-size="11" font-weight="600" fill="#334155">Small firm, single owner, direct face-to-face</text>
+  <text x="58" y="242" font-size="11" font-weight="600" fill="#334155">communication, flexible, quick problem-solving.</text>
+
+  <rect x="410" y="182" width="348" height="78" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="426" y="204" font-size="12.5" font-weight="800" fill="#1d4ed8">Evolution Stage 2 (Growth &amp; Expansion):</text>
+  <text x="426" y="224" font-size="11" font-weight="600" fill="#334155">New departments added; increasing operational complexity</text>
+  <text x="426" y="242" font-size="11" font-weight="600" fill="#334155">requiring a formal org chart &amp; structured management.</text>
+
+  <!-- Part C: 3 Case Tasks -->
+  <rect x="42" y="274" width="716" height="160" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+  <text x="400" y="298" text-anchor="middle" font-size="14" font-weight="800" fill="#92400e">PART C: APPLICATION CASE — 3 REQUIRED EXAM TASKS</text>
+
+  <rect x="58" y="312" width="218" height="106" rx="8" fill="#ffffff" stroke="#fde68a"/>
+  <text x="167" y="334" text-anchor="middle" font-size="12" font-weight="800" fill="#b45309">1. Identify Departmentalization</text>
+  <text x="167" y="354" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">Determine if grouped by</text>
+  <text x="167" y="370" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1d4ed8">Function (Finance, Mktg)</text>
+  <text x="167" y="386" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">or by Division (Product,</text>
+  <text x="167" y="402" text-anchor="middle" font-size="10.5" font-weight="700" fill="#047857">Region, Customer, Process).</text>
+
+  <rect x="291" y="312" width="218" height="106" rx="8" fill="#ffffff" stroke="#fde68a"/>
+  <text x="400" y="334" text-anchor="middle" font-size="12" font-weight="800" fill="#b45309">2. Span of Control &amp; Structure</text>
+  <text x="400" y="354" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1d4ed8">Narrow Span: Few reports &rarr;</text>
+  <text x="400" y="369" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Tall structure &rarr; Centralized.</text>
+  <text x="400" y="387" text-anchor="middle" font-size="10.5" font-weight="700" fill="#047857">Wide Span: Many reports &rarr;</text>
+  <text x="400" y="402" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Flat structure &rarr; Decentralized.</text>
+
+  <rect x="524" y="312" width="218" height="106" rx="8" fill="#ffffff" stroke="#fde68a"/>
+  <text x="633" y="334" text-anchor="middle" font-size="12" font-weight="800" fill="#b45309">3. Draw an Org Chart</text>
+  <text x="633" y="354" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">Construct clean hierarchical tree:</text>
+  <text x="633" y="370" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e293b">Top Mgmt (CEO/President)</text>
+  <text x="633" y="386" text-anchor="middle" font-size="10.5" font-weight="700" fill="#334155">&darr; Middle Mgmt (VPs/Directors)</text>
+  <text x="633" y="402" text-anchor="middle" font-size="10.5" font-weight="700" fill="#475569">&darr; Operational Departments</text>
+</svg>
