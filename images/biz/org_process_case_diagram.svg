@@ -62,15 +62,15 @@
 
   <rect x="291" y="312" width="218" height="106" rx="8" fill="#ffffff" stroke="#fde68a"/>
   <text x="400" y="334" text-anchor="middle" font-size="12" font-weight="800" fill="#b45309">2. Span of Control &amp; Structure</text>
-  <text x="400" y="354" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1d4ed8">Narrow Span: Few reports &rarr;</text>
-  <text x="400" y="369" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Tall structure &rarr; Centralized.</text>
-  <text x="400" y="387" text-anchor="middle" font-size="10.5" font-weight="700" fill="#047857">Wide Span: Many reports &rarr;</text>
-  <text x="400" y="402" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Flat structure &rarr; Decentralized.</text>
+  <text x="400" y="354" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1d4ed8">Narrow Span: Few reports &#8594;</text>
+  <text x="400" y="369" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Tall structure &#8594; Centralized.</text>
+  <text x="400" y="387" text-anchor="middle" font-size="10.5" font-weight="700" fill="#047857">Wide Span: Many reports &#8594;</text>
+  <text x="400" y="402" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Flat structure &#8594; Decentralized.</text>
 
   <rect x="524" y="312" width="218" height="106" rx="8" fill="#ffffff" stroke="#fde68a"/>
   <text x="633" y="334" text-anchor="middle" font-size="12" font-weight="800" fill="#b45309">3. Draw an Org Chart</text>
   <text x="633" y="354" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">Construct clean hierarchical tree:</text>
   <text x="633" y="370" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e293b">Top Mgmt (CEO/President)</text>
-  <text x="633" y="386" text-anchor="middle" font-size="10.5" font-weight="700" fill="#334155">&darr; Middle Mgmt (VPs/Directors)</text>
-  <text x="633" y="402" text-anchor="middle" font-size="10.5" font-weight="700" fill="#475569">&darr; Operational Departments</text>
+  <text x="633" y="386" text-anchor="middle" font-size="10.5" font-weight="700" fill="#334155">&#8595; Middle Mgmt (VPs/Directors)</text>
+  <text x="633" y="402" text-anchor="middle" font-size="10.5" font-weight="700" fill="#475569">&#8595; Operational Departments</text>
 </svg>

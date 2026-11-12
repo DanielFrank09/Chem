@@ -77,6 +77,6 @@
   <rect x="578" y="340" width="166" height="82" rx="8" fill="#ffe4e6"/>
   <text x="661" y="360" text-anchor="middle" font-size="12" font-weight="800" fill="#9f1239">4. Process Structure</text>
   <text x="661" y="378" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">By sequential workflow.</text>
-  <text x="661" y="394" text-anchor="middle" font-size="10" font-weight="700" fill="#be123c">Ex: Procurement &rarr;</text>
-  <text x="661" y="408" text-anchor="middle" font-size="10" font-weight="700" fill="#be123c">Manufacturing &rarr; Fulfillment</text>
+  <text x="661" y="394" text-anchor="middle" font-size="10" font-weight="700" fill="#be123c">Ex: Procurement &#8594;</text>
+  <text x="661" y="408" text-anchor="middle" font-size="10" font-weight="700" fill="#be123c">Manufacturing &#8594; Fulfillment</text>
 </svg>

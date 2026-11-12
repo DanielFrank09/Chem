@@ -19,7 +19,7 @@
   <rect x="176" y="220" width="36" height="14" rx="3" fill="#93c5fd"/>
   <rect x="218" y="220" width="36" height="14" rx="3" fill="#93c5fd"/>
   <rect x="260" y="220" width="36" height="14" rx="3" fill="#93c5fd"/>
-  <text x="214" y="250" text-anchor="middle" font-size="10.5" font-weight="800" fill="#1e3a8a">Few Reports &rarr; Tall Structure &rarr; Centralized Control</text>
+  <text x="214" y="250" text-anchor="middle" font-size="10.5" font-weight="800" fill="#1e3a8a">Few Reports &#8594; Tall Structure &#8594; Centralized Control</text>
 
   <!-- Right: Decentralized & Wide Span (Flat Structure) -->
   <rect x="410" y="66" width="348" height="196" rx="12" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
@@ -36,7 +36,7 @@
   <rect x="590" y="212" width="44" height="16" rx="3" fill="#6ee7b7"/>
   <rect x="642" y="212" width="44" height="16" rx="3" fill="#6ee7b7"/>
   <rect x="694" y="212" width="44" height="16" rx="3" fill="#6ee7b7"/>
-  <text x="584" y="250" text-anchor="middle" font-size="10.5" font-weight="800" fill="#065f46">Many Reports &rarr; Flat Structure &rarr; Decentralized Delegation</text>
+  <text x="584" y="250" text-anchor="middle" font-size="10.5" font-weight="800" fill="#065f46">Many Reports &#8594; Flat Structure &#8594; Decentralized Delegation</text>
 
   <!-- Bottom: Chain of Command & 4 Elements of Delegation -->
   <rect x="42" y="276" width="716" height="158" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
